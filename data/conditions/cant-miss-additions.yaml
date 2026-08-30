@@ -1,0 +1,163 @@
+# Conditions added after the first gap audit. Each is here because a GP can
+# plausibly miss it and the cost of missing it is high -- which is the tool's
+# stated purpose. UNVERIFIED codes; all features source: gp-estimate.
+conditions:
+  acute-angle-closure-glaucoma:
+    name: "Acute angle-closure glaucoma"
+    parents: [ophthalmic]
+    codes: {icd10: H40.2}
+    urgency: emergency
+    red_flag_features: [eye_pain_red_eye, visual_disturbance]
+    features:
+      headache_location:   {expect: [periorbital, unilateral], source: gp-estimate}
+      headache_onset:      {expect: [hours], source: gp-estimate}
+      headache_intensity:  {expect: [very_severe], source: gp-estimate}
+      eye_pain_red_eye:    {expect: [present], source: gp-estimate}
+      visual_disturbance:  {expect: [present], source: gp-estimate}
+      autonomic_symptoms:  {expect: [present], source: gp-estimate}
+      neck_stiffness:      {expect: [absent], source: gp-estimate}
+      focal_neurology:     {expect: [absent], source: gp-estimate}
+
+  carbon-monoxide-poisoning:
+    name: "Carbon monoxide poisoning"
+    parents: [toxic]
+    codes: {icd10: T58}
+    urgency: emergency
+    red_flag_features: [household_others_affected, symptoms_improve_away_from_home]
+    features:
+      headache_location:              {expect: [bilateral], source: gp-estimate}
+      headache_quality:               {expect: [pressing_tightening], source: gp-estimate}
+      headache_onset:                 {expect: [hours, days_or_longer], source: gp-estimate}
+      household_others_affected:      {expect: [present], source: gp-estimate}
+      symptoms_improve_away_from_home: {expect: [present], source: gp-estimate}
+      autonomic_symptoms:             {expect: [present], source: gp-estimate}
+      confusion_new:                  {expect: [present], source: gp-estimate}
+      fever_history:                  {expect: [absent], source: gp-estimate}
+
+  cervicogenic-headache:
+    name: "Cervicogenic headache"
+    parents: [secondary-headache, musculoskeletal]
+    codes: {icd10: G44.86}
+    urgency: routine
+    features:
+      headache_location:      {expect: [occipital, unilateral], source: gp-estimate}
+      headache_quality:       {expect: [pressing_tightening], source: gp-estimate}
+      headache_onset:         {expect: [days_or_longer], source: gp-estimate}
+      neck_movement_provokes: {expect: [present], source: gp-estimate}
+      photophobia:            {expect: [absent], source: gp-estimate}
+      focal_neurology:        {expect: [absent], source: gp-estimate}
+      fever_history:          {expect: [absent], source: gp-estimate}
+
+  trigeminal-neuralgia:
+    name: "Trigeminal neuralgia"
+    parents: [cranial-nerve]
+    codes: {icd10: G50.0}
+    urgency: urgent
+    features:
+      headache_location:      {expect: [unilateral], source: gp-estimate}
+      headache_quality:       {expect: [sharp_boring], source: gp-estimate}
+      headache_intensity:     {expect: [very_severe], source: gp-estimate}
+      headache_duration:      {expect: [under_1_hour], source: gp-estimate}
+      pain_triggered_by_touch: {expect: [present], source: gp-estimate}
+      focal_neurology:        {expect: [absent], source: gp-estimate}
+      photophobia:            {expect: [absent], source: gp-estimate}
+
+  herpes-zoster:
+    name: "Herpes zoster (shingles)"
+    parents: [infection, chest-wall]
+    codes: {icd10: B02.9}
+    urgency: urgent
+    features:
+      chest_pain_character:      {expect: [burning, sharp_stabbing], source: gp-estimate}
+      chest_pain_duration:       {expect: [constant], source: gp-estimate}
+      chest_pain_radiation:      {expect: [nowhere], source: gp-estimate}
+      rash_dermatomal:           {expect: [present, absent], source: gp-estimate}
+      pain_triggered_by_touch:   {expect: [present], source: gp-estimate}
+      reproducible_on_palpation: {expect: [absent], source: gp-estimate}
+      autonomic_symptoms:        {expect: [absent], source: gp-estimate}
+
+  myocarditis:
+    name: "Myocarditis"
+    parents: [cardiac]
+    codes: {icd10: I40.9}
+    urgency: same_day
+    red_flag_features: [recent_viral_illness, breathlessness]
+    features:
+      chest_pain_character: {expect: [sharp_stabbing, aching], source: gp-estimate}
+      chest_pain_duration:  {expect: [constant], source: gp-estimate}
+      recent_viral_illness: {expect: [present], source: gp-estimate}
+      breathlessness:       {expect: [on_exertion, at_rest], source: gp-estimate}
+      fever_history:        {expect: [present], source: gp-estimate}
+      chest_pain_relief:    {expect: [nothing], source: gp-estimate}
+      reproducible_on_palpation: {expect: [absent], source: gp-estimate}
+
+  peptic-ulcer-disease:
+    name: "Peptic ulcer disease"
+    parents: [gastric]
+    codes: {icd10: K27.9}
+    urgency: routine
+    features:
+      chest_pain_character: {expect: [burning, aching], source: gp-estimate}
+      chest_pain_trigger:   {expect: [eating], source: gp-estimate}
+      chest_pain_relief:    {expect: [antacid], source: gp-estimate}
+      epigastric_pain:      {expect: [present], source: gp-estimate}
+      chest_pain_radiation: {expect: [nowhere], source: gp-estimate}
+      autonomic_symptoms:   {expect: [absent], source: gp-estimate}
+      breathlessness:       {expect: [none], source: gp-estimate}
+
+  iron-deficiency-anaemia:
+    name: "Anaemia"
+    parents: [haematological]
+    codes: {icd10: D64.9}
+    urgency: routine
+    features:
+      breathlessness:   {expect: [on_exertion], source: gp-estimate}
+      onset_speed:      {expect: [weeks_or_longer], source: gp-estimate}
+      pallor:           {expect: [present], source: gp-estimate}
+      fatigue:          {expect: [present], source: gp-estimate}
+      cough_character:  {expect: [none], source: gp-estimate}
+      fever_history:    {expect: [absent], source: gp-estimate}
+      auscultation:     {expect: [clear], source: gp-estimate}
+
+  atrial-fibrillation:
+    name: "Atrial fibrillation"
+    parents: [arrhythmia]
+    codes: {icd10: I48.9}
+    urgency: urgent
+    features:
+      breathlessness:   {expect: [on_exertion], source: gp-estimate}
+      onset_speed:      {expect: [days, weeks_or_longer], source: gp-estimate}
+      pulse_rhythm:     {expect: [irregularly_irregular], source: gp-estimate}
+      cough_character:  {expect: [none], source: gp-estimate}
+      fever_history:    {expect: [absent], source: gp-estimate}
+      auscultation:     {expect: [clear], source: gp-estimate}
+      ankle_oedema:     {expect: [present, absent], source: gp-estimate}
+
+  hyperventilation-syndrome:
+    name: "Hyperventilation syndrome"
+    parents: [functional]
+    codes: {icd10: F45.33}
+    urgency: routine
+    features:
+      breathlessness:    {expect: [at_rest], source: gp-estimate}
+      onset_speed:       {expect: [seconds_to_minutes], source: gp-estimate}
+      cough_character:   {expect: [none], source: gp-estimate}
+      auscultation:      {expect: [clear], source: gp-estimate}
+      oxygen_saturation: {expect: [ninety_five_or_over], source: gp-estimate}
+      respiratory_rate:  {expect: [twenty_five_to_29], source: gp-estimate}
+      fever_history:     {expect: [absent], source: gp-estimate}
+      pallor:            {expect: [absent], source: gp-estimate}
+
+  bronchiectasis:
+    name: "Bronchiectasis"
+    parents: [airways-structural]
+    codes: {icd10: J47}
+    urgency: routine
+    features:
+      cough_character:        {expect: [productive_purulent], source: gp-estimate}
+      cough_duration:         {expect: [over_8_weeks], source: gp-estimate}
+      sputum_volume_chronic:  {expect: [present], source: gp-estimate}
+      onset_speed:            {expect: [weeks_or_longer], source: gp-estimate}
+      breathlessness:         {expect: [on_exertion], source: gp-estimate}
+      auscultation:           {expect: [focal_crackles, bilateral_basal_crackles], source: gp-estimate}
+      fever_history:          {expect: [absent], source: gp-estimate}

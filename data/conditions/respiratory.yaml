@@ -28,6 +28,7 @@ conditions:
     codes: {icd10: J18.9}
     urgency: same_day
     features:
+      immunosuppression: {expect: [present], source: gp-estimate}
       cough_character:   {expect: [productive_purulent], source: gp-estimate}
       cough_duration:    {expect: [under_3_weeks], source: gp-estimate}
       onset_speed:       {expect: [days], source: gp-estimate}
@@ -99,6 +100,7 @@ conditions:
     codes: {icd10: A15.0}
     urgency: urgent
     features:
+      immunosuppression: {expect: [present], source: gp-estimate}
       cough_character: {expect: [productive_purulent, blood_stained], source: gp-estimate}
       cough_duration:  {expect: [over_8_weeks], source: gp-estimate}
       onset_speed:     {expect: [weeks_or_longer], source: gp-estimate}
@@ -157,6 +159,7 @@ conditions:
     urgency: emergency
     red_flag_features: [pleuritic_pain, calf_swelling, recent_immobility]
     features:
+      pregnancy_status:  {expect: [pregnant, recently_pregnant], source: gp-estimate}
       cough_character:   {expect: [dry, blood_stained], source: gp-estimate}
       onset_speed:       {expect: [seconds_to_minutes, hours], source: gp-estimate}
       breathlessness:    {expect: [at_rest, on_exertion], source: gp-estimate}

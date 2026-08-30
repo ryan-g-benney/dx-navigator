@@ -39,6 +39,7 @@ conditions:
     codes: {icd10: G44.0}
     urgency: urgent
     features:
+      sex:               {expect: [male], source: gp-estimate}
       headache_location:          {expect: [periorbital, unilateral], source: gp-estimate}
       headache_quality:           {expect: [sharp_boring], source: gp-estimate}
       headache_intensity:         {expect: [very_severe], source: gp-estimate}
@@ -82,6 +83,7 @@ conditions:
     urgency: emergency
     red_flag_features: [neck_stiffness, non_blanching_rash, confusion_new]
     features:
+      immunosuppression: {expect: [present], source: gp-estimate}
       headache_onset:     {expect: [hours], source: gp-estimate}
       headache_intensity: {expect: [moderate_severe, very_severe], source: gp-estimate}
       fever_history:      {expect: [present], source: gp-estimate}
@@ -97,6 +99,7 @@ conditions:
     urgency: emergency
     red_flag_features: [scalp_tenderness, jaw_claudication, headache_location]
     features:
+      sex:               {expect: [female], source: gp-estimate}
       headache_location:  {expect: [temporal, unilateral], source: gp-estimate}
       headache_onset:     {expect: [days_or_longer], source: gp-estimate}
       headache_intensity: {expect: [moderate_severe], source: gp-estimate}

@@ -1,0 +1,181 @@
+# Evaluation vignettes. Synthetic, authored, NOT derived from real patients.
+# Each carries a ground-truth condition and an answer set a patient with that
+# condition would plausibly give. `adversarial: true` marks atypical
+# presentations -- the cases where a tool like this is most likely to fail and
+# most needed.
+vignettes:
+  - id: cap-typical
+    complaint: acute-cough
+    truth: community-acquired-pneumonia
+    answers: {cough_character: productive_purulent, fever_history: present, onset_speed: days,
+              auscultation: focal_crackles, breathlessness: on_exertion, pleuritic_pain: present,
+              respiratory_rate: twenty_to_24, oxygen_saturation: ninety_two_to_94}
+
+  - id: bronchitis-typical
+    complaint: acute-cough
+    truth: acute-bronchitis
+    answers: {cough_character: productive_clear, fever_history: absent, onset_speed: days,
+              auscultation: clear, breathlessness: none, cough_duration: under_3_weeks,
+              respiratory_rate: under_20, oxygen_saturation: ninety_five_or_over}
+
+  - id: pe-typical
+    complaint: acute-cough
+    truth: pulmonary-embolism
+    answers: {cough_character: dry, onset_speed: hours, breathlessness: at_rest,
+              pleuritic_pain: present, calf_swelling: present, recent_immobility: present,
+              auscultation: clear, fever_history: absent, respiratory_rate: thirty_or_over}
+
+  - id: pe-as-anxiety
+    complaint: acute-cough
+    adversarial: true
+    note: "PE presenting as anxiety -- no calf signs, no obvious risk factor."
+    truth: pulmonary-embolism
+    answers: {cough_character: dry, onset_speed: seconds_to_minutes, breathlessness: at_rest,
+              pleuritic_pain: present, calf_swelling: absent, recent_immobility: absent,
+              auscultation: clear, fever_history: absent, respiratory_rate: twenty_five_to_29}
+
+  - id: heart-failure-typical
+    complaint: acute-cough
+    truth: acute-heart-failure
+    answers: {cough_character: dry, onset_speed: days, breathlessness: on_exertion,
+              orthopnoea: present, ankle_oedema: present, auscultation: bilateral_basal_crackles,
+              fever_history: absent, oxygen_saturation: ninety_two_to_94}
+
+  - id: lung-cancer-typical
+    complaint: acute-cough
+    truth: lung-cancer
+    answers: {cough_character: blood_stained, cough_duration: over_8_weeks,
+              onset_speed: weeks_or_longer, breathlessness: on_exertion, fever_history: absent,
+              auscultation: reduced_air_entry, age_years: sixty_five_or_over, ever_smoked: current,
+              weight_loss: present}
+
+  - id: copd-exac-typical
+    complaint: acute-cough
+    truth: copd-exacerbation
+    answers: {cough_character: productive_purulent, onset_speed: days, wheeze_history: present,
+              breathlessness: at_rest, known_airways_disease: copd,
+              auscultation: widespread_wheeze, oxygen_saturation: ninety_two_to_94}
+
+  - id: anaemia-breathless
+    complaint: acute-cough
+    adversarial: true
+    note: "Breathlessness with no respiratory cause at all."
+    truth: iron-deficiency-anaemia
+    answers: {breathlessness: on_exertion, onset_speed: weeks_or_longer, pallor: present,
+              fatigue: present, cough_character: none, fever_history: absent, auscultation: clear}
+
+  - id: co-poisoning
+    complaint: headache
+    adversarial: true
+    note: "The condition a GP has not thought of. Whole household affected."
+    truth: carbon-monoxide-poisoning
+    answers: {headache_location: bilateral, headache_quality: pressing_tightening,
+              headache_onset: days_or_longer, household_others_affected: present,
+              symptoms_improve_away_from_home: present, autonomic_symptoms: present,
+              confusion_new: present, fever_history: absent}
+
+  - id: sah-typical
+    complaint: headache
+    truth: subarachnoid-haemorrhage
+    answers: {headache_onset: instant_maximal, headache_intensity: very_severe,
+              headache_location: occipital, neck_stiffness: present, photophobia: present,
+              focal_neurology: absent, analgesic_overuse: absent}
+
+  - id: meningitis-typical
+    complaint: headache
+    truth: bacterial-meningitis
+    answers: {headache_onset: hours, headache_intensity: very_severe, fever_history: present,
+              neck_stiffness: present, photophobia: present, confusion_new: present,
+              non_blanching_rash: present}
+
+  - id: migraine-typical
+    complaint: headache
+    truth: migraine
+    answers: {headache_location: unilateral, headache_quality: pulsating,
+              headache_intensity: moderate_severe, headache_duration: four_to_72_hours,
+              headache_onset: hours, photophobia: present, aura: present, focal_neurology: absent}
+
+  - id: tension-typical
+    complaint: headache
+    truth: tension-type-headache
+    answers: {headache_location: bilateral, headache_quality: pressing_tightening,
+              headache_intensity: mild_moderate, headache_onset: hours, photophobia: absent,
+              aura: absent, neck_stiffness: absent, focal_neurology: absent}
+
+  - id: gca-typical
+    complaint: headache
+    truth: giant-cell-arteritis
+    answers: {headache_location: temporal, headache_onset: days_or_longer,
+              headache_intensity: moderate_severe, scalp_tenderness: present,
+              jaw_claudication: present, age_years: sixty_five_or_over, neck_stiffness: absent,
+              sex: female}
+
+  - id: glaucoma-as-headache
+    complaint: headache
+    adversarial: true
+    note: "Angle-closure glaucoma presenting as headache, not as an eye complaint."
+    truth: acute-angle-closure-glaucoma
+    answers: {headache_location: periorbital, headache_onset: hours,
+              headache_intensity: very_severe, eye_pain_red_eye: present,
+              visual_disturbance: present, autonomic_symptoms: present, neck_stiffness: absent,
+              focal_neurology: absent}
+
+  - id: acs-typical
+    complaint: chest-pain
+    truth: acute-coronary-syndrome
+    answers: {chest_pain_character: constricting, chest_pain_radiation: arm_jaw_or_neck,
+              chest_pain_trigger: at_rest, chest_pain_duration: over_15_minutes,
+              chest_pain_relief: nothing, autonomic_symptoms: present,
+              pain_onset_abruptness: built_over_minutes, reproducible_on_palpation: absent,
+              breathlessness: at_rest}
+
+  - id: silent-mi-diabetic
+    complaint: chest-pain
+    adversarial: true
+    note: "Atypical ACS in a diabetic -- little pain, dominant breathlessness and sweating."
+    truth: acute-coronary-syndrome
+    answers: {chest_pain_character: aching, chest_pain_radiation: nowhere,
+              chest_pain_trigger: at_rest, chest_pain_duration: over_15_minutes,
+              chest_pain_relief: nothing, autonomic_symptoms: present,
+              reproducible_on_palpation: absent, breathlessness: at_rest}
+
+  - id: dissection-typical
+    complaint: chest-pain
+    truth: aortic-dissection
+    answers: {chest_pain_character: tearing, chest_pain_radiation: between_shoulder_blades,
+              pain_onset_abruptness: instant_maximal, chest_pain_duration: constant,
+              chest_pain_relief: nothing, autonomic_symptoms: present,
+              reproducible_on_palpation: absent}
+
+  - id: costochondritis-typical
+    complaint: chest-pain
+    truth: costochondritis
+    answers: {chest_pain_character: sharp_stabbing, chest_pain_trigger: movement,
+              reproducible_on_palpation: present, chest_pain_radiation: nowhere,
+              autonomic_symptoms: absent, breathlessness: none}
+
+  - id: shingles-preeruptive
+    complaint: chest-pain
+    adversarial: true
+    note: "Shingles before the rash appears -- the classic miss."
+    truth: herpes-zoster
+    answers: {chest_pain_character: burning, chest_pain_duration: constant,
+              chest_pain_radiation: nowhere, rash_dermatomal: absent,
+              pain_triggered_by_touch: present, reproducible_on_palpation: absent,
+              autonomic_symptoms: absent}
+
+  - id: reflux-typical
+    complaint: chest-pain
+    truth: gastro-oesophageal-reflux
+    answers: {chest_pain_character: burning, chest_pain_trigger: eating,
+              chest_pain_relief: antacid, chest_pain_radiation: nowhere,
+              autonomic_symptoms: absent, breathlessness: none}
+
+  - id: all-unknown-cough
+    complaint: acute-cough
+    adversarial: true
+    note: "Patient answers unknown to everything. Must land in insufficient evidence."
+    truth: null
+    expect_insufficient: true
+    answers: {cough_character: unknown, fever_history: unknown, onset_speed: unknown,
+              auscultation: unknown, breathlessness: unknown, pleuritic_pain: unknown}

@@ -32,4 +32,12 @@ categories:
   cns-infection:         {name: "CNS infection", parents: [neurological, infection]}
   cns-malignancy:        {name: "CNS malignancy", parents: [neurological]}
   vasculitis:            {name: "Vasculitis", parents: [vascular]}
+  ophthalmic:      {name: "Ophthalmic"}
+  toxic:           {name: "Toxic and environmental"}
+  haematological:  {name: "Haematological"}
+  arrhythmia:      {name: "Arrhythmia", parents: [cardiac]}
+  cranial-nerve:   {name: "Cranial nerve", parents: [neurological]}
+  functional:      {name: "Functional", parents: [psychological]}
+  gastric:         {name: "Gastric and duodenal", parents: [gastrointestinal]}
+  airways-structural: {name: "Structural airways disease", parents: [respiratory]}
 

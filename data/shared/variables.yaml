@@ -113,3 +113,85 @@ variables:
     role: disposition
     cost: 0
     values: [mild, moderate, severe, unknown]
+
+  # Demographics. Brief §4 asks for these as "modifiers"; they are expressed as
+  # ordinary features instead. A modifier would be a second mechanism doing what
+  # a feature already does, and every condition that needs one already reads a
+  # variable. Revisit only if the eval shows features cannot express a real case.
+  sex:
+    prompt: "What is the patient's sex?"
+    modality: history
+    cost: 0
+    values: [female, male, unknown]
+  pregnancy_status:
+    prompt: "What is the pregnancy status?"
+    modality: history
+    cost: 0
+    values: [pregnant, recently_pregnant, neither, not_applicable, unknown]
+  immunosuppression:
+    prompt: "Is the patient immunosuppressed?"
+    hint: "Chemotherapy, long-term steroids, biologics, untreated HIV, asplenia"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  pallor:
+    prompt: "Is the patient pale?"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+  pulse_rhythm:
+    prompt: "Is the pulse regular?"
+    modality: examination
+    cost: 1
+    values: [regular, irregularly_irregular, unknown]
+  household_others_affected:
+    prompt: "Is anyone else in the household unwell?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  symptoms_improve_away_from_home:
+    prompt: "Do the symptoms settle away from home?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  visual_disturbance:
+    prompt: "Is there visual disturbance?"
+    hint: "Haloes around lights, blurring, transient loss"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  eye_pain_red_eye:
+    prompt: "Is there a painful red eye?"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+  rash_dermatomal:
+    prompt: "Is there a rash in a dermatomal band?"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+  pain_triggered_by_touch:
+    prompt: "Is the pain triggered by light touch?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  neck_movement_provokes:
+    prompt: "Does neck movement provoke the pain?"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+  epigastric_pain:
+    prompt: "Is there epigastric pain?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  recent_viral_illness:
+    prompt: "Was there a viral illness in the last month?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  sputum_volume_chronic:
+    prompt: "Is large-volume sputum produced daily?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
