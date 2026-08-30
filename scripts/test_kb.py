@@ -58,4 +58,15 @@ assert load(Path(__file__).resolve().parents[1] / "data").version_hash == kb.ver
 assert kb.conditions["pulmonary-embolism"].primary_parent == "vascular"
 assert len(kb.conditions["pulmonary-embolism"].parents) == 2, "PE must be multi-parent"
 
+# complaint pools are a cover, not a partition
+pools = {c: [n for n, comp in kb.complaints.items() if c in comp.pool] for c in kb.conditions}
+assert len(pools["pulmonary-embolism"]) == 2, "PE must be reachable from two complaints"
+assert len(kb.complaints) == 3
+for name, comp in kb.complaints.items():
+    assert len(comp.pool) >= 9, f"{name} pool too small to be non-toy"
+# every emergency condition carries at least one red flag
+for slug, c in kb.conditions.items():
+    if c.urgency.value == "emergency":
+        assert c.red_flag_features, f"{slug} is an emergency with no red flag"
+
 print(f"all checks passed — kb {kb.version_hash}, {len(kb.conditions)} conditions")

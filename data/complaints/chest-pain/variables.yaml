@@ -1,0 +1,49 @@
+# Chest pain discriminating variables. Correlated findings are collapsed into
+# single categorical variables rather than split into booleans.
+variables:
+  chest_pain_character:
+    prompt: "What does the pain feel like?"
+    modality: history
+    cost: 0
+    values: [constricting, sharp_stabbing, burning, tearing, aching, unknown]
+  chest_pain_radiation:
+    prompt: "Where does the pain travel to?"
+    modality: history
+    cost: 0
+    values: [arm_jaw_or_neck, between_shoulder_blades, nowhere, unknown]
+  chest_pain_trigger:
+    prompt: "What brings the pain on?"
+    modality: history
+    cost: 0
+    values: [exertion, at_rest, posture_change, movement, eating, nothing_specific, unknown]
+  chest_pain_duration:
+    prompt: "How long does an episode last?"
+    modality: history
+    cost: 0
+    values: [seconds, under_15_minutes, over_15_minutes, constant, unknown]
+  chest_pain_relief:
+    prompt: "What relieves the pain?"
+    modality: history
+    cost: 0
+    values: [rest_or_gtn, antacid, sitting_forward, nothing, unknown]
+  autonomic_symptoms:
+    prompt: "Are there autonomic symptoms with the pain?"
+    hint: "Marked sweating, nausea, vomiting"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  reproducible_on_palpation:
+    prompt: "Does pressing on the chest wall reproduce the pain?"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+  pain_onset_abruptness:
+    prompt: "Did the pain peak instantly?"
+    modality: history
+    cost: 0
+    values: [instant_maximal, built_over_minutes, built_over_hours, unknown]
+  known_ischaemic_heart_disease:
+    prompt: "Is there known ischaemic heart disease?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]

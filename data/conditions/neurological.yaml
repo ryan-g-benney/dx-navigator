@@ -1,0 +1,135 @@
+# Headache conditions. Feature profiles for the three primary headaches follow
+# the characteristics table in NICE CG150 recommendation 1.2.1; every cell is
+# still source: gp-estimate because the mapping onto our value vocabulary is
+# ours, not NICE's. UNVERIFIED codes, as elsewhere.
+conditions:
+  tension-type-headache:
+    name: "Tension-type headache"
+    parents: [primary-headache]
+    codes: {icd10: G44.2}
+    urgency: routine
+    features:
+      headache_location:   {expect: [bilateral], source: gp-estimate}
+      headache_quality:    {expect: [pressing_tightening], source: gp-estimate}
+      headache_intensity:  {expect: [mild_moderate], source: gp-estimate}
+      headache_onset:      {expect: [hours, days_or_longer], source: gp-estimate}
+      photophobia:         {expect: [absent], source: gp-estimate}
+      aura:                {expect: [absent], source: gp-estimate}
+      neck_stiffness:      {expect: [absent], source: gp-estimate}
+      focal_neurology:     {expect: [absent], source: gp-estimate}
+
+  migraine:
+    name: "Migraine"
+    parents: [primary-headache]
+    codes: {icd10: G43.9}
+    urgency: routine
+    features:
+      headache_location:  {expect: [unilateral, bilateral], source: gp-estimate}
+      headache_quality:   {expect: [pulsating], source: gp-estimate}
+      headache_intensity: {expect: [moderate_severe], source: gp-estimate}
+      headache_duration:  {expect: [four_to_72_hours], source: gp-estimate}
+      headache_onset:     {expect: [hours], source: gp-estimate}
+      photophobia:        {expect: [present], source: gp-estimate}
+      aura:               {expect: [present, absent], source: gp-estimate}
+      focal_neurology:    {expect: [absent], source: gp-estimate}
+
+  cluster-headache:
+    name: "Cluster headache"
+    parents: [primary-headache]
+    codes: {icd10: G44.0}
+    urgency: urgent
+    features:
+      headache_location:          {expect: [periorbital, unilateral], source: gp-estimate}
+      headache_quality:           {expect: [sharp_boring], source: gp-estimate}
+      headache_intensity:         {expect: [very_severe], source: gp-estimate}
+      headache_duration:          {expect: [under_1_hour], source: gp-estimate}
+      autonomic_cranial_features: {expect: [present], source: gp-estimate}
+      photophobia:                {expect: [absent], source: gp-estimate}
+      focal_neurology:            {expect: [absent], source: gp-estimate}
+
+  medication-overuse-headache:
+    name: "Medication overuse headache"
+    parents: [secondary-headache]
+    codes: {icd10: G44.4}
+    urgency: routine
+    features:
+      headache_location:  {expect: [bilateral], source: gp-estimate}
+      headache_quality:   {expect: [pressing_tightening], source: gp-estimate}
+      headache_duration:  {expect: [constant], source: gp-estimate}
+      analgesic_overuse:  {expect: [present], source: gp-estimate}
+      worse_on_waking:    {expect: [present], source: gp-estimate}
+      focal_neurology:    {expect: [absent], source: gp-estimate}
+
+  subarachnoid-haemorrhage:
+    name: "Subarachnoid haemorrhage"
+    parents: [intracranial-vascular]
+    codes: {icd10: I60.9}
+    urgency: emergency
+    red_flag_features: [headache_onset, headache_intensity, neck_stiffness]
+    features:
+      headache_onset:     {expect: [instant_maximal], source: gp-estimate}
+      headache_intensity: {expect: [very_severe], source: gp-estimate}
+      headache_location:  {expect: [occipital], source: gp-estimate}
+      neck_stiffness:     {expect: [present], source: gp-estimate}
+      photophobia:        {expect: [present], source: gp-estimate}
+      focal_neurology:    {expect: [present, absent], source: gp-estimate}
+      analgesic_overuse:  {expect: [absent], source: gp-estimate}
+
+  bacterial-meningitis:
+    name: "Bacterial meningitis"
+    parents: [cns-infection]
+    codes: {icd10: G00.9}
+    urgency: emergency
+    red_flag_features: [neck_stiffness, non_blanching_rash, confusion_new]
+    features:
+      headache_onset:     {expect: [hours], source: gp-estimate}
+      headache_intensity: {expect: [moderate_severe, very_severe], source: gp-estimate}
+      fever_history:      {expect: [present], source: gp-estimate}
+      neck_stiffness:     {expect: [present], source: gp-estimate}
+      photophobia:        {expect: [present], source: gp-estimate}
+      confusion_new:      {expect: [present], source: gp-estimate}
+      non_blanching_rash: {expect: [present, absent], source: gp-estimate}
+
+  giant-cell-arteritis:
+    name: "Giant cell arteritis"
+    parents: [vasculitis]
+    codes: {icd10: M31.6}
+    urgency: emergency
+    red_flag_features: [scalp_tenderness, jaw_claudication, headache_location]
+    features:
+      headache_location:  {expect: [temporal, unilateral], source: gp-estimate}
+      headache_onset:     {expect: [days_or_longer], source: gp-estimate}
+      headache_intensity: {expect: [moderate_severe], source: gp-estimate}
+      scalp_tenderness:   {expect: [present], source: gp-estimate}
+      jaw_claudication:   {expect: [present], source: gp-estimate}
+      age_years:          {expect: [sixty_five_or_over], source: gp-estimate}
+      neck_stiffness:     {expect: [absent], source: gp-estimate}
+
+  brain-tumour:
+    name: "Brain tumour"
+    parents: [cns-malignancy]
+    codes: {icd10: C71.9}
+    urgency: urgent
+    red_flag_features: [worse_on_waking, focal_neurology]
+    features:
+      headache_onset:     {expect: [days_or_longer], source: gp-estimate}
+      headache_duration:  {expect: [constant], source: gp-estimate}
+      worse_on_waking:    {expect: [present], source: gp-estimate}
+      focal_neurology:    {expect: [present], source: gp-estimate}
+      fever_history:      {expect: [absent], source: gp-estimate}
+      neck_stiffness:     {expect: [absent], source: gp-estimate}
+      analgesic_overuse:  {expect: [absent], source: gp-estimate}
+
+  sinusitis:
+    name: "Acute sinusitis"
+    parents: [secondary-headache, upper-respiratory-infection]
+    codes: {icd10: J01.9}
+    urgency: routine
+    features:
+      headache_location: {expect: [periorbital], source: gp-estimate}
+      headache_onset:    {expect: [days_or_longer], source: gp-estimate}
+      headache_quality:  {expect: [pressing_tightening], source: gp-estimate}
+      coryza:            {expect: [present], source: gp-estimate}
+      fever_history:     {expect: [present], source: gp-estimate}
+      focal_neurology:   {expect: [absent], source: gp-estimate}
+      neck_stiffness:    {expect: [absent], source: gp-estimate}

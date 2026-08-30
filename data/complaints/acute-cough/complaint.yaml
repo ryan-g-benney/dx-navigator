@@ -1,0 +1,18 @@
+complaints:
+  acute-cough:
+    name: "Acute cough or breathlessness"
+    pool:
+      - acute-bronchitis
+      - community-acquired-pneumonia
+      - upper-respiratory-tract-infection
+      - influenza
+      - covid-19
+      - pertussis
+      - pulmonary-tuberculosis
+      - asthma-exacerbation
+      - copd-exacerbation
+      - acute-heart-failure
+      - pulmonary-embolism
+      - lung-cancer
+      - upper-airway-cough-syndrome
+      - ace-inhibitor-cough

@@ -1,0 +1,63 @@
+# UNVERIFIED codes, as data/conditions/respiratory.yaml. All features
+# source: gp-estimate, all weights flat at 1.0.
+conditions:
+  acute-coronary-syndrome:
+    name: "Acute coronary syndrome"
+    parents: [coronary]
+    codes: {icd10: I24.9}
+    urgency: emergency
+    red_flag_features: [chest_pain_duration, autonomic_symptoms, chest_pain_radiation]
+    features:
+      chest_pain_character:  {expect: [constricting], source: gp-estimate}
+      chest_pain_radiation:  {expect: [arm_jaw_or_neck], source: gp-estimate}
+      chest_pain_trigger:    {expect: [at_rest, exertion], source: gp-estimate}
+      chest_pain_duration:   {expect: [over_15_minutes, constant], source: gp-estimate}
+      chest_pain_relief:     {expect: [nothing], source: gp-estimate}
+      autonomic_symptoms:    {expect: [present], source: gp-estimate}
+      pain_onset_abruptness: {expect: [built_over_minutes], source: gp-estimate}
+      reproducible_on_palpation: {expect: [absent], source: gp-estimate}
+      breathlessness:        {expect: [at_rest, on_exertion], source: gp-estimate}
+
+  stable-angina:
+    name: "Stable angina"
+    parents: [coronary]
+    codes: {icd10: I20.9}
+    urgency: urgent
+    features:
+      chest_pain_character:  {expect: [constricting], source: gp-estimate}
+      chest_pain_radiation:  {expect: [arm_jaw_or_neck], source: gp-estimate}
+      chest_pain_trigger:    {expect: [exertion], source: gp-estimate}
+      chest_pain_duration:   {expect: [under_15_minutes], source: gp-estimate}
+      chest_pain_relief:     {expect: [rest_or_gtn], source: gp-estimate}
+      autonomic_symptoms:    {expect: [absent], source: gp-estimate}
+      known_ischaemic_heart_disease: {expect: [present], source: gp-estimate}
+      reproducible_on_palpation: {expect: [absent], source: gp-estimate}
+
+  pericarditis:
+    name: "Acute pericarditis"
+    parents: [pericardial]
+    codes: {icd10: I30.9}
+    urgency: same_day
+    features:
+      chest_pain_character: {expect: [sharp_stabbing], source: gp-estimate}
+      chest_pain_trigger:   {expect: [posture_change], source: gp-estimate}
+      chest_pain_relief:    {expect: [sitting_forward], source: gp-estimate}
+      chest_pain_duration:  {expect: [constant], source: gp-estimate}
+      pleuritic_pain:       {expect: [present], source: gp-estimate}
+      fever_history:        {expect: [present], source: gp-estimate}
+      autonomic_symptoms:   {expect: [absent], source: gp-estimate}
+
+  aortic-dissection:
+    name: "Aortic dissection"
+    parents: [aortic]
+    codes: {icd10: I71.0}
+    urgency: emergency
+    red_flag_features: [pain_onset_abruptness, chest_pain_character, chest_pain_radiation]
+    features:
+      chest_pain_character:  {expect: [tearing], source: gp-estimate}
+      chest_pain_radiation:  {expect: [between_shoulder_blades], source: gp-estimate}
+      pain_onset_abruptness: {expect: [instant_maximal], source: gp-estimate}
+      chest_pain_duration:   {expect: [constant], source: gp-estimate}
+      chest_pain_relief:     {expect: [nothing], source: gp-estimate}
+      autonomic_symptoms:    {expect: [present], source: gp-estimate}
+      reproducible_on_palpation: {expect: [absent], source: gp-estimate}

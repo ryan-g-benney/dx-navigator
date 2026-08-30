@@ -1,0 +1,13 @@
+complaints:
+  headache:
+    name: "Headache (adult)"
+    pool:
+      - tension-type-headache
+      - migraine
+      - cluster-headache
+      - medication-overuse-headache
+      - subarachnoid-haemorrhage
+      - bacterial-meningitis
+      - giant-cell-arteritis
+      - brain-tumour
+      - sinusitis

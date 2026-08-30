@@ -10,24 +10,8 @@ import re
 import sys
 from pathlib import Path
 
-WB = Path(".workbench/nice")
-
-
-def quote(slug: str, rec: str, end_marker: str | None = None) -> str:
-    """Pull recommendation `rec` from guideline `slug`, verbatim, whitespace-collapsed."""
-    for block in (WB / f"{slug}.txt").read_text().split("\n\n"):
-        m = re.match(rf"\[{re.escape(rec)}\]", block)
-        if not m:
-            continue
-        body = re.sub(r"\s+", " ", block[m.end():]).strip()
-        body = re.sub(rf"^{re.escape(rec)}\s*", "", body)
-        if end_marker:
-            idx = body.find(end_marker)
-            if idx == -1:
-                sys.exit(f"FAIL {slug} {rec}: end marker {end_marker!r} not found")
-            body = body[:idx].strip()
-        return body
-    sys.exit(f"FAIL {slug} {rec}: recommendation not found")
+sys.path.insert(0, str(Path(__file__).parent))
+from _nice import quote, y  # noqa: E402
 
 
 NG12 = "https://www.nice.org.uk/guidance/ng12"
@@ -48,9 +32,6 @@ Q = {
 for k, v in Q.items():
     print(f"  {k:14s} {len(v):>4} chars  {v[:70]}...")
 
-
-def y(s: str) -> str:
-    return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
 out = f"""# Acute cough / breathlessness -- NICE rules.
@@ -91,69 +72,11 @@ sources:
     note: "Replaced NG51, which NICE split into NG253/NG254/NG255 on 19 March 2024."
 
 variables:
-  age_years:
-    prompt: "How old is the patient?"
-    modality: history
-    cost: 0
-    values: [under_40, forty_to_64, sixty_five_or_over, unknown]
-  ever_smoked:
-    prompt: "Has the patient ever smoked?"
-    modality: history
-    cost: 0
-    values: [never, former, current, unknown]
-  weight_loss:
-    prompt: "Is there unexplained weight loss?"
-    modality: history
-    cost: 0
-    values: [present, absent, unknown]
-  appetite_loss:
-    prompt: "Has the appetite dropped?"
-    modality: history
-    cost: 0
-    values: [present, absent, unknown]
-  fatigue:
-    prompt: "Is the patient unusually tired?"
-    modality: history
-    cost: 0
-    values: [present, absent, unknown]
-  chest_pain_present:
-    prompt: "Is there chest pain?"
-    modality: history
-    cost: 0
-    values: [present, absent, unknown]
   finger_clubbing:
     prompt: "Is there finger clubbing?"
     modality: examination
     cost: 1
     values: [present, absent, unknown]
-  confusion_new:
-    prompt: "Is there new confusion?"
-    hint: "Abbreviated Mental Test score 8 or less, or new disorientation in person, place or time"
-    modality: examination
-    cost: 1
-    values: [present, absent, unknown]
-  low_blood_pressure:
-    prompt: "Is the blood pressure low?"
-    hint: "Systolic under 90 mmHg, or diastolic 60 mmHg or less"
-    modality: examination
-    cost: 2
-    values: [present, absent, unknown]
-  clinical_dvt_signs:
-    prompt: "Are there clinical signs of DVT?"
-    hint: "Minimum of leg swelling and pain with palpation of the deep veins"
-    modality: examination
-    cost: 1
-    values: [present, absent, unknown]
-  heart_rate_over_100:
-    prompt: "Is the heart rate over 100 beats per minute?"
-    modality: examination
-    cost: 1
-    values: [present, absent, unknown]
-  pe_alternative_less_likely:
-    prompt: "Is an alternative diagnosis less likely than PE?"
-    modality: history
-    cost: 0
-    values: [alternative_less_likely, alternative_at_least_as_likely, unknown]
 
 rules:
   ng12-lung-1.1.1:

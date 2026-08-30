@@ -6,7 +6,7 @@ f = Path(".workbench/nice") / f"{sys.argv[1]}.txt"
 want = sys.argv[2:]
 blocks = f.read_text().split("\n\n")
 for b in blocks:
-    m = re.match(r"\[(\d+\.\d+(?:\.\d+)?)\]", b)
+    m = re.match(r"\[(\d+\.\d+(?:\.\d+){0,2})\]", b)
     if m and m.group(1) in want:
         body = re.sub(r"\s+", " ", b[m.end():]).strip()
         body = re.sub(r"^" + re.escape(m.group(1)) + r"\s*", "", body)

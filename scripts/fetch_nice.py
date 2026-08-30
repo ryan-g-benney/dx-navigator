@@ -16,7 +16,7 @@ OUT = Path(__file__).resolve().parents[1] / ".workbench" / "nice"
 OUT.mkdir(parents=True, exist_ok=True)
 UA = "dx-navigator-research/0.1"
 
-REC = re.compile(r"(?=(?:^|\s)(\d+\.\d+(?:\.\d+)?)\s+[A-Z(])")
+REC = re.compile(r"(?=(?:^|\s)(\d+\.\d+(?:\.\d+){0,2})\s+[A-Z(])")
 
 
 def clean(raw: str) -> str:

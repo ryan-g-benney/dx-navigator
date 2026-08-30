@@ -214,11 +214,34 @@ class Rule(Strict):
         return self
 
 
+class Complaint(Strict):
+    """A presenting complaint and its candidate condition pool.
+
+    Pools are a cover, not a partition -- pulmonary embolism sits in both the
+    acute cough and the chest pain pool. That is why conditions live globally
+    and complaints only reference them.
+    """
+
+    slug: str
+    name: str
+    pool: list[str]
+
+    @field_validator("pool")
+    @classmethod
+    def _nonempty(cls, v: list[str]) -> list[str]:
+        if len(v) < 2:
+            raise ValueError("a complaint needs at least 2 candidate conditions")
+        if len(set(v)) != len(v):
+            raise ValueError("duplicate condition in pool")
+        return v
+
+
 class KnowledgeBase(Strict):
     sources: dict[str, Source]
     variables: dict[str, Variable]
     categories: dict[str, Category]
     conditions: dict[str, Condition]
+    complaints: dict[str, Complaint]
     rules: dict[str, Rule]
     version_hash: str
 
@@ -249,7 +272,8 @@ def load(data_dir: Path) -> KnowledgeBase:
         raise ValueError(f"no YAML found under {data_dir}")
 
     buckets: dict[str, dict] = {
-        "sources": {}, "variables": {}, "categories": {}, "conditions": {}, "rules": {},
+        "sources": {}, "variables": {}, "categories": {}, "conditions": {},
+        "complaints": {}, "rules": {},
     }
     hasher = hashlib.sha256()
     for path in files:
@@ -261,7 +285,8 @@ def load(data_dir: Path) -> KnowledgeBase:
             if section is None:
                 continue
             if isinstance(section, list):
-                section = {item["slug" if key in ("conditions", "categories") else "name" if key == "variables" else "id"]: item for item in section}
+                idkey = "slug" if key in ("conditions", "categories", "complaints") else "name" if key == "variables" else "id"
+                section = {item[idkey]: item for item in section}
             _merge(buckets[key], section, key, path)
 
     return KnowledgeBase(
@@ -269,6 +294,7 @@ def load(data_dir: Path) -> KnowledgeBase:
         variables={k: Variable(**({"name": k} | v)) for k, v in buckets["variables"].items()},
         categories={k: Category(**({"slug": k} | v)) for k, v in buckets["categories"].items()},
         conditions={k: Condition(**({"slug": k} | v)) for k, v in buckets["conditions"].items()},
+        complaints={k: Complaint(**({"slug": k} | v)) for k, v in buckets["complaints"].items()},
         rules={k: Rule(**({"id": k} | v)) for k, v in buckets["rules"].items()},
         version_hash=hasher.hexdigest()[:16],
     )

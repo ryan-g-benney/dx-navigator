@@ -1,0 +1,17 @@
+complaints:
+  chest-pain:
+    name: "Chest pain (non-traumatic, adult)"
+    # Pools are a cover, not a partition: pulmonary embolism, pneumonia and
+    # pericarditis are reachable from more than one presenting complaint.
+    pool:
+      - acute-coronary-syndrome
+      - stable-angina
+      - pericarditis
+      - aortic-dissection
+      - pulmonary-embolism
+      - pneumothorax
+      - community-acquired-pneumonia
+      - gastro-oesophageal-reflux
+      - oesophageal-spasm
+      - costochondritis
+      - anxiety-related-chest-pain

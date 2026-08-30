@@ -15,3 +15,21 @@ categories:
   upper-airway:                {name: "Upper airway", parents: [respiratory]}
   cardiac:                     {name: "Cardiac", parents: [cardiovascular]}
   vascular:                    {name: "Vascular", parents: [cardiovascular]}
+  musculoskeletal:  {name: "Musculoskeletal"}
+  neurological:     {name: "Neurological"}
+  psychological:    {name: "Psychological"}
+  infection:        {name: "Infection"}
+
+  coronary:              {name: "Coronary artery disease", parents: [cardiac]}
+  pericardial:           {name: "Pericardial", parents: [cardiac]}
+  aortic:                {name: "Aortic", parents: [vascular]}
+  pleural:               {name: "Pleural", parents: [respiratory]}
+  oesophageal:           {name: "Oesophageal", parents: [gastrointestinal]}
+  chest-wall:            {name: "Chest wall", parents: [musculoskeletal]}
+  primary-headache:      {name: "Primary headache", parents: [neurological]}
+  secondary-headache:    {name: "Secondary headache", parents: [neurological]}
+  intracranial-vascular: {name: "Intracranial vascular", parents: [neurological, vascular]}
+  cns-infection:         {name: "CNS infection", parents: [neurological, infection]}
+  cns-malignancy:        {name: "CNS malignancy", parents: [neurological]}
+  vasculitis:            {name: "Vasculitis", parents: [vascular]}
+

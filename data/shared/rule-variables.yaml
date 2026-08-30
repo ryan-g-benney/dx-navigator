@@ -1,0 +1,62 @@
+# Rule-driving variables shared across complaints. Kept here because the
+# loader rejects duplicate ids across files, and PE / cancer / sepsis
+# criteria recur in more than one presenting complaint.
+variables:
+  age_years:
+    prompt: "How old is the patient?"
+    modality: history
+    cost: 0
+    values: [under_40, forty_to_64, sixty_five_or_over, unknown]
+  ever_smoked:
+    prompt: "Has the patient ever smoked?"
+    modality: history
+    cost: 0
+    values: [never, former, current, unknown]
+  weight_loss:
+    prompt: "Is there unexplained weight loss?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  appetite_loss:
+    prompt: "Has the appetite dropped?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  fatigue:
+    prompt: "Is the patient unusually tired?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  chest_pain_present:
+    prompt: "Is there chest pain?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  confusion_new:
+    prompt: "Is there new confusion?"
+    hint: "Abbreviated Mental Test score 8 or less, or new disorientation in person, place or time"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+  low_blood_pressure:
+    prompt: "Is the blood pressure low?"
+    hint: "Systolic under 90 mmHg, or diastolic 60 mmHg or less"
+    modality: examination
+    cost: 2
+    values: [present, absent, unknown]
+  clinical_dvt_signs:
+    prompt: "Are there clinical signs of DVT?"
+    hint: "Minimum of leg swelling and pain with palpation of the deep veins"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+  heart_rate_over_100:
+    prompt: "Is the heart rate over 100 beats per minute?"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+  pe_alternative_less_likely:
+    prompt: "Is an alternative diagnosis less likely than PE?"
+    modality: history
+    cost: 0
+    values: [alternative_less_likely, alternative_at_least_as_likely, unknown]

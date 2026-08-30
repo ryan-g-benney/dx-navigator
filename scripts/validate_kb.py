@@ -56,6 +56,21 @@ def check_refs(kb: KnowledgeBase) -> None:
                 err(f"rule {rid}: clause var {clause.var!r} is not a declared variable")
 
 
+def check_complaints(kb: KnowledgeBase) -> None:
+    for slug, comp in kb.complaints.items():
+        for cond in comp.pool:
+            if cond not in kb.conditions:
+                err(f"complaint {slug}: pool references unknown condition {cond!r}")
+    pooled = {c for comp in kb.complaints.values() for c in comp.pool}
+    for cond in kb.conditions:
+        if cond not in pooled:
+            warn(f"condition {cond!r} is in no complaint pool -- unreachable")
+    for rid, r in kb.rules.items():
+        for c in r.complaints:
+            if c not in kb.complaints:
+                err(f"rule {rid}: unknown complaint {c!r}")
+
+
 def check_graph(kb: KnowledgeBase) -> None:
     nodes = set(kb.conditions) | set(kb.categories)
     for slug in nodes:
@@ -131,7 +146,7 @@ def main() -> int:
         print(f"LOAD FAILED\n{exc}", file=sys.stderr)
         return 1
 
-    for check in (check_refs, check_graph, check_safety, check_lattice):
+    for check in (check_refs, check_complaints, check_graph, check_safety, check_lattice):
         check(kb)
 
     print(f"kb version {kb.version_hash}")

@@ -1,0 +1,82 @@
+# Headache discriminating variables. Feature definitions follow the headache
+# characteristics table in NICE CG150; values are collapsed categoricals.
+variables:
+  headache_location:
+    prompt: "Where is the pain?"
+    modality: history
+    cost: 0
+    values: [bilateral, unilateral, periorbital, occipital, temporal, unknown]
+  headache_quality:
+    prompt: "What does the pain feel like?"
+    modality: history
+    cost: 0
+    values: [pressing_tightening, pulsating, sharp_boring, unknown]
+  headache_intensity:
+    prompt: "How severe is the pain?"
+    modality: history
+    cost: 0
+    values: [mild_moderate, moderate_severe, very_severe, unknown]
+  headache_onset:
+    prompt: "How quickly did the pain peak?"
+    modality: history
+    cost: 0
+    values: [instant_maximal, minutes, hours, days_or_longer, unknown]
+  headache_duration:
+    prompt: "How long does an attack last?"
+    modality: history
+    cost: 0
+    values: [under_1_hour, four_to_72_hours, constant, unknown]
+  aura:
+    prompt: "Are there reversible neurological symptoms beforehand?"
+    hint: "Fully reversible, developing over at least 5 minutes, lasting 5 to 60 minutes"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  photophobia:
+    prompt: "Is there sensitivity to light?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  neck_stiffness:
+    prompt: "Is there neck stiffness?"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+  non_blanching_rash:
+    prompt: "Is there a non-blanching rash?"
+    hint: "Petechial or purpuric; test with a glass"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+  scalp_tenderness:
+    prompt: "Is the scalp tender?"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+  jaw_claudication:
+    prompt: "Is there jaw pain on chewing?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  worse_on_waking:
+    prompt: "Is the headache worse on waking?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  focal_neurology:
+    prompt: "Is there new focal neurological deficit?"
+    modality: examination
+    cost: 3
+    values: [present, absent, unknown]
+  analgesic_overuse:
+    prompt: "Are painkillers taken on most days?"
+    hint: "15 or more days a month, for three months or more"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  autonomic_cranial_features:
+    prompt: "Is there tearing on the affected side?"
+    hint: "Lacrimation, conjunctival injection, ptosis, nasal congestion"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
