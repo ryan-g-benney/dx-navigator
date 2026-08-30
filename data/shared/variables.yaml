@@ -1,0 +1,115 @@
+# Shared clinical variables. Complaint-specific rule variables live alongside
+# their rules; anything reusable across complaints belongs here.
+#
+# modality: history (cost 0) | examination (cost 1-3) | point_of_care (cost 4+)
+# `investigation` is not a legal modality — an investigation is an output.
+variables:
+  cough_character:
+    prompt: "What is the cough like?"
+    modality: history
+    cost: 0
+    values: [dry, productive_clear, productive_purulent, blood_stained, none, unknown]
+
+  cough_duration:
+    prompt: "How long has the cough lasted?"
+    modality: history
+    cost: 0
+    values: [under_3_weeks, three_to_8_weeks, over_8_weeks, unknown]
+
+  onset_speed:
+    prompt: "How quickly did this come on?"
+    modality: history
+    cost: 0
+    values: [seconds_to_minutes, hours, days, weeks_or_longer, unknown]
+
+  fever_history:
+    prompt: "Has the patient felt feverish?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+
+  breathlessness:
+    prompt: "Is the patient short of breath?"
+    modality: history
+    cost: 0
+    values: [none, on_exertion, at_rest, unknown]
+
+  pleuritic_pain:
+    prompt: "Is the chest pain worse on breathing in?"
+    modality: history
+    cost: 0
+    values: [present, absent, no_chest_pain, unknown]
+
+  wheeze_history:
+    prompt: "Does the patient report wheezing?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+
+  orthopnoea:
+    prompt: "Is breathing worse lying flat?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+
+  calf_swelling:
+    prompt: "Is there unilateral calf swelling?"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+
+  recent_immobility:
+    prompt: "Any thrombosis risk factor in the last 4 weeks?"
+    hint: "Immobility, surgery, long-haul travel, active cancer, pregnancy"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+
+  auscultation:
+    prompt: "What do you hear on auscultation?"
+    modality: examination
+    cost: 2
+    values: [clear, focal_crackles, bilateral_basal_crackles, widespread_wheeze, reduced_air_entry, unknown]
+
+  respiratory_rate:
+    prompt: "What is the respiratory rate?"
+    modality: examination
+    cost: 1
+    values: [under_20, twenty_to_24, twenty_five_or_over, unknown]
+
+  oxygen_saturation:
+    prompt: "What is the oxygen saturation on air?"
+    modality: point_of_care
+    cost: 4
+    values: [ninety_five_or_over, ninety_two_to_94, under_92, unknown]
+
+  ankle_oedema:
+    prompt: "Is there bilateral ankle oedema?"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]
+
+  coryza:
+    prompt: "Are there nasal symptoms?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+
+  ace_inhibitor:
+    prompt: "Is the patient taking an ACE inhibitor?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+
+  known_airways_disease:
+    prompt: "Is there a known airways diagnosis?"
+    modality: history
+    cost: 0
+    values: [asthma, copd, neither, unknown]
+
+  symptom_severity:
+    prompt: "How severe are the symptoms today?"
+    modality: history
+    role: disposition
+    cost: 0
+    values: [mild, moderate, severe, unknown]

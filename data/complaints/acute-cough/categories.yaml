@@ -1,0 +1,17 @@
+# Aetiological hierarchy. A DAG, not a tree — pulmonary embolism reaches both
+# vascular and respiratory. First parent listed on a condition is the primary
+# one, used for breadcrumbs; the rest are for inference and display.
+categories:
+  respiratory:      {name: "Respiratory"}
+  cardiovascular:   {name: "Cardiovascular"}
+  gastrointestinal: {name: "Gastrointestinal"}
+  iatrogenic:       {name: "Iatrogenic"}
+
+  respiratory-infection:       {name: "Respiratory tract infection", parents: [respiratory]}
+  upper-respiratory-infection: {name: "Upper respiratory tract infection", parents: [respiratory-infection]}
+  lower-respiratory-infection: {name: "Lower respiratory tract infection", parents: [respiratory-infection]}
+  airways-disease:             {name: "Chronic airways disease", parents: [respiratory]}
+  respiratory-malignancy:      {name: "Respiratory malignancy", parents: [respiratory]}
+  upper-airway:                {name: "Upper airway", parents: [respiratory]}
+  cardiac:                     {name: "Cardiac", parents: [cardiovascular]}
+  vascular:                    {name: "Vascular", parents: [cardiovascular]}

@@ -1,0 +1,8 @@
+sources:
+  gp-estimate:
+    type: estimate
+    title: "Clinical estimate — authored, pending clinician review"
+    note: >-
+      Not a published figure. Authored from general clinical knowledge and
+      flagged for review by a practising UK GP before any clinical use. The UI
+      must display assertions carrying this source as estimates.

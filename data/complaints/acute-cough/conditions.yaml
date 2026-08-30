@@ -1,0 +1,210 @@
+# Acute cough / breathlessness in an adult, UK general practice.
+#
+# EVERY feature here carries source: gp-estimate. None is a published figure.
+# All weights are 1.0 — flat matching, per docs/phase-0-simplified-engine.md.
+# The weight field exists so likelihoods become a data change later.
+#
+# UNVERIFIED: icd10 codes below are written from general knowledge and have NOT
+# been checked against a licensed ICD-10 release. snomed and icpc2 are pending
+# NHS TRUD access. Do not treat any code here as authoritative yet.
+conditions:
+  acute-bronchitis:
+    name: "Acute bronchitis"
+    parents: [lower-respiratory-infection]
+    codes: {icd10: J20.9}
+    urgency: routine
+    features:
+      cough_character:   {expect: [productive_clear, productive_purulent, dry], source: gp-estimate}
+      cough_duration:    {expect: [under_3_weeks], source: gp-estimate}
+      onset_speed:       {expect: [days], source: gp-estimate}
+      fever_history:     {expect: [absent, present], source: gp-estimate}
+      auscultation:      {expect: [clear, widespread_wheeze], source: gp-estimate}
+      respiratory_rate:  {expect: [under_20], source: gp-estimate}
+      oxygen_saturation: {expect: [ninety_five_or_over], source: gp-estimate}
+
+  community-acquired-pneumonia:
+    name: "Community-acquired pneumonia"
+    parents: [lower-respiratory-infection]
+    codes: {icd10: J18.9}
+    urgency: same_day
+    features:
+      cough_character:   {expect: [productive_purulent], source: gp-estimate}
+      cough_duration:    {expect: [under_3_weeks], source: gp-estimate}
+      onset_speed:       {expect: [days], source: gp-estimate}
+      fever_history:     {expect: [present], source: gp-estimate}
+      breathlessness:    {expect: [on_exertion, at_rest], source: gp-estimate}
+      pleuritic_pain:    {expect: [present], source: gp-estimate}
+      auscultation:      {expect: [focal_crackles], source: gp-estimate}
+      respiratory_rate:  {expect: [twenty_to_24, twenty_five_or_over], source: gp-estimate}
+      oxygen_saturation: {expect: [ninety_two_to_94, under_92], source: gp-estimate}
+
+  upper-respiratory-tract-infection:
+    name: "Upper respiratory tract infection"
+    parents: [upper-respiratory-infection]
+    codes: {icd10: J06.9}
+    urgency: routine
+    features:
+      cough_character:   {expect: [dry, productive_clear], source: gp-estimate}
+      cough_duration:    {expect: [under_3_weeks], source: gp-estimate}
+      onset_speed:       {expect: [days], source: gp-estimate}
+      coryza:            {expect: [present], source: gp-estimate}
+      fever_history:     {expect: [absent], source: gp-estimate}
+      breathlessness:    {expect: [none], source: gp-estimate}
+      auscultation:      {expect: [clear], source: gp-estimate}
+      oxygen_saturation: {expect: [ninety_five_or_over], source: gp-estimate}
+
+  influenza:
+    name: "Influenza"
+    parents: [respiratory-infection]
+    codes: {icd10: J11.1}
+    urgency: routine
+    features:
+      cough_character:  {expect: [dry], source: gp-estimate}
+      cough_duration:   {expect: [under_3_weeks], source: gp-estimate}
+      onset_speed:      {expect: [hours], source: gp-estimate}
+      fever_history:    {expect: [present], source: gp-estimate}
+      coryza:           {expect: [present], source: gp-estimate}
+      symptom_severity: {expect: [moderate, severe], source: gp-estimate}
+      auscultation:     {expect: [clear], source: gp-estimate}
+
+  covid-19:
+    name: "COVID-19"
+    parents: [respiratory-infection]
+    codes: {icd10: U07.1}
+    urgency: routine
+    features:
+      cough_character:   {expect: [dry], source: gp-estimate}
+      cough_duration:    {expect: [under_3_weeks], source: gp-estimate}
+      onset_speed:       {expect: [days], source: gp-estimate}
+      fever_history:     {expect: [present, absent], source: gp-estimate}
+      breathlessness:    {expect: [none, on_exertion], source: gp-estimate}
+      oxygen_saturation: {expect: [ninety_five_or_over, ninety_two_to_94], source: gp-estimate}
+
+  pertussis:
+    name: "Pertussis (whooping cough)"
+    parents: [lower-respiratory-infection]
+    codes: {icd10: A37.9}
+    urgency: urgent
+    features:
+      cough_character: {expect: [dry], source: gp-estimate}
+      cough_duration:  {expect: [three_to_8_weeks, over_8_weeks], source: gp-estimate}
+      onset_speed:     {expect: [weeks_or_longer], source: gp-estimate}
+      fever_history:   {expect: [absent], source: gp-estimate}
+      coryza:          {expect: [present], source: gp-estimate}
+      auscultation:    {expect: [clear], source: gp-estimate}
+
+  pulmonary-tuberculosis:
+    name: "Pulmonary tuberculosis"
+    parents: [lower-respiratory-infection]
+    codes: {icd10: A15.0}
+    urgency: urgent
+    features:
+      cough_character: {expect: [productive_purulent, blood_stained], source: gp-estimate}
+      cough_duration:  {expect: [over_8_weeks], source: gp-estimate}
+      onset_speed:     {expect: [weeks_or_longer], source: gp-estimate}
+      fever_history:   {expect: [present], source: gp-estimate}
+      breathlessness:  {expect: [none, on_exertion], source: gp-estimate}
+
+  asthma-exacerbation:
+    name: "Asthma exacerbation"
+    parents: [airways-disease]
+    codes: {icd10: J45.9}
+    urgency: same_day
+    features:
+      cough_character:       {expect: [dry], source: gp-estimate}
+      onset_speed:           {expect: [hours, days], source: gp-estimate}
+      wheeze_history:        {expect: [present], source: gp-estimate}
+      breathlessness:        {expect: [on_exertion, at_rest], source: gp-estimate}
+      known_airways_disease: {expect: [asthma], source: gp-estimate}
+      auscultation:          {expect: [widespread_wheeze], source: gp-estimate}
+      fever_history:         {expect: [absent], source: gp-estimate}
+
+  copd-exacerbation:
+    name: "COPD exacerbation"
+    parents: [airways-disease]
+    codes: {icd10: J44.1}
+    urgency: same_day
+    features:
+      cough_character:       {expect: [productive_purulent], source: gp-estimate}
+      onset_speed:           {expect: [days], source: gp-estimate}
+      wheeze_history:        {expect: [present], source: gp-estimate}
+      breathlessness:        {expect: [on_exertion, at_rest], source: gp-estimate}
+      known_airways_disease: {expect: [copd], source: gp-estimate}
+      auscultation:          {expect: [widespread_wheeze, reduced_air_entry], source: gp-estimate}
+      oxygen_saturation:     {expect: [ninety_two_to_94, under_92], source: gp-estimate}
+
+  acute-heart-failure:
+    name: "Acute heart failure"
+    parents: [cardiac]
+    codes: {icd10: I50.9}
+    urgency: same_day
+    features:
+      cough_character:   {expect: [dry, productive_clear], source: gp-estimate}
+      onset_speed:       {expect: [days], source: gp-estimate}
+      breathlessness:    {expect: [on_exertion, at_rest], source: gp-estimate}
+      orthopnoea:        {expect: [present], source: gp-estimate}
+      ankle_oedema:      {expect: [present], source: gp-estimate}
+      auscultation:      {expect: [bilateral_basal_crackles], source: gp-estimate}
+      fever_history:     {expect: [absent], source: gp-estimate}
+      oxygen_saturation: {expect: [ninety_two_to_94, under_92], source: gp-estimate}
+
+  pulmonary-embolism:
+    name: "Pulmonary embolism"
+    # Multi-parent: legitimately both vascular and respiratory. This is the case
+    # the DAG requirement exists for.
+    parents: [vascular, respiratory]
+    codes: {icd10: I26.9}
+    urgency: emergency
+    red_flag_features: [pleuritic_pain, calf_swelling, recent_immobility]
+    features:
+      cough_character:   {expect: [dry, blood_stained], source: gp-estimate}
+      onset_speed:       {expect: [seconds_to_minutes, hours], source: gp-estimate}
+      breathlessness:    {expect: [at_rest, on_exertion], source: gp-estimate}
+      pleuritic_pain:    {expect: [present], source: gp-estimate}
+      calf_swelling:     {expect: [present], source: gp-estimate}
+      recent_immobility: {expect: [present], source: gp-estimate}
+      auscultation:      {expect: [clear], source: gp-estimate}
+      respiratory_rate:  {expect: [twenty_five_or_over], source: gp-estimate}
+      fever_history:     {expect: [absent], source: gp-estimate}
+
+  lung-cancer:
+    name: "Lung cancer"
+    parents: [respiratory-malignancy]
+    codes: {icd10: C34.9}
+    urgency: urgent
+    red_flag_features: [cough_character, cough_duration]
+    features:
+      cough_character: {expect: [blood_stained, dry], source: gp-estimate}
+      cough_duration:  {expect: [over_8_weeks], source: gp-estimate}
+      onset_speed:     {expect: [weeks_or_longer], source: gp-estimate}
+      breathlessness:  {expect: [on_exertion], source: gp-estimate}
+      fever_history:   {expect: [absent], source: gp-estimate}
+      auscultation:    {expect: [reduced_air_entry, clear], source: gp-estimate}
+
+  upper-airway-cough-syndrome:
+    name: "Upper airway cough syndrome"
+    parents: [upper-airway]
+    codes: {icd10: R05}
+    urgency: routine
+    features:
+      cough_character: {expect: [dry, productive_clear], source: gp-estimate}
+      cough_duration:  {expect: [three_to_8_weeks, over_8_weeks], source: gp-estimate}
+      onset_speed:     {expect: [weeks_or_longer], source: gp-estimate}
+      coryza:          {expect: [present], source: gp-estimate}
+      breathlessness:  {expect: [none], source: gp-estimate}
+      auscultation:    {expect: [clear], source: gp-estimate}
+      fever_history:   {expect: [absent], source: gp-estimate}
+
+  ace-inhibitor-cough:
+    name: "ACE inhibitor-induced cough"
+    parents: [iatrogenic]
+    codes: {icd10: R05}
+    urgency: routine
+    features:
+      cough_character: {expect: [dry], source: gp-estimate}
+      cough_duration:  {expect: [over_8_weeks], source: gp-estimate}
+      onset_speed:     {expect: [weeks_or_longer], source: gp-estimate}
+      ace_inhibitor:   {expect: [present], source: gp-estimate}
+      fever_history:   {expect: [absent], source: gp-estimate}
+      breathlessness:  {expect: [none], source: gp-estimate}
+      auscultation:    {expect: [clear], source: gp-estimate}
