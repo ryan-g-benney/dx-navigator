@@ -75,7 +75,7 @@ variables:
     prompt: "What is the respiratory rate?"
     modality: examination
     cost: 1
-    values: [under_20, twenty_to_24, twenty_five_or_over, unknown]
+    values: [under_20, twenty_to_24, twenty_five_to_29, thirty_or_over, unknown]
 
   oxygen_saturation:
     prompt: "What is the oxygen saturation on air?"

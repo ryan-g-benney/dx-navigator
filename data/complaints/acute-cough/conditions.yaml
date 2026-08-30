@@ -35,7 +35,7 @@ conditions:
       breathlessness:    {expect: [on_exertion, at_rest], source: gp-estimate}
       pleuritic_pain:    {expect: [present], source: gp-estimate}
       auscultation:      {expect: [focal_crackles], source: gp-estimate}
-      respiratory_rate:  {expect: [twenty_to_24, twenty_five_or_over], source: gp-estimate}
+      respiratory_rate:  {expect: [twenty_to_24, twenty_five_to_29], source: gp-estimate}
       oxygen_saturation: {expect: [ninety_two_to_94, under_92], source: gp-estimate}
 
   upper-respiratory-tract-infection:
@@ -164,7 +164,7 @@ conditions:
       calf_swelling:     {expect: [present], source: gp-estimate}
       recent_immobility: {expect: [present], source: gp-estimate}
       auscultation:      {expect: [clear], source: gp-estimate}
-      respiratory_rate:  {expect: [twenty_five_or_over], source: gp-estimate}
+      respiratory_rate:  {expect: [twenty_five_to_29, thirty_or_over], source: gp-estimate}
       fever_history:     {expect: [absent], source: gp-estimate}
 
   lung-cancer:

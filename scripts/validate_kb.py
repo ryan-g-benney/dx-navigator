@@ -109,9 +109,12 @@ def check_lattice(kb: KnowledgeBase) -> None:
     # Discrimination floor. A variable is dead weight only if EVERY condition
     # treats it identically. Conditions that leave it unstated form their own
     # group -- a variable stated by some and not others still separates them.
+    rule_vars = {c.var for r in kb.rules.values() for c in [*r.all_of, *r.any_of]}
     for name, var in kb.variables.items():
         if var.role is Role.DISPOSITION:
             continue  # disposition variables are not meant to discriminate
+        if name in rule_vars:
+            continue  # exists to drive a rule, not to rank -- not dead weight
         groups: set[object] = set()
         for c in kb.conditions.values():
             feat = c.features.get(name)

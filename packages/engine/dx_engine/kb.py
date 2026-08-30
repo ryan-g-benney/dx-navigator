@@ -197,12 +197,20 @@ class Rule(Strict):
     complaints: list[str]
     all_of: list[Clause] = Field(default_factory=list)
     any_of: list[Clause] = Field(default_factory=list)
+    # NICE criteria are often "2 or more of the following". any_of alone would
+    # fire on one, which over-refers -- safe in direction but not the guideline.
+    min_matches: int = Field(default=1, ge=1)
     emit: Emit
 
     @model_validator(mode="after")
     def _has_condition(self) -> "Rule":
         if not self.all_of and not self.any_of:
             raise ValueError(f"rule {self.id}: no predicate -- would fire always")
+        if self.min_matches > max(len(self.any_of), 1):
+            raise ValueError(
+                f"rule {self.id}: min_matches={self.min_matches} exceeds "
+                f"{len(self.any_of)} any_of clauses -- can never fire"
+            )
         return self
 
 
