@@ -69,4 +69,58 @@ for slug, c in kb.conditions.items():
     if c.urgency.value == "emergency":
         assert c.red_flag_features, f"{slug} is an emergency with no red flag"
 
+# --- engine behaviour ---
+from dx_engine import session as S  # noqa: E402
+from dx_engine.score import rank  # noqa: E402
+
+# unknown is a genuine no-op, not a weak signal
+base = {"cough_character": "productive_purulent", "fever_history": "present"}
+assert rank(kb, "acute-cough", base) == rank(kb, "acute-cough", base | {"orthopnoea": "unknown"})
+
+# belief is order-invariant even though the question sequence is not
+a = S.start("acute-cough")
+for k, v in base.items():
+    a = S.step(kb, a, k, v)
+b = S.start("acute-cough")
+for k, v in reversed(list(base.items())):
+    b = S.step(kb, b, k, v)
+assert [r.slug for r in S.view(kb, a).ranked] == [r.slug for r in S.view(kb, b).ranked]
+
+# undo is exact: it restores the earlier state, nothing to unwind
+assert S.undo(S.step(kb, a, "orthopnoea", "present")).answers == a.answers
+
+rejects(lambda: S.step(kb, a, "orthopnoea", "sideways"), "illegal value for a variable")
+rejects(lambda: S.step(kb, a, "no_such_variable", "present"), "unknown variable")
+
+# an escalation reached before the differential separates must be provisional,
+# and must list every emergency it has not excluded
+diss = {"chest_pain_character": "tearing", "chest_pain_radiation": "between_shoulder_blades",
+        "pain_onset_abruptness": "instant_maximal", "autonomic_symptoms": "present",
+        "chest_pain_duration": "constant", "chest_pain_relief": "nothing",
+        "reproducible_on_palpation": "absent"}
+st = S.start("chest-pain")
+while (v := S.view(kb, st)).stop is S.Stop.ONGOING:
+    st = S.step(kb, st, v.question, diss.get(v.question, "unknown"))
+v = S.view(kb, st)
+assert v.stop is S.Stop.EMERGENCY
+assert v.provisional, "early escalation must not be presented as an answer"
+assert "aortic-dissection" in v.emergency_outstanding
+
+# unknown never satisfies a rule clause, so it cannot trigger an escalation.
+# That is deliberate -- a no-op must not be a weak yes -- and the outstanding
+# emergency list is what stops the omission being silent.
+thin = dict(diss, chest_pain_duration="unknown")
+st2 = S.start("chest-pain")
+while (v2 := S.view(kb, st2)).stop is S.Stop.ONGOING:
+    st2 = S.step(kb, st2, v2.question, thin.get(v2.question, "unknown"))
+v2 = S.view(kb, st2)
+assert v2.stop is not S.Stop.EMERGENCY
+assert "aortic-dissection" in v2.emergency_outstanding
+
+# answering unknown to everything must never produce a confident leader
+st = S.start("acute-cough")
+while (v := S.view(kb, st)).stop is S.Stop.ONGOING:
+    st = S.step(kb, st, v.question, "unknown")
+assert S.view(kb, st).stop is S.Stop.INSUFFICIENT
+
 print(f"all checks passed — kb {kb.version_hash}, {len(kb.conditions)} conditions")

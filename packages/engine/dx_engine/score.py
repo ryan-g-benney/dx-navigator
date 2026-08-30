@@ -17,6 +17,13 @@ from dataclasses import dataclass
 from .kb import UNKNOWN, Complaint, KnowledgeBase
 
 EVIDENCE_FLOOR = 3  # below this a condition is not eligible for rank 1
+# Normalising to [-1, 1] saturates: 3-of-3 ties with 5-of-5. Shrink toward zero
+# by weight of evidence so a thinly-matched condition cannot tie a well-matched
+# one. This is the "2-of-2 beats 9-of-10" failure named in
+# docs/phase-0-simplified-engine.md §2.1, which the evidence floor alone fixed
+# for ranking but not for stopping.
+# ponytail: k is a guess; fit it against independent vignettes.
+SHRINKAGE_K = 2.0
 
 
 @dataclass(frozen=True)
@@ -30,6 +37,11 @@ class Ranked:
     @property
     def insufficient(self) -> bool:
         return self.evidence < EVIDENCE_FLOOR
+
+    @property
+    def confidence_weighted(self) -> float:
+        """Score shrunk toward zero by how much evidence stands behind it."""
+        return self.normalised * self.evidence / (self.evidence + SHRINKAGE_K)
 
 
 def score_condition(kb: KnowledgeBase, slug: str, answers: dict[str, str]) -> Ranked:
@@ -58,7 +70,7 @@ def rank(kb: KnowledgeBase, complaint: str, answers: dict[str, str],
     """Rank a complaint's pool. Sorted by score, then by weight of evidence."""
     comp: Complaint = kb.complaints[complaint]
     scored = [score_condition(kb, s, answers) for s in comp.pool]
-    scored.sort(key=lambda r: (r.insufficient, -r.normalised, -r.evidence, r.slug))
+    scored.sort(key=lambda r: (r.insufficient, -r.confidence_weighted, -r.evidence, r.slug))
     return scored[:top]
 
 
