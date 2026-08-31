@@ -79,3 +79,19 @@ variables:
     modality: examination
     cost: 1
     values: [present, absent, unknown]
+
+  # The last two Wells criteria. They had no variables while the scraped table
+  # was missing a row; with the table intact the score can be completed.
+  previous_dvt_pe:
+    prompt: "Has the patient had a previous venous thromboembolism?"
+    hint: "A previously documented DVT or PE"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  active_malignancy:
+    prompt: "Is there active malignancy?"
+    hint: "On treatment, treated in the last 6 months, or palliative"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+

@@ -30,7 +30,12 @@ Q = {
     "ng158_wells": (
         "Table 2 Two-level PE Wells score Clinical feature Points Clinical signs "
         "and symptoms of DVT (minimum of leg swelling and pain with palpation of "
-        "the deep veins) 3 An alternative diagnosis is less likely than PE 3"),
+        "the deep veins) 3 An alternative diagnosis is less likely than PE 3 Heart "
+        "rate more than 100 beats per minute 1.5 Immobilisation for more than 3 "
+        "days or surgery in the previous 4 weeks 1.5 Previous DVT/PE 1.5 "
+        "Haemoptysis 1 Malignancy (on treatment, treated in the last 6 months, or "
+        "palliative) 1 Clinical probability simplified score Points PE likely More "
+        "than 4 points PE unlikely 4 points or less"),
     "ng253_1_5_2": quote("ng253-risk", "1.5.2", "[2016"),
 }
 for k, v in Q.items():
@@ -191,11 +196,8 @@ rules:
   # The two-level PE Wells score, weighted rather than counted: two 1.5-point
   # items are not one 3-point item, and the threshold is more than 4.
   #
-  # Two criteria have no variable, malignancy and previous DVT or PE, worth
-  # 1 and 1.5. A patient scoring only on those is missed here. The scraped
-  # table is also short a row, because the recommendation-number regex in
-  # fetch_nice.py eats "[1.5] 1.5"; the points below follow the published
-  # score, and the quote is trimmed to the part that survived intact.
+  # All seven criteria, totalling 12 points. Haemoptysis is read off
+  # cough_character rather than a variable of its own.
   ng158-pe-wells-table-2:
     complaints: [acute-cough, chest-pain]
     min_score: 4.5
@@ -204,7 +206,9 @@ rules:
       - {{var: pe_alternative_less_likely, op: "==", value: alternative_less_likely, points: 3}}
       - {{var: heart_rate_over_100, op: "==", value: present, points: 1.5}}
       - {{var: recent_immobility, op: "==", value: present, points: 1.5}}
+      - {{var: previous_dvt_pe, op: "==", value: present, points: 1.5}}
       - {{var: cough_character, op: "==", value: blood_stained, points: 1}}
+      - {{var: active_malignancy, op: "==", value: present, points: 1}}
     emit:
       kind: investigation
       urgency: same_day
