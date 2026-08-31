@@ -27,6 +27,10 @@ Q = {
     "ng158_1_1_15": quote("ng158", "1.1.15", "Pulmonary embolism rule-out"),
     "ng158_1_1_17": quote("ng158", "1.1.17", "Table 2"),
     "ng250_1_2_3": quote("ng250", "1.2.3", "[2025]"),
+    "ng158_wells": (
+        "Table 2 Two-level PE Wells score Clinical feature Points Clinical signs "
+        "and symptoms of DVT (minimum of leg swelling and pain with palpation of "
+        "the deep veins) 3 An alternative diagnosis is less likely than PE 3"),
     "ng253_1_5_2": quote("ng253-risk", "1.5.2", "[2016"),
 }
 for k, v in Q.items():
@@ -167,8 +171,12 @@ rules:
       text_verbatim: {y(Q["ng158_1_1_17"])}
       source: ng158
 
+  # CRB65 is a count, so min_matches expresses it exactly. Two or more is the
+  # threshold NICE gives for referral; on one point the recommendation is
+  # primary care with safety netting, which is not what this text says.
   ng250-cap-1.2.3:
     complaints: [acute-cough]
+    min_matches: 2
     any_of:
       - {{var: confusion_new, op: "==", value: present}}
       - {{var: respiratory_rate, op: "==", value: thirty_or_over}}
@@ -179,6 +187,29 @@ rules:
       urgency: same_day
       text_verbatim: {y(Q["ng250_1_2_3"])}
       source: ng250
+
+  # The two-level PE Wells score, weighted rather than counted: two 1.5-point
+  # items are not one 3-point item, and the threshold is more than 4.
+  #
+  # Two criteria have no variable, malignancy and previous DVT or PE, worth
+  # 1 and 1.5. A patient scoring only on those is missed here. The scraped
+  # table is also short a row, because the recommendation-number regex in
+  # fetch_nice.py eats "[1.5] 1.5"; the points below follow the published
+  # score, and the quote is trimmed to the part that survived intact.
+  ng158-pe-wells-table-2:
+    complaints: [acute-cough, chest-pain]
+    min_score: 4.5
+    any_of:
+      - {{var: clinical_dvt_signs, op: "==", value: present, points: 3}}
+      - {{var: pe_alternative_less_likely, op: "==", value: alternative_less_likely, points: 3}}
+      - {{var: heart_rate_over_100, op: "==", value: present, points: 1.5}}
+      - {{var: recent_immobility, op: "==", value: present, points: 1.5}}
+      - {{var: cough_character, op: "==", value: blood_stained, points: 1}}
+    emit:
+      kind: investigation
+      urgency: same_day
+      text_verbatim: {y(Q["ng158_wells"])}
+      source: ng158
 
   ng253-sepsis-1.5.2:
     complaints: [acute-cough]

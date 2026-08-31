@@ -36,7 +36,13 @@ def fired(kb: KnowledgeBase, complaint: str, answers: dict[str, str]) -> list[Ru
             continue
         if not all(_holds(c, answers) for c in rule.all_of):
             continue
-        if rule.any_of and sum(_holds(c, answers) for c in rule.any_of) < rule.min_matches:
-            continue
+        if rule.any_of:
+            if rule.min_score is not None:
+                # Weighted: sum the points of the criteria that hold.
+                score = sum(c.points or 0 for c in rule.any_of if _holds(c, answers))
+                if score < rule.min_score:
+                    continue
+            elif sum(_holds(c, answers) for c in rule.any_of) < rule.min_matches:
+                continue
         out.append(rule)
     return out

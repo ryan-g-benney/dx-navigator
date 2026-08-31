@@ -185,6 +185,10 @@ class Clause(Strict):
     var: str
     op: Literal["==", "!=", ">=", "<=", ">", "<", "in"]
     value: str | int | float | list[str]
+    # Weighted scores such as Wells give each criterion a different value and
+    # test a threshold. Counting matches cannot express that: two 1.5-point
+    # items are not one 3-point item. Absent means the rule counts instead.
+    points: float | None = None
 
 
 class Rule(Strict):
@@ -200,12 +204,28 @@ class Rule(Strict):
     # NICE criteria are often "2 or more of the following". any_of alone would
     # fire on one, which over-refers -- safe in direction but not the guideline.
     min_matches: int = Field(default=1, ge=1)
+    # Set with points on the any_of clauses to score rather than count. The
+    # rule fires when the summed points of satisfied clauses reach min_score.
+    min_score: float | None = None
     emit: Emit
 
     @model_validator(mode="after")
     def _has_condition(self) -> "Rule":
         if not self.all_of and not self.any_of:
             raise ValueError(f"rule {self.id}: no predicate -- would fire always")
+        scored = [c for c in self.any_of if c.points is not None]
+        if self.min_score is not None:
+            if not scored:
+                raise ValueError(
+                    f"rule {self.id}: min_score set but no any_of clause has points")
+            if sum(c.points for c in scored) < self.min_score:
+                raise ValueError(
+                    f"rule {self.id}: min_score={self.min_score} exceeds the "
+                    f"{sum(c.points for c in scored)} points available -- can never fire")
+        elif scored:
+            raise ValueError(
+                f"rule {self.id}: clauses carry points but min_score is unset -- "
+                f"the points would be silently ignored")
         if self.min_matches > max(len(self.any_of), 1):
             raise ValueError(
                 f"rule {self.id}: min_matches={self.min_matches} exceeds "

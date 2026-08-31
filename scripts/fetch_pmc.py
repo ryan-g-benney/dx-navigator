@@ -27,19 +27,25 @@ def text_of(xml: str, tag: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", m.group(1))).strip() if m else ""
 
 
-def fetch(pmcid: str) -> None:
+def fetch(pmcid: str) -> bool:
+    """Cache the article, or report why it cannot be quoted. True if cached."""
     r = subprocess.run(
         ["curl", "-sSL", "-m", "60", "-A", UA,
          f"{EUTILS}?db=pmc&id={pmcid}&retmode=xml"],
         capture_output=True, text=True, check=True)
     xml = r.stdout
     if "<article" not in xml:
-        sys.exit(f"PMC{pmcid}: no article returned")
+        print(f"PMC{pmcid}  SKIP  no article returned")
+        return False
 
     licence = text_of(xml, "license")
+    # An article in PMC is not automatically reusable: "free to read" and
+    # "licensed to redistribute" are different things. Without a Creative
+    # Commons licence we must not cache text we would then quote.
     if "creativecommons.org" not in xml:
-        sys.exit(f"PMC{pmcid}: no Creative Commons licence found -- refusing to "
-                 f"cache an article we cannot quote. Licence text: {licence[:120]!r}")
+        print(f"PMC{pmcid}  SKIP  no Creative Commons licence "
+              f"({licence[:60].strip() or 'none stated'}...)")
+        return False
 
     body = re.sub(r"(?is)<(table-wrap|ref-list)[^>]*>.*?</\1>", " ", xml)
     body = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", body)).strip()
@@ -51,12 +57,15 @@ def fetch(pmcid: str) -> None:
         f"LICENCE: {licence}\n"
         f"CHARS: {len(body)}\n\n{body}\n")
     print(f"PMC{pmcid}  {len(body):>7} chars  -> {path.name}")
+    return True
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         sys.exit(__doc__)
+    kept = 0
     for i, pid in enumerate(sys.argv[1:]):
         if i:
             time.sleep(1)  # NCBI asks for 3 requests/second at most
-        fetch(pid)
+        kept += fetch(pid)
+    print(f"\ncached {kept} of {len(sys.argv) - 1}")
