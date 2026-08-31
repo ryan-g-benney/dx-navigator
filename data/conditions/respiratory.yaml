@@ -27,6 +27,7 @@ conditions:
     parents: [lower-respiratory-infection]
     codes: {snomed: '385093006', icd10: J18.9}
     urgency: same_day
+    red_flag_features: [respiratory_rate, oxygen_saturation, breathlessness]
     features:
       immunosuppression: {expect: [present], source: gp-estimate}
       cough_character:   {expect: [productive_purulent], source: gp-estimate}
@@ -112,6 +113,7 @@ conditions:
     parents: [airways-disease]
     codes: {icd10: J45.9}
     urgency: same_day
+    red_flag_features: [breathlessness, auscultation]
     features:
       cough_character:       {expect: [dry], source: gp-estimate}
       onset_speed:           {expect: [hours, days], source: gp-estimate}
@@ -126,6 +128,7 @@ conditions:
     parents: [airways-disease]
     codes: {icd10: J44.1}
     urgency: same_day
+    red_flag_features: [breathlessness, oxygen_saturation]
     features:
       cough_character:       {expect: [productive_purulent], source: gp-estimate}
       onset_speed:           {expect: [days], source: gp-estimate}
@@ -140,6 +143,7 @@ conditions:
     parents: [cardiac]
     codes: {snomed: '56675007', icd10: I50.9}
     urgency: same_day
+    red_flag_features: [orthopnoea, breathlessness, oxygen_saturation]
     features:
       cough_character:   {expect: [dry, productive_clear], source: gp-estimate}
       onset_speed:       {expect: [days], source: gp-estimate}
