@@ -6,7 +6,7 @@ conditions:
   tension-type-headache:
     name: "Tension-type headache"
     parents: [primary-headache]
-    codes: {icd10: G44.2}
+    codes: {snomed: '398057008', icd10: G44.2}
     urgency: routine
     features:
       headache_location:   {expect: [bilateral], source: gp-estimate}
@@ -21,7 +21,7 @@ conditions:
   migraine:
     name: "Migraine"
     parents: [primary-headache]
-    codes: {icd10: G43.9}
+    codes: {snomed: '37796009', icd10: G43.9}
     urgency: routine
     features:
       headache_location:  {expect: [unilateral, bilateral], source: gp-estimate}
@@ -36,7 +36,7 @@ conditions:
   cluster-headache:
     name: "Cluster headache"
     parents: [primary-headache]
-    codes: {icd10: G44.0}
+    codes: {snomed: '193031009', icd10: G44.0}
     urgency: urgent
     features:
       sex:               {expect: [male], source: gp-estimate}
@@ -51,7 +51,7 @@ conditions:
   medication-overuse-headache:
     name: "Medication overuse headache"
     parents: [secondary-headache]
-    codes: {icd10: G44.4}
+    codes: {snomed: '698803006', icd10: G44.4}
     urgency: routine
     features:
       headache_location:  {expect: [bilateral], source: gp-estimate}
@@ -79,7 +79,7 @@ conditions:
   bacterial-meningitis:
     name: "Bacterial meningitis"
     parents: [cns-infection]
-    codes: {icd10: G00.9}
+    codes: {snomed: '95883001', icd10: G00.9}
     urgency: emergency
     red_flag_features: [neck_stiffness, non_blanching_rash, confusion_new]
     features:
@@ -95,7 +95,7 @@ conditions:
   giant-cell-arteritis:
     name: "Giant cell arteritis"
     parents: [vasculitis]
-    codes: {icd10: M31.6}
+    codes: {snomed: '414341000', icd10: M31.6}
     urgency: emergency
     red_flag_features: [scalp_tenderness, jaw_claudication, headache_location]
     features:
@@ -126,7 +126,7 @@ conditions:
   sinusitis:
     name: "Acute sinusitis"
     parents: [secondary-headache, upper-respiratory-infection]
-    codes: {icd10: J01.9}
+    codes: {snomed: '15805002', icd10: J01.9}
     urgency: routine
     features:
       headache_location: {expect: [periorbital], source: gp-estimate}

@@ -11,7 +11,7 @@ conditions:
   acute-bronchitis:
     name: "Acute bronchitis"
     parents: [lower-respiratory-infection]
-    codes: {icd10: J20.9}
+    codes: {snomed: '10509002', icd10: J20.9}
     urgency: routine
     features:
       cough_character:   {expect: [productive_clear, productive_purulent, dry], source: gp-estimate}
@@ -25,7 +25,7 @@ conditions:
   community-acquired-pneumonia:
     name: "Community-acquired pneumonia"
     parents: [lower-respiratory-infection]
-    codes: {icd10: J18.9}
+    codes: {snomed: '385093006', icd10: J18.9}
     urgency: same_day
     features:
       immunosuppression: {expect: [present], source: gp-estimate}
@@ -57,7 +57,7 @@ conditions:
   influenza:
     name: "Influenza"
     parents: [respiratory-infection]
-    codes: {icd10: J11.1}
+    codes: {snomed: '6142004', icd10: J11.1}
     urgency: routine
     features:
       cough_character:  {expect: [dry], source: gp-estimate}
@@ -97,7 +97,7 @@ conditions:
   pulmonary-tuberculosis:
     name: "Pulmonary tuberculosis"
     parents: [lower-respiratory-infection]
-    codes: {icd10: A15.0}
+    codes: {snomed: '154283005', icd10: A15.0}
     urgency: urgent
     features:
       immunosuppression: {expect: [present], source: gp-estimate}
@@ -138,7 +138,7 @@ conditions:
   acute-heart-failure:
     name: "Acute heart failure"
     parents: [cardiac]
-    codes: {icd10: I50.9}
+    codes: {snomed: '56675007', icd10: I50.9}
     urgency: same_day
     features:
       cough_character:   {expect: [dry, productive_clear], source: gp-estimate}
@@ -155,7 +155,7 @@ conditions:
     # Multi-parent: legitimately both vascular and respiratory. This is the case
     # the DAG requirement exists for.
     parents: [vascular, respiratory]
-    codes: {icd10: I26.9}
+    codes: {snomed: '59282003', icd10: I26.9}
     urgency: emergency
     red_flag_features: [pleuritic_pain, calf_swelling, recent_immobility]
     features:

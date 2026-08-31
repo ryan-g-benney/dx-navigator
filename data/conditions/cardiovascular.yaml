@@ -4,7 +4,7 @@ conditions:
   acute-coronary-syndrome:
     name: "Acute coronary syndrome"
     parents: [coronary]
-    codes: {icd10: I24.9}
+    codes: {snomed: '394659003', icd10: I24.9}
     urgency: emergency
     red_flag_features: [chest_pain_duration, autonomic_symptoms, chest_pain_radiation]
     features:
@@ -21,7 +21,7 @@ conditions:
   stable-angina:
     name: "Stable angina"
     parents: [coronary]
-    codes: {icd10: I20.9}
+    codes: {snomed: '233819005', icd10: I20.9}
     urgency: urgent
     features:
       chest_pain_character:  {expect: [constricting], source: gp-estimate}
@@ -36,7 +36,7 @@ conditions:
   pericarditis:
     name: "Acute pericarditis"
     parents: [pericardial]
-    codes: {icd10: I30.9}
+    codes: {snomed: '15555002', icd10: I30.9}
     urgency: same_day
     features:
       chest_pain_character: {expect: [sharp_stabbing], source: gp-estimate}

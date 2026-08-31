@@ -5,7 +5,7 @@ conditions:
   acute-angle-closure-glaucoma:
     name: "Acute angle-closure glaucoma"
     parents: [ophthalmic]
-    codes: {icd10: H40.2}
+    codes: {snomed: '30041005', icd10: H40.2}
     urgency: emergency
     red_flag_features: [eye_pain_red_eye, visual_disturbance]
     features:
@@ -37,7 +37,7 @@ conditions:
   cervicogenic-headache:
     name: "Cervicogenic headache"
     parents: [secondary-headache, musculoskeletal]
-    codes: {icd10: G44.86}
+    codes: {snomed: '279016001', icd10: G44.86}
     urgency: routine
     features:
       headache_location:      {expect: [occipital, unilateral], source: gp-estimate}
@@ -51,7 +51,7 @@ conditions:
   trigeminal-neuralgia:
     name: "Trigeminal neuralgia"
     parents: [cranial-nerve]
-    codes: {icd10: G50.0}
+    codes: {snomed: '31681005', icd10: G50.0}
     urgency: urgent
     features:
       headache_location:      {expect: [unilateral], source: gp-estimate}
@@ -79,7 +79,7 @@ conditions:
   myocarditis:
     name: "Myocarditis"
     parents: [cardiac]
-    codes: {icd10: I40.9}
+    codes: {snomed: '50920009', icd10: I40.9}
     urgency: same_day
     red_flag_features: [recent_viral_illness, breathlessness]
     features:
@@ -122,7 +122,7 @@ conditions:
   atrial-fibrillation:
     name: "Atrial fibrillation"
     parents: [arrhythmia]
-    codes: {icd10: I48.9}
+    codes: {snomed: '49436004', icd10: I48.9}
     urgency: urgent
     features:
       breathlessness:   {expect: [on_exertion], source: gp-estimate}
@@ -151,7 +151,7 @@ conditions:
   bronchiectasis:
     name: "Bronchiectasis"
     parents: [airways-structural]
-    codes: {icd10: J47}
+    codes: {snomed: '12295008', icd10: J47}
     urgency: routine
     features:
       cough_character:        {expect: [productive_purulent], source: gp-estimate}

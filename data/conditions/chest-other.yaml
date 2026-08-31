@@ -2,7 +2,7 @@ conditions:
   pneumothorax:
     name: "Spontaneous pneumothorax"
     parents: [pleural]
-    codes: {icd10: J93.9}
+    codes: {snomed: '80423007', icd10: J93.9}
     urgency: emergency
     red_flag_features: [pain_onset_abruptness, breathlessness]
     features:
