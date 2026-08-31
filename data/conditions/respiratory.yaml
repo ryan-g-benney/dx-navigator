@@ -36,6 +36,11 @@ conditions:
       fever_history:     {expect: [present], source: gp-estimate}
       breathlessness:    {expect: [on_exertion, at_rest], source: gp-estimate}
       pleuritic_pain:    {expect: [present], source: gp-estimate}
+      # In the chest-pain pool this condition shared no variable with the
+      # conditions modelled through chest_pain_*, so the two were never
+      # compared. The character follows from pleuritic_pain above rather
+      # than being a new claim: pleuritic pain is sharp by definition.
+      chest_pain_character:  {expect: [sharp_stabbing], source: nhs-coverage-audit}
       auscultation:      {expect: [focal_crackles], source: gp-estimate}
       respiratory_rate:  {expect: [twenty_to_24, twenty_five_to_29], source: gp-estimate}
       oxygen_saturation: {expect: [ninety_two_to_94, under_92], source: gp-estimate}
@@ -168,6 +173,11 @@ conditions:
       onset_speed:       {expect: [seconds_to_minutes, hours], source: gp-estimate}
       breathlessness:    {expect: [at_rest, on_exertion], source: gp-estimate}
       pleuritic_pain:    {expect: [present], source: gp-estimate}
+      # In the chest-pain pool this condition shared no variable with the
+      # conditions modelled through chest_pain_*, so the two were never
+      # compared. The character follows from pleuritic_pain above rather
+      # than being a new claim: pleuritic pain is sharp by definition.
+      chest_pain_character:  {expect: [sharp_stabbing], source: nhs-coverage-audit}
       calf_swelling:     {expect: [present], source: gp-estimate}
       recent_immobility: {expect: [present], source: gp-estimate}
       auscultation:      {expect: [clear], source: gp-estimate}
