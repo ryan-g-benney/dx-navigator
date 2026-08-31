@@ -13,6 +13,10 @@ conditions:
       auscultation:          {expect: [reduced_air_entry], source: gp-estimate}
       reproducible_on_palpation: {expect: [absent], source: gp-estimate}
       fever_history:         {expect: [absent], source: gp-estimate}
+      # A dermatomal rash is pathognomonic of shingles and this condition does
+      # not cause one. Stated because silence scores zero: without it the
+      # ranking cannot separate shingles from anything else in this pool.
+      rash_dermatomal:       {expect: [absent], source: nhs-coverage-audit}
 
   gastro-oesophageal-reflux:
     name: "Gastro-oesophageal reflux disease"
@@ -26,6 +30,10 @@ conditions:
       chest_pain_radiation: {expect: [nowhere], source: gp-estimate}
       autonomic_symptoms:   {expect: [absent], source: gp-estimate}
       breathlessness:       {expect: [none], source: gp-estimate}
+      # A dermatomal rash is pathognomonic of shingles and this condition does
+      # not cause one. Stated because silence scores zero: without it the
+      # ranking cannot separate shingles from anything else in this pool.
+      rash_dermatomal:       {expect: [absent], source: nhs-coverage-audit}
 
   oesophageal-spasm:
     name: "Oesophageal spasm"
@@ -38,6 +46,10 @@ conditions:
       chest_pain_duration:  {expect: [under_15_minutes], source: gp-estimate}
       chest_pain_relief:    {expect: [rest_or_gtn, antacid], source: gp-estimate}
       autonomic_symptoms:   {expect: [absent], source: gp-estimate}
+      # A dermatomal rash is pathognomonic of shingles and this condition does
+      # not cause one. Stated because silence scores zero: without it the
+      # ranking cannot separate shingles from anything else in this pool.
+      rash_dermatomal:       {expect: [absent], source: nhs-coverage-audit}
 
   costochondritis:
     name: "Costochondritis"
@@ -51,6 +63,10 @@ conditions:
       chest_pain_radiation:      {expect: [nowhere], source: gp-estimate}
       autonomic_symptoms:        {expect: [absent], source: gp-estimate}
       breathlessness:            {expect: [none], source: gp-estimate}
+      # A dermatomal rash is pathognomonic of shingles and this condition does
+      # not cause one. Stated because silence scores zero: without it the
+      # ranking cannot separate shingles from anything else in this pool.
+      rash_dermatomal:       {expect: [absent], source: nhs-coverage-audit}
 
   anxiety-related-chest-pain:
     name: "Anxiety-related chest pain"
@@ -67,3 +83,7 @@ conditions:
       autonomic_symptoms:    {expect: [present], source: gp-estimate}
       pain_onset_abruptness: {expect: [built_over_minutes], source: gp-estimate}
       reproducible_on_palpation: {expect: [absent], source: gp-estimate}
+      # A dermatomal rash is pathognomonic of shingles and this condition does
+      # not cause one. Stated because silence scores zero: without it the
+      # ranking cannot separate shingles from anything else in this pool.
+      rash_dermatomal:       {expect: [absent], source: nhs-coverage-audit}

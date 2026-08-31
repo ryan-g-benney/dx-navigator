@@ -17,6 +17,10 @@ conditions:
       pain_onset_abruptness: {expect: [built_over_minutes], source: gp-estimate}
       reproducible_on_palpation: {expect: [absent], source: gp-estimate}
       breathlessness:        {expect: [at_rest, on_exertion], source: gp-estimate}
+      # A dermatomal rash is pathognomonic of shingles and this condition does
+      # not cause one. Stated because silence scores zero: without it the
+      # ranking cannot separate shingles from anything else in this pool.
+      rash_dermatomal:       {expect: [absent], source: nhs-coverage-audit}
 
   stable-angina:
     name: "Stable angina"
@@ -32,6 +36,10 @@ conditions:
       autonomic_symptoms:    {expect: [absent], source: gp-estimate}
       known_ischaemic_heart_disease: {expect: [present], source: gp-estimate}
       reproducible_on_palpation: {expect: [absent], source: gp-estimate}
+      # A dermatomal rash is pathognomonic of shingles and this condition does
+      # not cause one. Stated because silence scores zero: without it the
+      # ranking cannot separate shingles from anything else in this pool.
+      rash_dermatomal:       {expect: [absent], source: nhs-coverage-audit}
 
   pericarditis:
     name: "Acute pericarditis"
@@ -47,6 +55,10 @@ conditions:
       pleuritic_pain:       {expect: [present], source: gp-estimate}
       fever_history:        {expect: [present], source: gp-estimate}
       autonomic_symptoms:   {expect: [absent], source: gp-estimate}
+      # A dermatomal rash is pathognomonic of shingles and this condition does
+      # not cause one. Stated because silence scores zero: without it the
+      # ranking cannot separate shingles from anything else in this pool.
+      rash_dermatomal:       {expect: [absent], source: nhs-coverage-audit}
 
   aortic-dissection:
     name: "Aortic dissection"
@@ -62,3 +74,7 @@ conditions:
       chest_pain_relief:     {expect: [nothing], source: gp-estimate}
       autonomic_symptoms:    {expect: [present], source: gp-estimate}
       reproducible_on_palpation: {expect: [absent], source: gp-estimate}
+      # A dermatomal rash is pathognomonic of shingles and this condition does
+      # not cause one. Stated because silence scores zero: without it the
+      # ranking cannot separate shingles from anything else in this pool.
+      rash_dermatomal:       {expect: [absent], source: nhs-coverage-audit}

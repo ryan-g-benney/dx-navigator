@@ -44,6 +44,10 @@ conditions:
       auscultation:      {expect: [focal_crackles], source: gp-estimate}
       respiratory_rate:  {expect: [twenty_to_24, twenty_five_to_29], source: gp-estimate}
       oxygen_saturation: {expect: [ninety_two_to_94, under_92], source: gp-estimate}
+      # A dermatomal rash is pathognomonic of shingles and this condition does
+      # not cause one. Stated because silence scores zero: without it the
+      # ranking cannot separate shingles from anything else in this pool.
+      rash_dermatomal:       {expect: [absent], source: nhs-coverage-audit}
 
   upper-respiratory-tract-infection:
     name: "Upper respiratory tract infection"
@@ -183,6 +187,10 @@ conditions:
       auscultation:      {expect: [clear], source: gp-estimate}
       respiratory_rate:  {expect: [twenty_five_to_29, thirty_or_over], source: gp-estimate}
       fever_history:     {expect: [absent], source: gp-estimate}
+      # A dermatomal rash is pathognomonic of shingles and this condition does
+      # not cause one. Stated because silence scores zero: without it the
+      # ranking cannot separate shingles from anything else in this pool.
+      rash_dermatomal:       {expect: [absent], source: nhs-coverage-audit}
 
   lung-cancer:
     name: "Lung cancer"

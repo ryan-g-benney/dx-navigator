@@ -25,11 +25,20 @@ from dx_engine.kb import load  # noqa: E402
 
 
 def separators(kb, a: str, b: str) -> tuple[list[str], set[str]]:
-    """Variables whose expected values are disjoint, and the shared variables."""
+    """Variables that can separate the pair, and the variables they share.
+
+    Differing is the test, not disjointness. If one expects [present, absent]
+    and the other [absent], an answer of present matches the first and
+    mismatches the second, which moves the ranking. Requiring disjoint sets
+    misses that and reports a pair as undecidable when it is not -- shingles
+    against the rest of the chest-pain pool is exactly that case, because
+    shingles expects the rash either way to cover the pre-eruptive
+    presentation.
+    """
     fa, fb = kb.conditions[a].features, kb.conditions[b].features
     shared = set(fa) & set(fb)
     return [v for v in sorted(shared)
-            if not (set(fa[v].expect) & set(fb[v].expect))], shared
+            if set(fa[v].expect) != set(fb[v].expect)], shared
 
 
 def main() -> None:
