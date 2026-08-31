@@ -104,6 +104,26 @@ SLUG = {
     "acute-angle-closure-glaucoma": "glaucoma",
     "carbon-monoxide-poisoning": "carbon-monoxide-poisoning",
     "anxiety-related-chest-pain": "generalised-anxiety-disorder",
+    # Symptom pages rather than condition pages. For this audit that is if
+    # anything better: the page lists the dangerous causes of the presentation,
+    # which is exactly the set a benign cause needs to argue against. Several
+    # benign headaches share one page for the same reason.
+    "medication-overuse-headache": "headaches",
+    "cervicogenic-headache": "headaches",
+    "oesophageal-spasm": "chest-pain",
+    "hyperventilation-syndrome": "chest-pain",
+}
+
+
+# Proposals rejected on clinical grounds, kept so they cannot be re-proposed
+# silently. Each is a case where the cue matched but the assertion would be
+# wrong, and only reading the entry catches it.
+EXCLUDE: dict[tuple[str, str], str] = {
+    ("migraine", "visual_disturbance"):
+        "visual disturbance is migraine aura; the entry already asserts aura",
+    ("cervicogenic-headache", "neck_stiffness"):
+        "arises from the cervical spine and asserts neck_movement_provokes; "
+        "neck findings are expected, not absent",
 }
 
 

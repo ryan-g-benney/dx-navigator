@@ -72,6 +72,15 @@ conditions:
       analgesic_overuse:  {expect: [present], source: gp-estimate}
       worse_on_waking:    {expect: [present], source: gp-estimate}
       focal_neurology:    {expect: [absent], source: gp-estimate}
+      # Red flags the NHS description raises for this presentation but that
+      # this condition does not cause. Asserting absent is what separates it
+      # from the dangerous causes; unstated would score zero.
+      confusion_new:       {expect: [absent], source: nhs-coverage-audit}
+      neck_stiffness:      {expect: [absent], source: nhs-coverage-audit}
+      non_blanching_rash:  {expect: [absent], source: nhs-coverage-audit}
+      visual_disturbance:  {expect: [absent], source: nhs-coverage-audit}
+      jaw_claudication:    {expect: [absent], source: nhs-coverage-audit}
+      scalp_tenderness:    {expect: [absent], source: nhs-coverage-audit}
 
   subarachnoid-haemorrhage:
     name: "Subarachnoid haemorrhage"
