@@ -60,3 +60,22 @@ variables:
     modality: history
     cost: 0
     values: [alternative_less_likely, alternative_at_least_as_likely, unknown]
+
+  # Ottawa SAH rule items the knowledge base did not already have a variable
+  # for. age_years, neck_stiffness and headache_onset cover the other three.
+  loss_of_consciousness_witnessed:
+    prompt: "Did anyone witness a loss of consciousness?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  onset_during_exertion:
+    prompt: "Did the headache begin during exertion?"
+    modality: history
+    cost: 0
+    values: [present, absent, unknown]
+  limited_neck_flexion:
+    prompt: "Is neck flexion limited on examination?"
+    hint: "Inability to touch chin to chest, or to raise the head 8 cm off the bed"
+    modality: examination
+    cost: 1
+    values: [present, absent, unknown]

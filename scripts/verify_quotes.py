@@ -13,15 +13,18 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "packages" / "engin
 from dx_engine.kb import load  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
-WB = ROOT / ".workbench" / "nice"
+# Guideline text and open-access literature are fetched by different scripts
+# into different directories; a quote may legitimately come from either.
+CORPORA = (ROOT / ".workbench" / "nice", ROOT / ".workbench" / "lit")
 
 corpus = {}
-for f in WB.glob("*.txt"):
-    corpus[f.stem] = re.sub(r"\s+", " ", f.read_text())
+for d in CORPORA:
+    for f in d.glob("*.txt"):
+        corpus[f.stem] = re.sub(r"\s+", " ", f.read_text())
 
 kb = load(ROOT / "data")
 if not corpus:
-    print("no fetched sources in .workbench/nice -- run scripts/fetch_nice.py first")
+    print("no fetched sources -- run scripts/fetch_nice.py or scripts/fetch_pmc.py first")
     raise SystemExit(1)
 
 bad = 0

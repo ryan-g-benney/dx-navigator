@@ -7,6 +7,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 from _nice import quote, y  # noqa: E402
 
 CG150 = "https://www.nice.org.uk/guidance/cg150"
+PMC8373882 = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8373882/"
+CCBY = "https://creativecommons.org/licenses/by/4.0/"
 NG12 = "https://www.nice.org.uk/guidance/ng12"
 NG240 = "https://www.nice.org.uk/guidance/ng240"
 LIC = "https://www.nice.org.uk/reusing-our-content/nice-uk-open-content-licence"
@@ -14,6 +16,12 @@ LIC = "https://www.nice.org.uk/reusing-our-content/nice-uk-open-content-licence"
 Q = {
     "cns_cancer": quote("ng12-lung", "1.9.1", "[2015]"),
     "headache_evaluate": quote("cg150", "1.1.1", "[2012]"),
+    "ottawa_sah": (
+        "The rule consists of six items: (1) age \u2265 40 years, (2) neck pain or "
+        "stiffness, (3) witnessed loss of consciousness, (4) onset during exertion, "
+        "(5) thunderclap headache (instantly peaking pain), and (6) limited neck "
+        "flexion on examination. If all of the six items are absent, the patients "
+        "with acute headache are thought to be at low risk of SAH."),
     "meningitis_red_flag": quote("ng240", "1.1.4"),
     "meningococcal_red_flag": quote("ng240", "1.1.9"),
 }
@@ -34,6 +42,12 @@ out = f"""# Headache -- NICE rules.
 #  has to decide whether the tool may assert an urgency NICE does not state.
 
 sources:
+  pmc8373882:
+    type: published
+    title: "External validation for sensitivity of the Ottawa subarachnoid hemorrhage rule in a Japanese tertiary teaching hospital"
+    url: {PMC8373882}
+    licence: {CCBY}
+    attribution: "Suzuki T, Itokazu D, Tokuda Y. Sci Rep 2021;11:16889. Licensed CC BY 4.0."
   cg150:
     type: guideline
     title: "Headaches in over 12s: diagnosis and management"
@@ -71,6 +85,30 @@ rules:
       urgency: urgent
       text_verbatim: {y(Q["headache_evaluate"])}
       source: cg150
+
+  # The Ottawa rule is a rule-OUT tool: high sensitivity, low specificity, so a
+  # single present item means SAH cannot be excluded, not that it is likely.
+  # Two caveats the encoding cannot express and a reviewer must weigh.
+  # Its entry criterion is an alert patient over 15 with new atraumatic headache
+  # peaking within an hour; the knowledge base has no variable for that, so the
+  # rule is applied more widely here than it was validated for. And age 40 or
+  # over is on its own enough to fire it, which is the intended behaviour of a
+  # rule-out tool and will still flag most older patients with a headache.
+  ottawa-sah-six-items:
+    complaints: [headache]
+    min_matches: 1
+    any_of:
+      - {{var: age_years, op: in, value: [forty_to_64, sixty_five_or_over]}}
+      - {{var: neck_stiffness, op: "==", value: present}}
+      - {{var: loss_of_consciousness_witnessed, op: "==", value: present}}
+      - {{var: onset_during_exertion, op: "==", value: present}}
+      - {{var: headache_onset, op: "==", value: instant_maximal}}
+      - {{var: limited_neck_flexion, op: "==", value: present}}
+    emit:
+      kind: investigation
+      urgency: same_day
+      text_verbatim: {y(Q["ottawa_sah"])}
+      source: pmc8373882
 
   # NG240 1.1.4 is an all-of: the red flag combination requires every symptom.
   ng240-meningitis-red-flag-1.1.4:
