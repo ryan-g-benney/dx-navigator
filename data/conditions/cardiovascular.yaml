@@ -51,7 +51,7 @@ conditions:
   aortic-dissection:
     name: "Aortic dissection"
     parents: [aortic]
-    codes: {icd10: I71.0}
+    codes: {snomed: '308546005', icd10: I71.0}
     urgency: emergency
     red_flag_features: [pain_onset_abruptness, chest_pain_character, chest_pain_radiation]
     features:

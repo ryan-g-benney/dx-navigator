@@ -23,7 +23,7 @@ conditions:
   carbon-monoxide-poisoning:
     name: "Carbon monoxide poisoning"
     parents: [toxic]
-    codes: {icd10: T58}
+    codes: {snomed: '17383000', icd10: T58}
     urgency: emergency
     red_flag_features: [household_others_affected, symptoms_improve_away_from_home]
     features:
@@ -39,7 +39,8 @@ conditions:
   cervicogenic-headache:
     name: "Cervicogenic headache"
     parents: [secondary-headache, musculoskeletal]
-    codes: {snomed: '279016001', icd10: G44.86}
+    # G44.86 is ICD-10-CM only; WHO ICD-10 stops at G44.8. SNOMED maps here.
+    codes: {snomed: '279016001', icd10: G44.8}
     urgency: routine
     features:
       headache_location:      {expect: [occipital, unilateral], source: gp-estimate}
@@ -67,7 +68,7 @@ conditions:
   herpes-zoster:
     name: "Herpes zoster (shingles)"
     parents: [infection, chest-wall]
-    codes: {icd10: B02.9}
+    codes: {snomed: '4740000', icd10: B02.9}
     urgency: urgent
     features:
       chest_pain_character:      {expect: [burning, sharp_stabbing], source: gp-estimate}
@@ -96,7 +97,7 @@ conditions:
   peptic-ulcer-disease:
     name: "Peptic ulcer disease"
     parents: [gastric]
-    codes: {icd10: K27.9}
+    codes: {snomed: '13200003', icd10: K27.9}
     urgency: routine
     features:
       chest_pain_character: {expect: [burning, aching], source: gp-estimate}
@@ -110,7 +111,9 @@ conditions:
   iron-deficiency-anaemia:
     name: "Anaemia"
     parents: [haematological]
-    codes: {icd10: D64.9}
+    # SNOMED 'Anemia' -- unspecified, matching this entry's own name and D64.9. The slug
+    # says iron deficiency and the entry does not; one of the two is wrong.
+    codes: {snomed: '271737000', icd10: D64.9}
     urgency: routine
     features:
       breathlessness:   {expect: [on_exertion], source: gp-estimate}
@@ -138,7 +141,10 @@ conditions:
   hyperventilation-syndrome:
     name: "Hyperventilation syndrome"
     parents: [functional]
-    codes: {icd10: F45.33}
+    # SNOMED SNOMED's term is 'Psychogenic hyperventilation'; no concept is named
+    # hyperventilation syndrome outright.
+    # F45.33 is ICD-10-CM only; WHO ICD-10 stops at F45.3. SNOMED maps here.
+    codes: {snomed: '191956005', icd10: F45.3}
     urgency: routine
     features:
       breathlessness:    {expect: [at_rest], source: gp-estimate}

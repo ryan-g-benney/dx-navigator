@@ -43,7 +43,7 @@ conditions:
   upper-respiratory-tract-infection:
     name: "Upper respiratory tract infection"
     parents: [upper-respiratory-infection]
-    codes: {icd10: J06.9}
+    codes: {snomed: '54150009', icd10: J06.9}
     urgency: routine
     features:
       cough_character:   {expect: [dry, productive_clear], source: gp-estimate}
@@ -72,7 +72,7 @@ conditions:
   covid-19:
     name: "COVID-19"
     parents: [respiratory-infection]
-    codes: {icd10: U07.1}
+    codes: {snomed: '840539006', icd10: U07.1}
     urgency: routine
     features:
       cough_character:   {expect: [dry], source: gp-estimate}
@@ -85,7 +85,7 @@ conditions:
   pertussis:
     name: "Pertussis (whooping cough)"
     parents: [lower-respiratory-infection]
-    codes: {icd10: A37.9}
+    codes: {snomed: '27836007', icd10: A37.9}
     urgency: urgent
     features:
       cough_character: {expect: [dry], source: gp-estimate}
@@ -111,7 +111,7 @@ conditions:
   asthma-exacerbation:
     name: "Asthma exacerbation"
     parents: [airways-disease]
-    codes: {icd10: J45.9}
+    codes: {snomed: '281239006', icd10: J45.9}
     urgency: same_day
     red_flag_features: [breathlessness, auscultation]
     features:
@@ -126,7 +126,7 @@ conditions:
   copd-exacerbation:
     name: "COPD exacerbation"
     parents: [airways-disease]
-    codes: {icd10: J44.1}
+    codes: {snomed: '195951007', icd10: J44.1}
     urgency: same_day
     red_flag_features: [breathlessness, oxygen_saturation]
     features:
@@ -177,7 +177,7 @@ conditions:
   lung-cancer:
     name: "Lung cancer"
     parents: [respiratory-malignancy]
-    codes: {icd10: C34.9}
+    codes: {snomed: '363358000', icd10: C34.9}
     urgency: urgent
     red_flag_features: [cough_character, cough_duration]
     features:
@@ -191,6 +191,8 @@ conditions:
   upper-airway-cough-syndrome:
     name: "Upper airway cough syndrome"
     parents: [upper-airway]
+    # No SNOMED code: SNOMED has postnasal drip findings and a management procedure, but no
+    # disorder concept for upper airway cough syndrome
     codes: {icd10: R05}
     urgency: routine
     features:
@@ -205,6 +207,7 @@ conditions:
   ace-inhibitor-cough:
     name: "ACE inhibitor-induced cough"
     parents: [iatrogenic]
+    # No SNOMED code: no active SNOMED concept for ACE inhibitor-induced cough
     codes: {icd10: R05}
     urgency: routine
     features:

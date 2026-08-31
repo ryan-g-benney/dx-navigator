@@ -17,7 +17,7 @@ conditions:
   gastro-oesophageal-reflux:
     name: "Gastro-oesophageal reflux disease"
     parents: [oesophageal]
-    codes: {icd10: K21.9}
+    codes: {snomed: '235595009', icd10: K21.9}
     urgency: routine
     features:
       chest_pain_character: {expect: [burning], source: gp-estimate}
@@ -30,7 +30,7 @@ conditions:
   oesophageal-spasm:
     name: "Oesophageal spasm"
     parents: [oesophageal]
-    codes: {icd10: K22.4}
+    codes: {snomed: '79962008', icd10: K22.4}
     urgency: routine
     features:
       chest_pain_character: {expect: [constricting], source: gp-estimate}
@@ -42,7 +42,7 @@ conditions:
   costochondritis:
     name: "Costochondritis"
     parents: [chest-wall]
-    codes: {icd10: M94.0}
+    codes: {snomed: '64109004', icd10: M94.0}
     urgency: routine
     features:
       chest_pain_character:      {expect: [sharp_stabbing, aching], source: gp-estimate}
@@ -55,6 +55,8 @@ conditions:
   anxiety-related-chest-pain:
     name: "Anxiety-related chest pain"
     parents: [psychological]
+    # No SNOMED code: no anxiety-specific chest pain concept; 274668005 Non-cardiac chest pain is
+    # broader than this entry and would overstate the match
     codes: {icd10: F41.0}
     urgency: routine
     features:

@@ -10,6 +10,7 @@ Only concept ids -- which we already store -- ever reach data/.
     trud_snomed.py releases [ITEM]   list what this key can see
     trud_snomed.py fetch [ITEM]      download the latest release archive
     trud_snomed.py check             compare data/categories.yaml against SNOMED
+    trud_snomed.py icd10             check our ICD-10 codes against SNOMED's map
 
 The relationship file is read straight out of the zip; unpacking a 1 GB release
 to disk twice buys nothing.
@@ -202,6 +203,60 @@ def check(archive: Path) -> None:
           f"{len(kb.categories)}")
 
 
+def icd10(archive: Path) -> None:
+    """Compare each condition's ICD-10 code against the SNOMED to ICD-10 map.
+
+    The map is the licensed cross-check the keyless route could not do: it
+    catches ICD-10-CM codes that do not exist in WHO ICD-10, and codes less
+    specific than the condition they sit on.
+    """
+    kb = load(ROOT / "data")
+    coded = {s: c for s, c in kb.conditions.items() if c.codes.snomed and c.codes.icd10}
+    want = {c.codes.snomed for c in coded.values()}
+
+    maps: dict[str, set[str]] = defaultdict(set)
+    with zipfile.ZipFile(archive) as z:
+        for name in z.namelist():
+            base = name.rsplit("/", 1)[-1]
+            if "/Snapshot/" not in name or not name.endswith(".txt"):
+                continue
+            if "ExtendedMap" not in base:
+                continue
+            with z.open(name) as fh:
+                rows = csv.DictReader(io.TextIOWrapper(fh, "utf-8"), delimiter="\t",
+                                      quoting=csv.QUOTE_NONE)
+                for r in rows:
+                    if r["active"] == "1" and r["referencedComponentId"] in want:
+                        target = (r.get("mapTarget") or "").strip()
+                        if target:
+                            maps[r["referencedComponentId"]].add(target)
+
+    # The refset lists each target twice, dotted and undotted (H40.2 and H402).
+    # Compare without the dot or every second row reads as a divergence.
+    flat = lambda code: code.replace(".", "")  # noqa: E731
+    agree = divergent = unmapped = 0
+    for slug, c in sorted(coded.items()):
+        targets = {flat(x) for x in maps.get(c.codes.snomed, set())}
+        ours = flat(c.codes.icd10)
+        if not targets:
+            print(f"  NO MAP    {slug:34s} ours={c.codes.icd10}")
+            unmapped += 1
+        elif ours in targets:
+            agree += 1
+        else:
+            if any(ours.startswith(x) for x in targets):
+                tag = "NARROWER"  # ours has digits WHO ICD-10 does not define
+            elif any(x[:3] == ours[:3] for x in targets):
+                tag = "NEARBY  "
+            else:
+                tag = "MISMATCH"
+            print(f"  {tag}  {slug:34s} ours={c.codes.icd10:8s} "
+                  f"snomed={','.join(sorted(targets))[:56]}")
+            divergent += 1
+    print(f"\nexact {agree}, divergent {divergent}, unmapped {unmapped}, "
+          f"of {len(coded)} conditions with both codes")
+
+
 def main() -> None:
     cmd = sys.argv[1] if len(sys.argv) > 1 else "releases"
     item = sys.argv[2] if len(sys.argv) > 2 else DEFAULT_ITEM
@@ -211,11 +266,11 @@ def main() -> None:
                   f"{r['archiveFileSizeBytes'] / 1e6:>7.0f} MB  {r['name']}")
     elif cmd == "fetch":
         print(fetch(item))
-    elif cmd == "check":
+    elif cmd in ("check", "icd10"):
         archives = sorted(WB.glob("*.zip"))
         if not archives:
             sys.exit("no release in .workbench/trud -- run `trud_snomed.py fetch` first")
-        check(archives[-1])
+        (check if cmd == "check" else icd10)(archives[-1])
     else:
         sys.exit(__doc__)
 

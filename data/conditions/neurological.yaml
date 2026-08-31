@@ -64,7 +64,7 @@ conditions:
   subarachnoid-haemorrhage:
     name: "Subarachnoid haemorrhage"
     parents: [intracranial-vascular]
-    codes: {icd10: I60.9}
+    codes: {snomed: '21454007', icd10: I60.9}
     urgency: emergency
     red_flag_features: [headache_onset, headache_intensity, neck_stiffness]
     features:
@@ -111,7 +111,7 @@ conditions:
   brain-tumour:
     name: "Brain tumour"
     parents: [cns-malignancy]
-    codes: {icd10: C71.9}
+    codes: {snomed: '428061005', icd10: C71.9}
     urgency: urgent
     red_flag_features: [worse_on_waking, focal_neurology]
     features:
