@@ -5,7 +5,9 @@ conditions:
   acute-angle-closure-glaucoma:
     name: "Acute angle-closure glaucoma"
     parents: [ophthalmic]
-    codes: {snomed: '30041005', icd10: H40.2}
+    # 30041005 was inactive; SNOMED's own REPLACED BY association points here.
+    # The replacement's FSN is 'Acute angle closure', dropping the word glaucoma.
+    codes: {snomed: '1111451000000106', icd10: H40.2}
     urgency: emergency
     red_flag_features: [eye_pain_red_eye, visual_disturbance]
     features:

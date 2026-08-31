@@ -23,7 +23,7 @@ def row(src, dst, type_id=t.IS_A, active="1"):
 def archive(rows, tmp: Path) -> Path:
     z = tmp / "uk_sct2cl_synthetic.zip"
     with zipfile.ZipFile(z, "w") as f:
-        f.writestr("Snapshot/Terminology/sct2_Relationship_Snapshot_UK_20240101.txt",
+        f.writestr("SnomedCT_UKClinicalRF2/Snapshot/Terminology/sct2_Relationship_UKCLSnapshot_GB1000000_20240101.txt",
                    "\n".join([COLS, *rows]) + "\n")
     return z
 
@@ -35,6 +35,12 @@ with tempfile.TemporaryDirectory() as d:
     z = archive([row("b", "a"), row("c", "b"),
                  row("x", "y", active="0"),
                  row("p", "q", type_id="42")], tmp)
+    # Full and Delta must not be counted, and Stated is not the inferred view.
+    with zipfile.ZipFile(z, "a") as f:
+        for path in ("SnomedCT_UKClinicalRF2/Full/Terminology/sct2_Relationship_UKCLFull_GB1000000_20240101.txt",
+                     "SnomedCT_UKClinicalRF2/Snapshot/Terminology/sct2_StatedRelationship_UKCLSnapshot_GB1000000_20240101.txt",
+                     "SnomedCT_UKClinicalRF2/Snapshot/Terminology/sct2_RelationshipConcreteValues_UKCLSnapshot_GB1000000_20240101.txt"):
+            f.writestr(path, "\n".join([COLS, row("must", "not_appear")]) + "\n")
     parents = t.is_a_edges(z)
     assert parents == {"b": {"a"}, "c": {"b"}}, parents
     assert t.ancestors(parents, "c") == {"a", "b"}

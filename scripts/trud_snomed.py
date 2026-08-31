@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WB = ROOT / ".workbench" / "trud"
 API = "https://isd.digital.nhs.uk/trud/api/v1/keys"
 IS_A = "116680003"
+FSN = "900000000000003001"  # fully specified name, one per active concept
 DEFAULT_ITEM = "101"  # SNOMED CT UK Clinical Edition, RF2 snapshot
 
 sys.path.insert(0, str(ROOT / "packages" / "engine"))
@@ -81,17 +82,46 @@ def is_a_edges(archive: Path) -> dict[str, set[str]]:
     """child -> set of parents, from the active is-a rows of the Relationship snapshot."""
     parents: dict[str, set[str]] = defaultdict(set)
     with zipfile.ZipFile(archive) as z:
+        # The release bundles several editions, each naming its own file:
+        # sct2_Relationship_Snapshot_INT (International) but
+        # sct2_Relationship_UKCLSnapshot (UK Clinical). Match all of them, take
+        # Snapshot only (Full and Delta would double-count), take inferred
+        # rather than Stated (the classifier's output is the poset we want),
+        # and skip the concrete-value file, which holds numbers not concepts.
         names = [n for n in z.namelist()
-                 if "sct2_Relationship_Snapshot" in n and n.endswith(".txt")]
+                 if "/Snapshot/" in n and n.endswith(".txt")
+                 and "sct2_Relationship_" in n.rsplit("/", 1)[-1]
+                 and "ConcreteValues" not in n]
         if not names:
             sys.exit(f"no sct2_Relationship_Snapshot in {archive.name}")
         for name in names:
             with z.open(name) as fh:
-                rows = csv.DictReader(io.TextIOWrapper(fh, "utf-8"), delimiter="\t")
+                rows = csv.DictReader(io.TextIOWrapper(fh, "utf-8"), delimiter="\t",
+                                          quoting=csv.QUOTE_NONE)
                 for r in rows:
                     if r["active"] == "1" and r["typeId"] == IS_A:
                         parents[r["sourceId"]].add(r["destinationId"])
     return parents
+
+
+def labels(archive: Path, wanted: set[str]) -> dict[str, str]:
+    """concept id -> fully specified name, for the ids we are about to print.
+
+    RF2 is tab-delimited with no quoting, so a double quote inside a term is
+    literal text. Without QUOTE_NONE the reader swallows the rest of the file.
+    """
+    out: dict[str, str] = {}
+    with zipfile.ZipFile(archive) as z:
+        for name in z.namelist():
+            if "sct2_Description_Snapshot" not in name or not name.endswith(".txt"):
+                continue
+            with z.open(name) as fh:
+                for r in csv.DictReader(io.TextIOWrapper(fh, "utf-8"), delimiter="\t",
+                                          quoting=csv.QUOTE_NONE):
+                    if (r["active"] == "1" and r["typeId"] == FSN
+                            and r["conceptId"] in wanted):
+                        out.setdefault(r["conceptId"], r["term"])
+    return out
 
 
 def ancestors(parents: dict[str, set[str]], start: str) -> set[str]:
@@ -140,9 +170,10 @@ def check(archive: Path) -> None:
     print("acyclic: ok")
 
     anc = {slug: ancestors(parents, sct) for slug, sct in coded.items()}
-    missing = [s for s, a in anc.items() if not a]
-    if missing:
-        print(f"NOT IN THIS RELEASE: {', '.join(sorted(missing))}")
+    rootless = [s for s, a in anc.items() if not a]
+    if rootless:
+        print(f"NO IS-A ANCESTORS (absent, or an inactive concept): "
+              f"{', '.join(sorted(rootless))}")
 
     # Subsumption inside our own leaf set. Any hit is a KB smell: two conditions
     # where one is an ancestor of the other are not siblings in a pool.
@@ -159,11 +190,14 @@ def check(archive: Path) -> None:
     for slug, a_set in anc.items():
         for a in a_set:
             shared[a].add(slug)
-    print("== SHARED ANCESTORS COVERING 2+ CONDITIONS (tightest 30) ==")
     ranked = sorted(((len(v), a, v) for a, v in shared.items() if 2 <= len(v) < len(anc)),
-                    key=lambda t: (t[0], t[1]))
-    for n, a, members in ranked[:30]:
-        print(f"  {a:>15}  {n:>2}  {', '.join(sorted(members))}")
+                    key=lambda t: (-t[0], t[1]))
+    top = ranked[:30]
+    name = labels(archive, {a for _, a, _ in top})
+    print("== SHARED ANCESTORS COVERING 2+ CONDITIONS (widest 30) ==")
+    for n, a, members in top:
+        print(f"  {n:>2}  {name.get(a, a)}")
+        print(f"      {', '.join(sorted(members))}")
     print(f"\n{len(ranked)} shared ancestors total; hand-written categories: "
           f"{len(kb.categories)}")
 
