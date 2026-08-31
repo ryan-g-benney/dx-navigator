@@ -6,3 +6,16 @@ sources:
       Not a published figure. Authored from general clinical knowledge and
       flagged for review by a practising UK GP before any clinical use. The UI
       must display assertions carrying this source as estimates.
+
+  nhs-coverage-audit:
+    type: estimate
+    title: "Coverage audit against the NHS condition description — pending clinician review"
+    note: >-
+      Not a published figure and not NHS wording. scripts/audit_nhs_coverage.py
+      found that the plain-language description of this condition raises a red
+      flag in its seek-help section which the entry did not mention, and the
+      absence was asserted so the entry argues against that red flag rather
+      than staying silent on it. Only applied to routine conditions, because
+      asserting absent on a time-critical one would penalise it when the
+      feature is present. Needs the same clinician review as gp-estimate; the
+      UI must display it as an estimate.

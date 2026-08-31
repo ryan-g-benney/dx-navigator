@@ -23,6 +23,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / ".workbench" / "nhs"
+# Everything from the first advice callout onwards describes when to seek help,
+# and lists the red flags of the serious thing this condition is mistaken for.
+# A cue before it belongs to this condition; a cue only after it does not.
+ADVICE = re.compile(r"(Urgent advice|Immediate action required|Non-urgent advice)")
 UA = "dx-navigator-research/0.1"
 sys.path.insert(0, str(ROOT / "packages" / "engine"))
 from dx_engine.kb import load  # noqa: E402
@@ -137,16 +141,26 @@ def main() -> None:
         if text is None:
             unmatched.append(f"{slug} ({nhs})")
             continue
-        low = text.lower()
+        split = ADVICE.search(text)
+        own = text[:split.start()].lower() if split else text.lower()
+        advice = text[split.start():].lower() if split else ""
         cond = kb.conditions[slug]
-        gaps = [var for var, cues in CUES.items()
-                if var not in cond.features
-                and var in kb.variables
-                and any(c in low for c in cues)]
-        if gaps:
-            missing_total += len(gaps)
+
+        here_own, here_flag = [], []
+        for var, cues in CUES.items():
+            if var in cond.features or var not in kb.variables:
+                continue
+            if any(c in own for c in cues):
+                here_own.append(var)
+            elif any(c in advice for c in cues):
+                here_flag.append(var)
+        if here_own or here_flag:
+            missing_total += len(here_own) + len(here_flag)
             print(f"  {slug}")
-            print(f"      {', '.join(sorted(gaps))}")
+            if here_own:
+                print(f"      describes:  {', '.join(sorted(here_own))}")
+            if here_flag:
+                print(f"      red flag:   {', '.join(sorted(here_flag))}")
 
     print(f"\n{missing_total} variable mentions our entries do not assert")
     covered = len([s for s in SLUG if s in kb.conditions]) - len(unmatched)
