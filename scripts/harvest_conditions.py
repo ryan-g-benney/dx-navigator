@@ -59,9 +59,23 @@ def az_slugs(refetch: bool) -> dict[str, str]:
 
 
 # Medical plurals do not follow the English rule: keratoses is keratosis, not
-# keratose, and bacilli is bacillus. Order matters, longest suffix first.
-PLURAL = [("oses", "osis"), ("ses", "sis"), ("ae", "a"), ("i", "us"),
-          ("ies", "y"), ("es", ""), ("s", "")]
+# keratose, and bacilli is bacillus. Every rule that applies is tried, not the
+# first one that matches -- headaches ends in "es", and stopping there gives
+# "headach" and loses cluster headache.
+PLURAL = [("oses", "osis"), ("ses", "sis"), ("ae", "a"), ("ies", "y"),
+          ("i", "us"), ("es", ""), ("s", "")]
+
+# The A to Z names a cancer by site and SNOMED names it by morphology, and the
+# same holds for fractures and stones. These are the clusters, not one-offs:
+# about a fifth of the unmatched names are one of these three shapes.
+REWRITE = [
+    (re.compile(r"^(.*?) cancer$"), r"malignant neoplasm of \1"),
+    (re.compile(r"^(.*?) cancer$"), r"malignant tumor of \1"),
+    (re.compile(r"^broken (.*)$"), r"fracture of \1"),
+    (re.compile(r"^(.*?) stones?$"), r"calculus of \1"),
+    (re.compile(r"^(.*?) injur(y|ies)$"), r"injury of \1"),
+    (re.compile(r"^dislocated (.*)$"), r"dislocation of \1"),
+]
 QUALIFIER = re.compile(
     r"\s+(in adults?|in children( and young people)?|in babies|in men|in women"
     r"|in pregnancy|in over \d+s|in under \d+s)$")
@@ -90,13 +104,19 @@ def variants(display: str) -> list[str]:
     for alt in re.findall(r"\(([^)]+)\)", body):
         if len(alt.split()) <= 6 and not alt.isupper():
             add(alt)
-    stripped = QUALIFIER.sub("", norm(body))
-    add(stripped)
+    add(QUALIFIER.sub("", norm(body)))
+    # "Head lice and nits", "Cuts and grazes": each half names the thing.
+    for half in re.split(r"\s+and\s+", body):
+        if len(half.split()) >= 2:
+            add(half)
     for base in list(out):
         for suf, rep in PLURAL:
             if base.endswith(suf) and len(base) - len(suf) >= 3:
                 add(base[: -len(suf)] + rep)
-                break
+    for base in list(out):
+        for rx, sub in REWRITE:
+            if rx.match(base):
+                add(rx.sub(sub, base))
     return out
 
 
