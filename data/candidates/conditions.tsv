@@ -1,0 +1,481 @@
+slug	name	snomed	icd10	system	kind
+abdominal-aortic-aneurysm	Abdominal aortic aneurysm	233985008	I71.4	cardiovascular	disorder
+acanthosis-nigricans	Acanthosis nigricans	402599005		unclassified	disorder
+achalasia	Achalasia	48531003	K22.0	unclassified	presentation
+acne	Acne	11381005	L70.9	skin	disorder
+acoustic-neuroma	Acoustic neuroma (vestibular schwannoma)	126949007	D33.3	neoplasm	disorder
+acromegaly	Acromegaly	74107003	E22.0	neurological	disorder
+actinic-keratoses	Actinic keratoses (solar keratoses)	201101007	L57.0	neoplasm	disorder
+actinomycosis	Actinomycosis	11817007	A42.9	infectious	disorder
+acute-cholecystitis	Acute cholecystitis	65275009	K81.0	digestive	disorder
+acute-kidney-injury	Acute kidney injury (AKI)	14669001	N17.9	genitourinary	disorder
+acute-myeloid-leukaemia	Acute myeloid leukaemia	91861009	C92.0	neoplasm	disorder
+acute-pancreatitis	Acute pancreatitis	197456007	K85.9	digestive	disorder
+acute-respiratory-distress-syndrome	Acute respiratory distress syndrome (ARDS)	67782005		respiratory	disorder
+addisons-disease	Addison's disease	363732003	E27.1	endocrine	disorder
+age-related-macular-degeneration-amd	Age-related macular degeneration (AMD)	267718000	H35.3	eye	disorder
+albinism	Albinism	15890002	E70.3	unclassified	disorder
+alcohol-poisoning	Alcohol poisoning	82782008	T51.0	unclassified	disorder
+alcohol-use-disorder	Alcohol-use disorder	1336085007	F10.9	mental-health	disorder
+allergic-rhinitis	Allergic rhinitis	61582004	J30.4	respiratory	disorder
+allergies	Allergies	609328004		unclassified	presentation
+altitude-sickness	Altitude sickness	87284002	T70.2	unclassified	disorder
+alzheimers-disease	Alzheimer's disease	26929004	G30.9	mental-health	disorder
+amyloidosis	Amyloidosis	17602002	E85.9	unclassified	disorder
+anal-fissure	Anal fissure	30037006	K60.2	digestive	disorder
+anal-fistula	Anal fistula	786878009	K60.3	digestive	disorder
+anaphylaxis	Anaphylaxis	39579001	T78.2	unclassified	disorder
+androgen-insensitivity-syndrome	Androgen insensitivity syndrome	12313004	E34.5	genitourinary	disorder
+angelman-syndrome	Angelman syndrome	76880004	Q93.5	neurological	disorder
+angina	Angina	194828000	I20.9	cardiovascular	disorder
+angioedema	Angioedema	41291007	T78.3	unclassified	disorder
+ankylosing-spondylitis	Ankylosing spondylitis	9631008	M45.X9	musculoskeletal	disorder
+antiphospholipid-syndrome	Antiphospholipid syndrome (APS)	26843008	D68.6	unclassified	disorder
+aphasia	Aphasia	87486003	R47.0	unclassified	presentation
+appendicitis	Appendicitis	74400008		digestive	disorder
+arrhythmia	Arrhythmia, see Heart rhythm problems (arrhythmia)	698247007	I49.9	cardiovascular	disorder
+arthritis	Arthritis	3723001	M13.99	musculoskeletal	disorder
+asbestosis	Asbestosis	22607003		respiratory	disorder
+aspergillosis	Aspergillosis	65553006	B44.9	infectious	disorder
+asthma	Asthma	195967001	J45.9	respiratory	disorder
+astigmatism	Astigmatism	82649003	H52.2	eye	disorder
+ataxia	Ataxia	20262006	R27.0	unclassified	presentation
+athletes-foot	Athlete's foot	6020002	B35.3	infectious	disorder
+atopic-eczema	Atopic eczema	24079001	L20.9	skin	disorder
+atrial-fibrillation	Atrial fibrillation	49436004	I48.9	cardiovascular	disorder
+auditory-processing-disorder	Auditory processing disorder (APD)	229752008	H93.2	unclassified	disorder
+autism	Autism	35919005	F84.9	mental-health	disorder
+autosomal-dominant-polycystic-kidney-disease-adpkd	Autosomal dominant polycystic kidney disease	765330003	Q61.2	genitourinary	disorder
+autosomal-recessive-polycystic-kidney-disease-arpkd	Autosomal recessive polycystic kidney disease	28770003	Q61.1	genitourinary	disorder
+back-pain	Back pain	161891005	M54.99	unclassified	presentation
+bacterial-vaginosis	Bacterial vaginosis	419760006	N76.0	infectious	disorder
+balanitis	Balanitis	44882003	N48.1	genitourinary	disorder
+bartholins-cyst	Bartholin's cyst	57044006	N75.0	genitourinary	disorder
+bells-palsy	Bell's palsy	193093009	G51.0	neurological	disorder
+bile-duct-cancer	Bile duct cancer (cholangiocarcinoma)	312104005	C24.9	neoplasm	disorder
+birthmarks	Birthmarks	51089004	Q82.5	skin	disorder
+black-eye	Black eye	7927006	S00.2	eye	disorder
+bladder-cancer	Bladder cancer	399326009	C67.9	neoplasm	disorder
+blepharitis	Blepharitis	41446000	H01.0	eye	disorder
+blisters	Blisters	417237009	T14.0	unclassified	disorder
+boils	Boils	416675009	L02.9	infectious	disorder
+bone-cyst	Bone cyst	203465002	M85.69	musculoskeletal	disorder
+botulism	Botulism	398565003	A05.1	infectious	disorder
+bowel-incontinence	Bowel incontinence	72042002		unclassified	presentation
+bowel-polyps	Bowel polyps	254588001	K63.8	digestive	disorder
+brain-abscess	Brain abscess	441806004	G06.0	neurological	disorder
+brain-aneurysm	Aneurysm (brain), see Brain aneurysm	432119003	I72.9	cardiovascular	disorder
+brain-tumours	Brain tumours	126952004	D43.2	neoplasm	disorder
+breast-cancer-in-men	Breast cancer in men	254837009	C50.9	neoplasm	disorder
+breast-cancer-in-women	Breast cancer in women	254837009	C50.9	neoplasm	disorder
+broken-nose	Broken nose	263171005	S02.20	traumatic-or-injury	disorder
+bronchiectasis	Bronchiectasis	12295008		respiratory	disorder
+bronchiolitis	Bronchiolitis	4120002	J21.9	respiratory	disorder
+bronchitis	Bronchitis	32398004	J20.9	respiratory	disorder
+brucellosis	Brucellosis	75702008	A23.9	infectious	disorder
+brugada-syndrome	Brugada syndrome	418818005	I49.8	cardiovascular	disorder
+bullous-pemphigoid	Bullous pemphigoid	77090002	L12.0	skin	disorder
+bunions	Bunions	415692008	M20.1	musculoskeletal	disorder
+bursitis	Bursitis	84017003	M71.99	musculoskeletal	disorder
+c-difficile	Clostridioides difficile (C. diff) infection	186431008	A04.7	infectious	disorder
+cancer	Cancer	363346000	C80.9	neoplasm	disorder
+carbon-monoxide-poisoning	Carbon monoxide poisoning	17383000		unclassified	disorder
+cardiomyopathy	Cardiomyopathy	85898001	I42.9	cardiovascular	disorder
+cardiovascular-disease	Cardiovascular disease	49601007	I51.6	unclassified	disorder
+carpal-tunnel-syndrome	Carpal tunnel syndrome	57406009	G56.0	neurological	disorder
+cataracts	Cataracts in adults	95722004	H26.9	eye	disorder
+cellulitis	Cellulitis	128045006	L03.9	unclassified	disorder
+cerebral-palsy	Cerebral palsy	128188000	G80.9	neurological	disorder
+cervical-cancer	Cervical cancer	363354003	C53.9	neoplasm	disorder
+cervical-spondylosis	Cervical spondylosis	387800004	M47.82	musculoskeletal	disorder
+charles-bonnet-syndrome	Charles Bonnet syndrome	193756007	R44.1	mental-health	disorder
+chiari-malformation	Chiari malformation	253184003	Q07.0	neurological	disorder
+chickenpox	Chickenpox	38907003	B01.9	infectious	disorder
+chilblains	Chilblains	37869000	T69.1	traumatic-or-injury	disorder
+childhood-cataracts	Cataracts (children), see Childhood cataracts	95722004	H26.9	eye	disorder
+chlamydia	Chlamydia	105629000	A74.9	infectious	disorder
+cholera	Cholera	63650001	A00.9	infectious	disorder
+cholesteatoma	Cholesteatoma	363668000		ear	disorder
+chronic-myeloid-leukaemia	Chronic myeloid leukaemia	92818009	C92.1	neoplasm	disorder
+chronic-obstructive-pulmonary-disease-copd	Chronic obstructive pulmonary disease (COPD)	13645005	J44.9	respiratory	disorder
+chronic-pancreatitis	Chronic pancreatitis	235494005	K86.1	digestive	disorder
+chronic-traumatic-encephalopathy	Chronic traumatic encephalopathy	1187004001	F07.2	mental-health	disorder
+club-foot	Clubfoot	397932003	Q66.0	unclassified	disorder
+coeliac-disease	Coeliac disease	396331005	K90.0	digestive	disorder
+cold-sores	Cold sores	1475003	B00.1	infectious	disorder
+colic	Colic	9991008	R10.4	unclassified	presentation
+colour-vision-deficiency	Colour vision deficiency (colour blindness)	367469000	H53.5	eye	disorder
+common-cold	Common cold	82272006		infectious	disorder
+compartment-syndrome	Compartment syndrome	111245009	T79.6	musculoskeletal	disorder
+complex-regional-pain-syndrome	Complex regional pain syndrome	128200000		neurological	disorder
+congenital-heart-disease	Congenital heart disease	13213009	Q24.9	cardiovascular	disorder
+conjunctivitis	Conjunctivitis	9826008	H10.9	eye	disorder
+constipation	Constipation	14760008	K59.0	unclassified	presentation
+contact-dermatitis	Contact dermatitis	40275004	L25.9	skin	disorder
+coronary-heart-disease	Coronary heart disease	53741008	I25.1	cardiovascular	disorder
+corticobasal-degeneration	Corticobasal degeneration	18842008	G23.8	neurological	disorder
+costochondritis	Costochondritis	64109004	M94.0	musculoskeletal	disorder
+covid-19	Coronavirus, see COVID-19	840539006	U07.1	infectious	disorder
+cradle-cap	Cradle cap	62742006	L21.0	skin	disorder
+craniosynostosis	Craniosynostosis	57219006	Q75.0	musculoskeletal	disorder
+creutzfeldt-jakob-disease-cjd	CJD, see Creutzfeldt-Jakob disease	792004	A81.0	infectious	disorder
+crohns-disease	Crohn's disease	34000006	K50.9	digestive	disorder
+croup	Croup	71186008	J05.0	infectious	disorder
+cushings-syndrome	Cushing's syndrome	47270006	E24.9	endocrine	disorder
+cyclical-vomiting-syndrome	Cyclical vomiting syndrome	18773000		digestive	disorder
+cystic-fibrosis	Cystic fibrosis	190905008	E84.9	respiratory	disorder
+dandruff	Dandruff	400201008	L21.0	skin	disorder
+deep-vein-thrombosis-dvt	DVT (deep vein thrombosis)	128053003	I80.2	cardiovascular	disorder
+dehydration	Dehydration	34095006		unclassified	disorder
+dementia	Dementia	52448006		mental-health	disorder
+dengue	Dengue	38362002	A97.9	infectious	disorder
+dental-abscess	Dental abscess	299709002	K04.7	digestive	disorder
+detached-retina-retinal-detachment	Detached retina (retinal detachment)	42059000	H33.2	eye	disorder
+developmental-coordination-disorder-dyspraxia	Developmental co-ordination disorder (dyspraxia) in children	6950007	R27.8	unclassified	presentation
+developmental-coordination-disorder-dyspraxia-in-adults	Developmental co-ordination disorder (dyspraxia) in adults, see Dyspraxia in adults	6950007	R27.8	unclassified	presentation
+developmental-dysplasia-of-the-hip	Congenital hip dislocation, see Developmental dysplasia of the hip	52781008	Q65.8	musculoskeletal	disorder
+diabetes-insipidus	Diabetes insipidus	1296758008	N25.1	unclassified	disorder
+diabetic-ketoacidosis	Diabetic ketoacidosis	420422005	E14.1	unclassified	disorder
+diabetic-retinopathy	Diabetic retinopathy	4855003	E14.3	eye	disorder
+digeorge-syndrome	DiGeorge syndrome (22q11 deletion)	767263007	D82.1	unclassified	disorder
+diphtheria	Diphtheria	397430003	A36.9	infectious	disorder
+downs-syndrome	Down's syndrome	41040004	Q90.9	unclassified	disorder
+dysarthria	Dysarthria (difficulty speaking)	8011004	R47.1	unclassified	presentation
+dysentery	Dysentery	46799006	A09.0	infectious	disorder
+dyslexia-in-adults	Dyslexia in adults	59770006	R48.0	unclassified	presentation
+dyslexia-in-children	Dyslexia in children	59770006	R48.0	unclassified	presentation
+dystonia	Dystonia	15802004	G24.9	neurological	disorder
+ear-infections	Ear infections	129127001	H66.9	infectious	disorder
+ebola	Ebola virus disease	37109004	A98.4	infectious	disorder
+ectopic-pregnancy	Ectopic pregnancy	34801009	O00.9	unclassified	disorder
+ectropion	Ectropion	62909004	H02.1	eye	disorder
+edwards-syndrome	Edwards' syndrome (trisomy 18)	51500006	Q91.3	unclassified	disorder
+encephalitis	Encephalitis	45170000	G04.9	neurological	disorder
+endocarditis	Endocarditis	56819008		cardiovascular	disorder
+endometriosis	Endometriosis	129103003	N80.9	unclassified	disorder
+enlarged-prostate	Benign prostate enlargement, see Enlarged prostate	249607009		unclassified	presentation
+epidermolysis-bullosa	Epidermolysis bullosa	61003004	Q81.9	skin	disorder
+epididymitis	Epididymitis	31070006	N45.9	genitourinary	disorder
+epiglottitis	Epiglottitis	80384002	J05.1	respiratory	disorder
+epilepsy	Epilepsy	84757009	G40.9	neurological	disorder
+erection-problems-erectile-dysfunction	Erectile dysfunction (impotence)	860914002	F52.2	unclassified	disorder
+erythema-multiforme	Erythema multiforme	36715001	L51.9	unclassified	disorder
+erythema-nodosum	Erythema nodosum	32861005		unclassified	disorder
+erythrocytosis	Erythrocytosis	127062003	D75.1	unclassified	disorder
+erythromelalgia	Erythromelalgia	37151006	I73.8	cardiovascular	disorder
+excessive-daytime-sleepiness-hypersomnia	Excessive daytime sleepiness (hypersomnia)	1367959007	G47.1	unclassified	presentation
+excessive-sweating-hyperhidrosis	Excessive sweating (hyperhidrosis)	52613005	R61.9	unclassified	presentation
+face-blindness	Face blindness, see Prosopagnosia (face blindness)	18358003	R48.8	unclassified	presentation
+falls	Falls	161898004	R29.6	unclassified	presentation
+female-genital-mutilation-fgm	Female genital mutilation (FGM)	95041000119101	Z91.7	genitourinary	disorder
+fetal-alcohol-spectrum-disorder	Fetal alcohol spectrum disorder	609437000	P04.3	unclassified	disorder
+fibroids	Fibroids	95315005	D25.9	neoplasm	disorder
+fibromyalgia	Fibromyalgia	203082005	M79.79	unclassified	disorder
+flu	Flu	6142004	J11.1	infectious	disorder
+food-allergy	Food allergy	414285001	Z91.0	unclassified	presentation
+food-intolerance	Food intolerance	235719002	K90.4	unclassified	presentation
+food-poisoning	Food poisoning	75258004	T62.9	unclassified	disorder
+foot-drop	Foot drop	6077001	M21.37	unclassified	presentation
+frontotemporal-dementia	Dementia (frontotemporal), see Frontotemporal dementia	230270009		mental-health	disorder
+frostbite	Frostbite	370977006	T35.7	traumatic-or-injury	disorder
+frozen-shoulder	Frozen shoulder	399114005	M75.0	musculoskeletal	disorder
+gallstones	Gallstones	235919008	K80.2	digestive	disorder
+gangrene	Gangrene	372070002		unclassified	disorder
+gastritis	Gastritis	4556007	K29.7	digestive	disorder
+gastroparesis	Gastroparesis	235675006	K31.8	digestive	disorder
+genital-warts	Genital warts	266113007	A63.0	infectious	disorder
+gestational-diabetes	Diabetes in pregnancy, see Gestational diabetes	11687002	O24.4	endocrine	disorder
+giardiasis	Giardia, see Giardiasis	58265007	A07.1	infectious	disorder
+gilberts-syndrome	Gilbert's syndrome	27503000	E80.4	unclassified	disorder
+glandular-fever	Glandular fever	271558008	B27.9	infectious	disorder
+glaucoma	Glaucoma	23986001	H40.9	eye	disorder
+glomerulonephritis	Glomerulonephritis	36171008	N05.9	genitourinary	disorder
+glue-ear	Glue ear	232255003	H65.9	ear	disorder
+goitre	Goitre	3716002	E04.9	endocrine	disorder
+gonorrhoea	Gonorrhoea	15628003	A54.9	infectious	disorder
+gout	Gout	90560007	M10.99	unclassified	disorder
+granuloma-annulare	Granuloma annulare	65508009	L92.0	skin	disorder
+granulomatosis-with-polyangiitis	Granulomatosis with polyangiitis (GPA)	195353004	M31.3	cardiovascular	disorder
+growing-pains	Growing pains	102482005	R52.9	unclassified	presentation
+guillain-barre-syndrome	Guillain-Barré syndrome	40956001	G61.0	neurological	disorder
+gum-disease	Gum disease	18718003	K06.9	digestive	disorder
+gynaecomastia	Gynaecomastia	4754008		unclassified	disorder
+haemochromatosis	Haemochromatosis	399187006	E83.1	unclassified	disorder
+haemophilia	Haemophilia	90935002		unclassified	disorder
+hamstring-injury	Hamstring injury	135851009	S76.3	traumatic-or-injury	disorder
+hand-foot-mouth-disease	Hand, foot and mouth disease	266108008	B08.4	infectious	disorder
+hearing-loss	Deafness, see Hearing loss	15188001	H91.9	ear	disorder
+heart-attack	Heart attack	22298006	I21.9	cardiovascular	disorder
+heart-block	Heart block	233916004	I45.9	cardiovascular	disorder
+heart-failure	Heart failure	84114007	I50.9	cardiovascular	disorder
+heart-valve-disease	Heart valve disease	368009		cardiovascular	disorder
+heartburn-and-acid-reflux	Acid reflux, see Heartburn and acid reflux	698065002	K21.9	unclassified	presentation
+heat-rash-prickly-heat	Heat rash (prickly heat)	72658003	L74.0	skin	disorder
+heavy-periods	Heavy periods	386692008	N92.0	unclassified	presentation
+henoch-schonlein-purpura-hsp	Henoch-Schönlein purpura (HSP)	191306005	D69.0	cardiovascular	disorder
+hepatitis	Hepatitis	128241005	K75.9	digestive	disorder
+hepatitis-a	Hepatitis A	40468003	B15.9	infectious	disorder
+hepatitis-b	Hepatitis B	66071002	B18.1	infectious	disorder
+hepatitis-c	Hepatitis C	50711007	B18.2	infectious	disorder
+hereditary-haemorrahagic-telangiectasia	Hereditary haemorrhagic telangiectasia (HHT)	21877004	I78.0	cardiovascular	disorder
+hereditary-spastic-paraplegia	Hereditary spastic paraplegia	39912006	G11.4	neurological	disorder
+herpes-simplex-eye-infections	Eye infection (herpes), see Herpes simplex eye infections	128351009	H44.0	infectious	disorder
+herpetic-whitlow	Herpetic whitlow (whitlow finger)	43891009	B00.8	infectious	disorder
+hiatus-hernia	Hernia (hiatus), see Hiatus hernia	84089009	K44.9	respiratory	disorder
+hidradenitis-suppurativa	Hidradenitis suppurativa (HS)	59393003	L73.2	infectious	disorder
+high-blood-pressure	Blood pressure (high), see High blood pressure	38341003		cardiovascular	disorder
+high-blood-sugar-hyperglycaemia	High blood sugar (hyperglycaemia)	80394007	R73.9	unclassified	disorder
+high-cholesterol	Cholesterol (high), see High cholesterol	13644009	E78.0	unclassified	disorder
+hirschsprungs-disease	Hirschsprung's disease	204739008	Q43.1	neurological	disorder
+hives	Hives	247472004	L50.9	unclassified	presentation
+huntingtons-disease	Huntington's disease	58756001		mental-health	disorder
+hydrocephalus	Hydrocephalus	230745008	G91.9	neurological	disorder
+hydronephrosis	Hydronephrosis	43064006	N13.3	genitourinary	disorder
+hyperacusis	Hyperacusis, see Noise sensitivity (hyperacusis)	25289003	H93.2	ear	disorder
+hyperparathyroidism	Hyperparathyroidism	66999008	E21.3	endocrine	disorder
+hypoparathyroidism	Hypoparathyroidism	36976004	E20.9	endocrine	disorder
+hypothermia	Hypothermia	386689009		unclassified	presentation
+ichthyosis	Ichthyosis	782957005	Q80.9	skin	disorder
+idiopathic-pulmonary-fibrosis	Idiopathic pulmonary fibrosis	700250006	J84.1	respiratory	disorder
+impetigo	Impetigo	48277006	L01.0	infectious	disorder
+indigestion	Indigestion	162031009		unclassified	presentation
+inflammatory-bowel-disease	IBD, see Inflammatory bowel disease	24526004	K52.9	digestive	disorder
+ingrown-hairs	Ingrown hairs	9115004	L73.1	skin	disorder
+ingrown-toenail	Ingrown toenail	400200009	L60.0	skin	disorder
+insomnia	Insomnia	193462001	G47.0	unclassified	disorder
+iron-deficiency-anaemia	Anaemia (iron deficiency), see Iron deficiency anaemia	87522002	D50.9	unclassified	disorder
+irritable-bowel-syndrome-ibs	Irritable bowel syndrome (IBS)	10743008	K58.9	digestive	disorder
+japanese-encephalitis	Japanese encephalitis	52947006	A83.0	infectious	disorder
+jaundice	Jaundice	18165001		unclassified	presentation
+jaundice-in-babies	Jaundice in babies	18165001		unclassified	presentation
+jet-lag	Jet lag	387604006		unclassified	presentation
+kawasaki-disease	Kawasaki disease	75053002	M30.3	cardiovascular	disorder
+keloid-scars	Keloid scars	33659008	L91.0	skin	disorder
+keratosis-pilaris	Keratosis pilaris	5132005	Q82.8	skin	disorder
+kidney-disease	Chronic kidney disease	709044004	N18.9	genitourinary	disorder
+kidney-infection	Kidney infection	129128006	N15.9	infectious	disorder
+klinefelters-syndrome	Klinefelter syndrome	22053006	Q98.4	unclassified	disorder
+knock-knees	Knock knees	299330008	M21.06	unclassified	presentation
+kyphosis	Kyphosis	414564002	M40.29	musculoskeletal	disorder
+lambert-eaton-myasthenic-syndrome	Lambert-Eaton myasthenic syndrome	56989000	G70.8	neurological	disorder
+laryngeal-cancer	Laryngeal cancer	363429002	C32.9	neoplasm	disorder
+laryngitis	Laryngitis	45913009	J04.0	respiratory	disorder
+lazy-eye	Amblyopia, see Lazy eye	246623008	H53.0	unclassified	presentation
+leg-ulcer	Leg ulcer, see Venous leg ulcer	95344007		unclassified	disorder
+legionnaires-disease	Legionnaires' disease	195889001	A48.1	infectious	disorder
+leptospirosis	Leptospirosis (Weil's disease)	77377001	A27.9	infectious	disorder
+leukoplakia	Leukoplakia	274134003		unclassified	disorder
+lichen-planus	Lichen planus	4776004	L43.9	skin	disorder
+lichen-sclerosus	Lichen sclerosus	895454001	L90.0	unclassified	disorder
+lipoedema	Lipoedema	234102003	R60.9	unclassified	disorder
+lipoma	Lipoma	93163002	D17.9	neoplasm	disorder
+listeriosis	Listeriosis	4241002	A32.9	infectious	disorder
+liver-cancer	Liver cancer	93870000	C22.9	neoplasm	disorder
+liver-disease	Liver disease	235856003	K76.9	digestive	disorder
+long-qt-syndrome	Long QT syndrome	9651007	I49.8	cardiovascular	disorder
+low-blood-pressure-hypotension	Blood pressure (low), see Low blood pressure (hypotension)	45007003	I95.9	cardiovascular	disorder
+low-blood-sugar-hypoglycaemia	Hypoglycaemia, see Low blood sugar (hypoglycaemia)	302866003	E16.2	endocrine	disorder
+lung-cancer	Lung cancer	363358000	C34.9	neoplasm	disorder
+lupus	Lupus	200936003	L93.0	unclassified	disorder
+lyme-disease	Lyme disease	23502006	A69.2	infectious	disorder
+lymphoedema	Lymphoedema	234097001	I89.0	unclassified	disorder
+macular-hole	Macular hole	232006002	H35.3	eye	disorder
+malaria	Malaria	61462000		infectious	disorder
+mallet-finger	Mallet finger	64298006	M20.0	traumatic-or-injury	disorder
+marfan-syndrome	Marfan syndrome	19346006	Q87.4	unclassified	disorder
+mastitis	Mastitis	266579006		unclassified	disorder
+mastoiditis	Mastoiditis	52404001	H70.9	musculoskeletal	disorder
+measles	Measles	14189004	B05.9	infectious	disorder
+medically-unexplained-symptoms	Functional neurological disorder, see Medically unexplained symptoms	735541006	F44.9	mental-health	disorder
+menieres-disease	Ménière's disease	13445001	H81.0	ear	disorder
+meningitis	Meningitis	7180009	G03.9	neurological	disorder
+mesothelioma	Mesothelioma	109378008	C45.9	neoplasm	disorder
+metabolic-syndrome	Metabolic syndrome	237602007	E88.8	unclassified	disorder
+middle-east-respiratory-syndrome-mers	Middle East respiratory syndrome (MERS)	651000146102	B34.2	infectious	disorder
+migraine	Migraine	37796009	G43.9	cardiovascular	disorder
+miscarriage	Miscarriage	17369002	O03.9	unclassified	disorder
+mortons-neuroma	Morton's neuroma	30085007	G57.6	neurological	disorder
+motion-sickness	Motion sickness	37031009	T75.3	unclassified	presentation
+motor-neurone-disease	Motor neurone disease (MND)	37340000	G12.2	neurological	disorder
+mouth-cancer	Mouth cancer	363505006	C06.9	neoplasm	disorder
+mouth-ulcers	Mouth ulcers	26284000	K12.1	unclassified	disorder
+mpox	Mpox	359814004		infectious	disorder
+mucositis	Mucositis	95361005		unclassified	disorder
+multiple-sclerosis	Multiple sclerosis	24700007		neurological	disorder
+multiple-system-atrophy	Multiple system atrophy (MSA)	230297002	G23.2	neurological	disorder
+mumps	Mumps	36989005	B26.9	infectious	disorder
+muscular-dystrophy	Muscular dystrophy	73297009	G71.0	musculoskeletal	disorder
+myasthenia-gravis	Myasthenia gravis	91637004	G70.0	neurological	disorder
+myelodysplastic-syndrome-mds	Myelodysplastic syndrome (MDS)	109995007	D46.9	neoplasm	disorder
+myeloma	Myeloma	109989006	C90.0	neoplasm	disorder
+myositis	Myositis	26889001	M60.99	musculoskeletal	disorder
+narcolepsy	Narcolepsy	60380001	G47.4	unclassified	disorder
+necrotising-fasciitis	Necrotising fasciitis	52486002	M72.69	infectious	disorder
+nephrotic-syndrome	Nephrotic syndrome in children	52254009	N04.9	genitourinary	disorder
+neurofibromatosis-type-1	Neurofibromatosis type 1 (NF1)	92824003	Q85.0	neoplasm	disorder
+neurofibromatosis-type-2	Neurofibromatosis type 2 (NF2)	92503002	Q85.0	neoplasm	disorder
+neuromyelitis-optica	Neuromyelitis optica (NMO)	25044007	G36.0	neurological	disorder
+non-alcoholic-fatty-liver-disease	Non-alcoholic fatty liver disease (NAFLD)	1231824009	K76.0	digestive	disorder
+non-allergic-rhinitis	Non-allergic rhinitis	311000119101	J31.0	respiratory	disorder
+non-cancerous-benign-brain-tumours	Benign brain tumours, see Non-cancerous (benign) brain tumours	92030004	D33.2	neoplasm	disorder
+non-hodgkin-lymphoma	Lymphoma (non-Hodgkin, see Non-Hodgkin lymphoma	118601006	C85.9	neoplasm	disorder
+noonan-syndrome	Noonan syndrome	205824006	Q87.1	unclassified	disorder
+nosebleed	Nosebleed	249366005	R04.0	unclassified	presentation
+oedema	Ankles (swollen), see Swollen ankles, feet and legs (oedema)	267038008	R60.9	unclassified	presentation
+oesophageal-cancer	Oesophageal cancer	363402007	C15.9	neoplasm	disorder
+oral-thrush-mouth-thrush	Mouth thrush, see Oral thrush (mouth thrush)	79740000	B37.0	infectious	disorder
+orf	Orf	74050005	B08.0	infectious	disorder
+osteoarthritis	Osteoarthritis	396275006	M19.99	musculoskeletal	disorder
+osteomyelitis	Osteomyelitis	60168000	M86.99	infectious	disorder
+osteophyte	Osteophyte (bone spur)	235231000119100	M25.79	musculoskeletal	disorder
+osteoporosis	Osteoporosis	64859006	M81.99	musculoskeletal	disorder
+otosclerosis	Otosclerosis	11543004	H80.9	ear	disorder
+ovarian-cancer	Ovarian cancer	363443007		neoplasm	disorder
+ovarian-cyst	Ovarian cyst	79883001	N83.2	genitourinary	disorder
+overactive-thyroid-hyperthyroidism	Hyperthyroidism, see Overactive thyroid (hyperthyroidism)	34486009	E05.9	endocrine	disorder
+overweight-and-obesity	Obesity, see Overweight and obesity in adults	414916001	E66.9	unclassified	disorder
+pagets-disease-bone	Paget's disease of bone	2089002	M88.99	musculoskeletal	disorder
+pancreatic-cancer	Pancreatic cancer	363418001	C25.9	neoplasm	disorder
+parkinsons-disease	Parkinson's disease	49049000		neurological	disorder
+pelvic-inflammatory-disease-pid	Pelvic inflammatory disease	198130006	N73.9	infectious	disorder
+pemphigus-vulgaris	Pemphigus vulgaris	49420001	L10.0	unclassified	disorder
+perforated-eardrum	Eardrum (burst), see Perforated eardrum	60442001	H72.9	ear	disorder
+pericarditis	Pericarditis	3238004	I31.9	cardiovascular	disorder
+peripheral-arterial-disease-pad	Peripheral arterial disease (PAD)	840580004	I73.9	cardiovascular	disorder
+peripheral-neuropathy	Peripheral neuropathy	302226006	G62.9	neurological	disorder
+peritonitis	Peritonitis	48661000	K65.9	unclassified	disorder
+peyronies-disease	Peyronie's disease	1335005	N48.6	genitourinary	disorder
+phaeochromocytoma	Phaeochromocytoma	302835009	D35.0	neoplasm	disorder
+phimosis	Foreskin problems, see Tight foreskin (phimosis)	198006006		unclassified	presentation
+phlebitis	Phlebitis (superficial thrombophlebitis)	61599003	I80.9	cardiovascular	disorder
+piles-haemorrhoids	Haemorrhoids, see Piles (haemorrhoids)	70153002	K64.9	cardiovascular	disorder
+pilonidal-sinus	Pilonidal sinus	238496008	L05.9	unclassified	disorder
+pityriasis-rosea	Pityriasis rosea	77252004		skin	disorder
+pityriasis-versicolor	Pityriasis versicolor	56454009	B36.0	infectious	disorder
+plantar-fasciitis	Plantar fasciitis	202882003	M72.27	musculoskeletal	disorder
+pleurisy	Pleurisy	196075003	R09.1	respiratory	disorder
+pmdd-premenstrual-dysphoric-disorder	PMDD (premenstrual dysphoric disorder)	596004	F38.8	mental-health	disorder
+pneumonia	Pneumonia	233604007	J18.9	infectious	disorder
+poisoning	Poisoning	75478009	T65.9	unclassified	disorder
+polio	Polio	398102009	A80.9	infectious	disorder
+polyhydramnios	Polyhydramnios (too much amniotic fluid)	86203003		unclassified	disorder
+polymorphic-light-eruption	Polymorphic light eruption	238525001	L56.4	skin	disorder
+polymyalgia-rheumatica	Polymyalgia rheumatica	65323003	M35.3	unclassified	disorder
+pompholyx	Pompholyx (dyshidrotic eczema)	123698008	L30.1	skin	disorder
+postural-tachycardia-syndrome	Postural orthostatic tachycardia syndrome, see Postural tachycardia syndrome (PoTS)	371073003	I95.1	cardiovascular	disorder
+prader-willi-syndrome	Prader-Willi syndrome	89392001	Q87.1	neurological	disorder
+pre-eclampsia	Pre-eclampsia	398254007	O14.9	cardiovascular	disorder
+pre-menstrual-syndrome	PMS (premenstrual syndrome)	82639001	N94.3	unclassified	disorder
+primary-biliary-cholangitis-pbc	Primary biliary cholangitis (primary biliary cirrhosis)	31712002	K74.3	digestive	disorder
+progressive-supranuclear-palsy-psp	Progressive supranuclear palsy	192976002	G23.1	neurological	disorder
+prostatitis	Prostatitis	9713002	N41.9	genitourinary	disorder
+psoriasis	Psoriasis	9014002	L40.9	skin	disorder
+psoriatic-arthritis	Psoriatic arthritis	156370009	L40.5	musculoskeletal	disorder
+pubic-lice	Pubic lice	71011005	B85.3	infectious	disorder
+pudendal-neuralgia	Pudendal neuralgia	427972000	G58.8	unclassified	presentation
+pulmonary-embolism	Pulmonary embolism	59282003	I26.9	cardiovascular	disorder
+pulmonary-hypertension	Pulmonary hypertension	70995007	I27.2	cardiovascular	disorder
+pyoderma-gangrenosum	Pyoderma gangrenosum	74578003		skin	disorder
+q-fever	Q fever	186788009		infectious	disorder
+rabies	Rabies	14168008	A82.9	infectious	disorder
+reactive-arthritis	Reactive arthritis	201736002	M02.99	musculoskeletal	disorder
+repetitive-strain-injury-rsi	Repetitive strain injury (RSI)	788465007	M70.99	unclassified	disorder
+respiratory-tract-infection	Respiratory tract infections (RTIs)	275498002	J98.8	infectious	disorder
+restless-legs-syndrome	Restless legs syndrome	32914008	G25.8	unclassified	disorder
+retinal-ocular-migraine	Ocular migraine, see Retinal (ocular) migraine	79267007	G43.8	cardiovascular	disorder
+retinoblastoma	Eye cancer in children, see Retinoblastoma	370967009	C69.2	neoplasm	disorder
+rett-syndrome	Rett syndrome	68618008	F84.2	mental-health	disorder
+reyes-syndrome	Reye's syndrome	74351001	G93.7	neurological	disorder
+rheumatic-fever	Rheumatic fever	58718002		unclassified	disorder
+rheumatoid-arthritis	Rheumatoid arthritis	69896004	M06.99	musculoskeletal	disorder
+rickets-and-osteomalacia	Osteomalacia, see Rickets and osteomalacia	4598005	M83.99	musculoskeletal	disorder
+ringworm	Ringworm	47382004	B35.9	infectious	disorder
+rosacea	Rosacea	398909004	L71.9	unclassified	disorder
+rubella	German measles, see Rubella (german measles)	36653000	B06.9	infectious	disorder
+sarcoidosis	Sarcoidosis	31541009	D86.9	unclassified	disorder
+scarlet-fever	Scarlet fever	30242009		infectious	disorder
+scars	Scars	275322007	L90.5	unclassified	disorder
+schistosomiasis	Bilharzia, see Schistosomiasis (bilharzia)	10087007	B65.9	infectious	disorder
+sciatica	Sciatica	23056005	M54.39	neurological	disorder
+scleroderma	Scleroderma	267874003	M34.9	unclassified	disorder
+scoliosis	Scoliosis	298382003	M41.99	musculoskeletal	disorder
+scurvy	Scurvy	76169001		unclassified	disorder
+sepsis	Sepsis	91302008	A41.9	unclassified	disorder
+septic-arthritis	Septic arthritis	396234004	M00.99	infectious	disorder
+shin-splints	Shin splints	1290771001	T79.6	musculoskeletal	disorder
+shingles	Shingles	4740000	B02.9	infectious	disorder
+short-sightedness	Myopia, see Short-sightedness (myopia)	57190000	H52.1	eye	disorder
+sick-building-syndrome	Sick building syndrome	19076009	J67.9	respiratory	disorder
+sickle-cell-disease	Sickle cell disease	417357006	D57.1	unclassified	disorder
+silicosis	Silicosis	805002	J62.8	respiratory	disorder
+sinusitis-sinus-infection	Sinusitis (sinus infection)	36971009	J32.9	respiratory	disorder
+sjogrens-syndrome	Sjögren's syndrome	83901003	M35.0	unclassified	disorder
+skin-abscess	Skin abscess	31928004	L02.9	unclassified	disorder
+skin-tags	Skin tags	201091002	L91.8	neoplasm	disorder
+slapped-cheek-syndrome	Slapped cheek syndrome	34730008	B08.3	infectious	disorder
+sleep-apnoea	Sleep apnoea	73430006	G47.3	respiratory	disorder
+sleep-paralysis	Sleep paralysis	277180005	G47.8	unclassified	disorder
+sleepwalking	Sleepwalking	80495009	F51.3	neurological	disorder
+slipped-disc	Slipped disc	73589001	M51.2	musculoskeletal	disorder
+spina-bifida	Spina bifida	67531005	Q05.9	neurological	disorder
+spinal-muscular-atrophy-sma	Spinal muscular atrophy (SMA)	5262007	G12.9	neurological	disorder
+spondylolisthesis	Spondylolisthesis	274152003	M43.19	musculoskeletal	disorder
+squint	Squint	22066006	H50.9	eye	disorder
+stammering	Stammering	39423001	F98.5	unclassified	presentation
+stevens-johnson-syndrome	Stevens-Johnson syndrome	73442001	L51.1	skin	disorder
+stillbirth	Stillbirth	237364002		unclassified	presentation
+stomach-ulcer	Peptic ulcer, see Stomach ulcer	397825006	K25.9	digestive	disorder
+stretch-marks	Stretch marks	201067006	L90.6	skin	disorder
+stroke	Stroke	230690007		cardiovascular	disorder
+stye	Stye	1489008	H00.0	eye	disorder
+subarachnoid-haemorrhage	Brain haemorrhage, see Subarachnoid haemorrhage	21454007	I60.9	neurological	disorder
+sunburn	Sunburn	403194002	L55.0	skin	disorder
+supraventricular-tachycardia-svt	Supraventricular tachycardia (SVT)	6456007	I47.1	cardiovascular	disorder
+swollen-arms-and-hands-oedema	Swollen arms and hands (oedema)	267038008	R60.9	unclassified	presentation
+syphilis	Syphilis	76272004	A53.9	infectious	disorder
+temporal-arteritis	Giant cell arteritis, see Temporal arteritis	400130008	M31.6	cardiovascular	disorder
+temporomandibular-disorder-tmd	Jaw pain, see Temporomandibular disorder (TMD)	274667000	K10.8	unclassified	presentation
+tendonitis	Tendonitis	34840004	M77.99	musculoskeletal	disorder
+tennis-elbow	Tennis elbow	202855006	M77.1	musculoskeletal	disorder
+tetanus	Tetanus	76902006		infectious	disorder
+thalassaemia	Thalassaemia	40108008	D56.9	unclassified	disorder
+thoracic-outlet-syndrome	Thoracic outlet syndrome	128210009	G54.0	unclassified	disorder
+thrombophilia	Thrombophilia	234467004	D68.6	unclassified	disorder
+thyroid-cancer	Thyroid cancer	363478007		neoplasm	disorder
+tics	Tics	386783003	F95.9	unclassified	presentation
+tinnitus	Tinnitus	60862001	H93.1	unclassified	presentation
+tongue-tie	Tongue-tie	67787004	Q38.1	digestive	disorder
+tonsillitis	Quinsy, see Tonsillitis	90176007	J03.9	respiratory	disorder
+tooth-decay	Tooth decay	80967001	K02.9	infectious	disorder
+toxic-shock-syndrome	Toxic shock syndrome	18504008	A48.3	unclassified	disorder
+toxocariasis	Toxocariasis	406619001	B83.0	infectious	disorder
+toxoplasmosis	Toxoplasmosis	187192000	B58.9	infectious	disorder
+transient-ischaemic-attack-tia	TIA, see Transient ischaemic attack (TIA)	266257000	G45.9	cardiovascular	disorder
+trichomoniasis	Trichomoniasis	56335008	A59.9	infectious	disorder
+trigeminal-neuralgia	Trigeminal neuralgia	31681005	G50.0	neurological	disorder
+trigger-finger	Trigger finger	1539003	M65.3	musculoskeletal	disorder
+tuberculosis-tb	TB, see Tuberculosis (TB)	56717001	A16.9	infectious	disorder
+turner-syndrome	Turner syndrome	38804009	Q96.9	unclassified	disorder
+typhoid-fever	Typhoid fever	4834000	A01.0	infectious	disorder
+typhus	Typhus	240613006	A75.9	infectious	disorder
+ulcerative-colitis	Ulcerative colitis	64766004	K51.9	digestive	disorder
+umbilical-hernia	Hernia (umbilical), see Umbilical hernia	396347007	K42.9	unclassified	disorder
+underactive-thyroid-hypothyroidism	Hypothyroidism, see Underactive thyroid (hypothyroidism)	40930008	E03.9	endocrine	disorder
+urethritis	Urethritis	31822004	N34.2	genitourinary	disorder
+urinary-incontinence	Incontinence (urinary), see Urinary incontinence	165232002		unclassified	presentation
+urinary-tract-infections-utis	Cystitis, see Urinary tract infections (UTIs)	38822007	N30.9	genitourinary	disorder
+uveitis	Uveitis	128473001	H20.9	eye	disorder
+vaginitis	Vaginitis	30800001	N76.0	genitourinary	disorder
+varicose-eczema	Eczema (varicose), see Varicose eczema	366362000	I83.1	skin	disorder
+varicose-veins	Varicose veins	128060009	I83.9	cardiovascular	disorder
+vascular-dementia	Dementia (vascular), see Vascular dementia	429998004	F01.9	mental-health	disorder
+vasculitis	Vasculitis	31996006	I77.6	cardiovascular	disorder
+vertigo	Vertigo	399153001		unclassified	presentation
+vitamin-b12-or-folate-deficiency-anaemia	Anaemia (vitamin B12 or folate deficiency), see Vitamin B12 or folate deficiency anaemia	271737000	D64.9	unclassified	disorder
+vitiligo	Vitiligo	56727007		skin	disorder
+von-willebrand-disease	Von Willebrand disease	128105004	D68.0	unclassified	disorder
+vulvodynia	Vaginal pain, see Vulvodynia (vulval pain)	238968009	N94.8	genitourinary	disorder
+warts-and-verrucas	Verrucas, see Warts and verrucas	1296960002		infectious	disorder
+whooping-cough	Whooping cough	27836007	A37.0	infectious	disorder
+wolff-parkinson-white-syndrome	Wolff-Parkinson-White syndrome	74390002	I45.6	cardiovascular	disorder
+yellow-fever	Yellow fever	16541001	A95.9	infectious	disorder
