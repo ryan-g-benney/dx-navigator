@@ -1,0 +1,74 @@
+slug	name	snomed	kind
+anal-pain	Anal pain	68653001	presentation
+bad-breath	Bad breath	79879001	presentation
+bedwetting	Bedwetting in children	8009008	presentation
+bleeding-from-the-bottom-rectal-bleeding	Bleeding from the bottom (rectal bleeding)	12063002	disorder
+blood-in-semen	Blood in semen	34615008	presentation
+blood-in-urine	Blood in urine	34436003	presentation
+blue-skin-or-lips-cyanosis	Blue or grey skin or lips (cyanosis)	3415004	presentation
+body-odour-bo	Body odour (BO)	81917002	presentation
+breast-lump	Breast lumps	89164003	presentation
+breast-pain	Breast pain	53430007	presentation
+bulging-eyes	Bulging eyes (exophthalmos)	18265008	disorder
+chest-pain	Chest pain	29857009	presentation
+confusion	Confusion (sudden), see Sudden confusion (delirium)	40917007	presentation
+cough	Cough	49727002	presentation
+coughing-up-blood	Blood in phlegm, see Coughing up blood (blood in phlegm)	66857006	presentation
+diarrhoea-and-vomiting	Being sick, see Diarrhoea and vomiting	249519007	presentation
+dizziness	Dizziness	404640003	presentation
+double-vision	Double vision	24982008	disorder
+dry-eyes	Dry eyes	162290004	presentation
+dry-mouth	Dry mouth	87715008	presentation
+earache	Earache	301354004	presentation
+eye-pain	Eye pain	41652007	presentation
+fainting	Fainting	271594007	presentation
+feeling-sick-nausea	Feeling sick (nausea)	422587007	presentation
+fever-in-adults	Fever in adults, see High temperature (fever) in adults	386661006	presentation
+fever-in-children	Fever in children, see High temperature (fever) in children	386661006	presentation
+flatulence	Farting (flatulence)	249504006	presentation
+foot-pain	Foot pain	47933007	presentation
+hand-pain	Hand pain	53057004	presentation
+headaches	Headaches	25064002	presentation
+heart-palpitations	Ectopic beats, see Heart palpitations	29717002	disorder
+hiccups	Hiccups	65958008	presentation
+hip-pain	Hip pain in adults	49218002	presentation
+hip-pain-children-irritable-hip	Hip pain in children (irritable hip)	301864002	disorder
+hirsutism	Excessive hair growth (hirsutism)	271607001	presentation
+irregular-periods	Irregular periods	80182007	presentation
+joint-pain	Joint pain	57676002	presentation
+knee-pain	Knee pain	1003722009	presentation
+limp-in-children	Limping in children	16973004	presentation
+lost-or-changed-sense-smell	Anosmia, see Lost or changed sense of smell	44169009	presentation
+lumps	Lumps	300848003	presentation
+memory-loss-amnesia	Amnesia, see Memory loss (amnesia)	48167000	presentation
+metallic-taste	Metallic taste	11193009	presentation
+nail-problems	Nail problems	297989000	presentation
+neck-pain-and-stiff-neck	Neck pain	81680005	presentation
+night-sweats	Night sweats	42984000	presentation
+ovulation-pain	Ovulation pain	43548008	presentation
+paralysis	Paralysis	44695005	presentation
+period-pain	Menstrual pain, see Period pain	266599000	disorder
+pins-and-needles	Pins and needles	62507009	presentation
+post-menopausal-bleeding	Bleeding after the menopause, see Postmenopausal bleeding	76742009	presentation
+priapism-painful-erections	Priapism (painful erections)	6273006	disorder
+red-eye	Red eye	703630003	presentation
+shortness-of-breath	Shortness of breath	267036007	presentation
+shoulder-pain	Shoulder pain	45326000	presentation
+snoring	Snoring	72863001	presentation
+soiling-child-pooing-their-pants	Soiling (child pooing their pants)	276484003	presentation
+sore-or-dry-lips	Dry lips, see Sore or dry lips	248181001	presentation
+sore-throat	Sore throat	267102003	presentation
+stomach-ache	Stomach ache	271681002	presentation
+swallowing-problems-dysphagia	Dysphagia (swallowing problems)	40739000	disorder
+teeth-grinding	Bruxism, see Teeth grinding (bruxism)	191983006	disorder
+testicle-pain	Pain in testicles, see Testicle pain	63901009	presentation
+thirst	Excessive thirst	17173007	presentation
+toothache	Dental pain, see Toothache	27355003	presentation
+tremor-or-shaking-hands	Essential tremor, see Tremor or shaking hands	609558009	disorder
+twitching-eyes-and-muscles	Twitching eyes and muscles	699377006	presentation
+unintentional-weight-loss	Unintentional weight loss	448765001	presentation
+vaginal-discharge	Vaginal discharge	271939006	presentation
+vaginal-dryness	Vaginal dryness	31908003	disorder
+vomiting-blood	Vomiting blood	8765009	disorder
+watering-eyes	Watering eyes	420103007	presentation
+what-to-do-if-someone-has-a-seizure-fit	Fits (seizures), see What to do if someone has a seizure (fit)	91175000	presentation

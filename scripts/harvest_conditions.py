@@ -31,7 +31,9 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import trud_snomed as t  # noqa: E402
 
 INDEX = ROOT / ".workbench" / "nhs" / "_az_index.html"
+SYM_INDEX = ROOT / ".workbench" / "nhs" / "_symptom_index.html"
 OUT = ROOT / "data" / "candidates" / "conditions.tsv"
+SYM_OUT = ROOT / "data" / "candidates" / "presentations.tsv"
 UA = "dx-navigator-research/0.1"
 DISEASES: set[str] = set()
 FINDING = "404684003"   # Clinical finding, the ancestor everything sits under
@@ -41,21 +43,50 @@ DISEASE = "64572001"    # Disease. A finding that is not one is a presentation:
                         # three complaints and needs more, so the split matters.
 
 
-def az_slugs(refetch: bool) -> dict[str, str]:
-    """slug -> display name, from the NHS A to Z index page."""
-    if not INDEX.exists() or refetch:
-        INDEX.parent.mkdir(parents=True, exist_ok=True)
-        r = subprocess.run(["curl", "-sSL", "-m", "60", "-A", UA,
-                            "https://www.nhs.uk/conditions/"],
+def index_slugs(cache: Path, url: str, section: str, refetch: bool) -> dict[str, str]:
+    """slug -> display name, from an NHS index page. Links only, never prose."""
+    if not cache.exists() or refetch:
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        r = subprocess.run(["curl", "-sSL", "-m", "60", "-A", UA, url],
                            capture_output=True, text=True, check=True)
-        INDEX.write_text(r.stdout)
-    raw = INDEX.read_text()
+        cache.write_text(r.stdout)
+    raw = cache.read_text()
     out: dict[str, str] = {}
-    for m in re.finditer(r'href="/conditions/([a-z0-9-]+)/"[^>]*>(.*?)</a>', raw, re.S):
+    for m in re.finditer(rf'href="/{section}/([a-z0-9-]+)/"[^>]*>(.*?)</a>', raw, re.S):
         name = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", m.group(2)))).strip()
         if name and len(name) < 90:
             out.setdefault(m.group(1), name)
     return out
+
+
+def az_slugs(refetch: bool) -> dict[str, str]:
+    return index_slugs(INDEX, "https://www.nhs.uk/conditions/", "conditions", refetch)
+
+
+def symptom_slugs(refetch: bool) -> dict[str, str]:
+    """The symptoms index. These are presenting complaints, which is what the
+    knowledge base is shortest of: it has three."""
+    return index_slugs(SYM_INDEX, "https://www.nhs.uk/symptoms/", "symptoms", refetch)
+
+
+def match(names: dict[str, str], term: dict[str, set[str]]):
+    matched, ambiguous, unmatched = {}, [], []
+    for slug, display in sorted(names.items()):
+        hit = None
+        for cand in variants(display):
+            ids = term.get(cand, set())
+            if len(ids) == 1:
+                hit = next(iter(ids))
+                break
+            if ids and hit is None:
+                hit = "AMBIG"
+        if hit and hit != "AMBIG":
+            matched[slug] = (display, hit)
+        elif hit == "AMBIG":
+            ambiguous.append((slug, display))
+        else:
+            unmatched.append((slug, display))
+    return matched, ambiguous, unmatched
 
 
 # Medical plurals do not follow the English rule: keratoses is keratosis, not
@@ -221,23 +252,7 @@ def main() -> None:
     term, _keep, parents = snomed_index(archive)
     print(f"SNOMED: {len(term)} distinct terms under Clinical finding")
 
-    matched: dict[str, tuple[str, str]] = {}
-    ambiguous, unmatched = [], []
-    for slug, display in sorted(names.items()):
-        hit = None
-        for cand in variants(display):
-            ids = term.get(cand, set())
-            if len(ids) == 1:
-                hit = next(iter(ids))
-                break
-            if ids and hit is None:
-                hit = "AMBIG"
-        if hit and hit != "AMBIG":
-            matched[slug] = (display, hit)
-        elif hit == "AMBIG":
-            ambiguous.append((slug, display, 0))
-        else:
-            unmatched.append((slug, display))
+    matched, ambiguous, unmatched = match(names, term)
 
     codes = icd10_map(archive, {c for _, c in matched.values()})
 
@@ -270,6 +285,19 @@ def main() -> None:
         counts[v] += 1
     for k, n in sorted(counts.items(), key=lambda x: -x[1]):
         print(f"  {k:22s} {n}")
+
+    # Presenting complaints. The knowledge base has three; the index has 95.
+    syms = symptom_slugs("--refetch" in sys.argv)
+    smatched, samb, sunmatched = match(syms, term)
+    with SYM_OUT.open("w") as fh:
+        fh.write("slug\tname\tsnomed\tkind\n")
+        for slug, (display, cid) in sorted(smatched.items()):
+            kind = "disorder" if cid in DISEASES else "presentation"
+            fh.write(f"{slug}\t{display}\t{cid}\t{kind}\n")
+    print(f"\nNHS symptoms index: {len(syms)} pages")
+    print(f"  matched {len(smatched)}, ambiguous {len(samb)}, "
+          f"unmatched {len(sunmatched)}")
+    print(f"  wrote {SYM_OUT.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
