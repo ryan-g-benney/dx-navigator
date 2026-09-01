@@ -42,6 +42,46 @@ the consumer medical sites, UK, and reusable. One registration unlocks it.
 | **Wikidata, HPO, Orphanet** | Tested with numbers in `phase-0-acquisition-plan.md` §2. Rare-disease biased, thin on common presentations |
 | **UpToDate, BMJ Best Practice** | Subscription, no redistribution. Usable as a human reference, not as a pipeline |
 
+## Tested and rejected: SNOMED's own relationships
+
+SNOMED classifies disorders; it does not encode what a presentation's
+differential is. Tested rather than assumed, the same way the acquisition plan
+tested Wikidata.
+
+The release has 102 active relationship types. The two that could express
+causation are `42752001 |Due to|` with 19,910 source concepts and
+`47429007 |Associated with|` with 1,667. Taking every descendant of a
+presentation and collecting what those descendants are due to gives:
+
+| Presentation | Distinct causes |
+|---|---|
+| Cough | 2 |
+| Chest pain | 16 |
+| Headache | 19 |
+
+Cough returns allergic reaction and tracheoesophageal fistula. Not pneumonia,
+not asthma, not COPD, not PE, not lung cancer. Seven of the sixteen for chest
+pain are variants of arteriosclerosis of a coronary artery bypass graft, and
+the list also contains a prosthetic breast implant.
+
+Measured as recall against the three pools already hand-authored: **2 of 42
+coded conditions, 5%.**
+
+That number was first computed as 57%, which was wrong and worth recording.
+Counting a hit when any *ancestor* of our condition appeared among the causes
+looked reasonable until the cause list turned out to include
+`64572001 |Disease|`, which is an ancestor of nearly every disorder. One
+garbage node turned a 5% result into a 57% one. Causes with more than 200
+descendants are now excluded as category-level.
+
+The reason is structural rather than a gap to be filled. SNOMED's compound
+concepts exist because someone needed to record a specific thing, so
+"Headache due to whiplash injury" exists and "Cough due to pneumonia" does not.
+Coverage is incidental, and incidental coverage cannot be a differential.
+
+SNOMED remains the right source for what it does model: concept ids, the is-a
+poset, and the ICD-10 map. It is not a source for symptom-to-condition links.
+
 ## Not yet investigated
 
 - **ICPC-2**, the primary-care classification the source investigation
