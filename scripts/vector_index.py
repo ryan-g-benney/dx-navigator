@@ -6,12 +6,18 @@ not HNSW: 1300 x 768 floats is four megabytes, an exhaustive scan is
 immediate, and an exact index has no recall loss to caveat.
 
 FAISS stores no payload. Row order in the index is row order in
-data/candidates/symptoms-v2.tsv, and that is the only join.
+data/candidates/symptoms-v2.tsv, and that is the only join. A sidecar
+<name>.meta.json next to the index records the phrase count and a SHA-256
+of the phrase list as indexed; load() recomputes it against the current
+vocabulary and refuses a stale index instead of returning silently wrong
+row ids.
 
     vector_index.py --build     embed the vocabulary and write the index
 """
 from __future__ import annotations
 
+import hashlib
+import json
 import sys
 from pathlib import Path
 
@@ -45,14 +51,35 @@ def search(index: faiss.Index, queries: np.ndarray, k: int = 5
             for row_i, row_s in zip(ids, scores)]
 
 
-def save(index: faiss.Index, path: Path = INDEX_PATH) -> None:
+def _meta_path(path: Path) -> Path:
+    return path.with_name(path.stem + ".meta.json")
+
+
+def _digest(phrase_list: list[str]) -> str:
+    return hashlib.sha256("\n".join(phrase_list).encode()).hexdigest()
+
+
+def save(index: faiss.Index, path: Path = INDEX_PATH,
+         phrase_list: list[str] | None = None) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     faiss.write_index(index, str(path))
+    if phrase_list is not None:
+        meta = {"count": len(phrase_list), "sha256": _digest(phrase_list)}
+        _meta_path(path).write_text(json.dumps(meta))
 
 
-def load(path: Path = INDEX_PATH) -> faiss.Index:
+def load(path: Path = INDEX_PATH, phrase_list: list[str] | None = None) -> faiss.Index:
     if not path.exists():
         raise SystemExit(f"no index at {path}; run vector_index.py --build")
+    if phrase_list is None:
+        phrase_list = phrases()
+    meta_path = _meta_path(path)
+    want = {"count": len(phrase_list), "sha256": _digest(phrase_list)}
+    have = json.loads(meta_path.read_text()) if meta_path.exists() else None
+    if have != want:
+        raise SystemExit(
+            "the vocabulary changed since the index was built; "
+            "run vector_index.py --build")
     return faiss.read_index(str(path))
 
 
@@ -66,7 +93,7 @@ def build() -> None:
 
     texts = phrases()
     vecs = np.array(G.embed(texts, progress=True), dtype="float32")
-    save(from_vectors(vecs))
+    save(from_vectors(vecs), phrase_list=texts)
     print(f"{len(texts)} phrases indexed at {INDEX_PATH}")
 
 

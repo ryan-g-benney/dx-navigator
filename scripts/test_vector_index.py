@@ -26,10 +26,24 @@ def test_search_is_cosine_and_ordered():
 
 def test_roundtrip(tmp: Path):
     vecs = np.array([[1.0, 0.0], [0.0, 1.0]], dtype="float32")
+    words = ["alpha", "beta"]
     path = tmp / "t.faiss"
-    V.save(V.from_vectors(vecs), path)
-    hits = V.search(V.load(path), np.array([[0.0, 1.0]], dtype="float32"), k=1)[0]
+    V.save(V.from_vectors(vecs), path, phrase_list=words)
+    hits = V.search(V.load(path, phrase_list=words),
+                     np.array([[0.0, 1.0]], dtype="float32"), k=1)[0]
     assert hits[0][0] == 1, hits
+
+
+def test_identity_guard_fires_on_mismatch(tmp: Path):
+    vecs = np.array([[1.0, 0.0], [0.0, 1.0]], dtype="float32")
+    path = tmp / "g.faiss"
+    V.save(V.from_vectors(vecs), path, phrase_list=["alpha", "beta"])
+    try:
+        V.load(path, phrase_list=["alpha", "gamma"])
+    except SystemExit:
+        pass
+    else:
+        raise AssertionError("load() should refuse a phrase list that does not match the sidecar")
 
 
 import tempfile  # noqa: E402
@@ -39,4 +53,7 @@ print("  ok  test_search_is_cosine_and_ordered")
 with tempfile.TemporaryDirectory() as d:
     test_roundtrip(Path(d))
 print("  ok  test_roundtrip")
+with tempfile.TemporaryDirectory() as d:
+    test_identity_guard_fires_on_mismatch(Path(d))
+print("  ok  test_identity_guard_fires_on_mismatch")
 print("vector index: all checks passed")
