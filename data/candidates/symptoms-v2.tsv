@@ -1,0 +1,1088 @@
+symptom_id	core_phrase	character	concept	site	n_conditions
+0	abdominal discomfort		abdominal discomfort		1
+1	abnormal angle in the leg		abnormal angle	leg	1
+2	abnormal breastbone in the chest	abnormal	breastbone	chest	1
+3	abnormal cry		abnormal cry		1
+4	abnormal distribution in the fat	abnormal	distribution	fat	1
+5	abnormal temperature		abnormal temperature		1
+6	abnormality in the head		abnormality	head	1
+7	abscess in the skin		abscess	skin	1
+8	ache in the body		ache	body	7
+9	ache in the leg		ache	leg	1
+10	aches		aches		1
+11	aching in the fingers		aching	fingers	1
+12	aching in the knees		aching	knees	1
+13	aching in the wrists		aching	wrists	1
+14	aching pain		aching pain		1
+15	acid reflux		acid reflux		3
+16	acne in the chest		acne	chest	1
+17	acne in the lower back		acne	lower back	1
+18	action		action		1
+19	adjustment		adjustment		1
+20	aggression		aggression		1
+21	agitation		agitation		1
+22	agnosia		agnosia		1
+23	alertness		alertness		1
+24	amnesia		amnesia		1
+25	anxiety		anxiety		9
+26	apathy		apathy		1
+27	apnoea		apnoea		1
+28	appetite		appetite		1
+29	appetite loss		appetite loss		41
+30	arm pain in the arm		arm pain	arm	2
+31	auditory hallucination in the ear		auditory hallucination	ear	1
+32	aura in the head		aura	head	1
+33	automatic behaviour		automatic behaviour		1
+34	aversion		aversion		1
+35	back pain		back pain		1
+36	back pain in the back		back pain	back	1
+37	bad breath	bad	breath		7
+38	bad taste	bad	taste		7
+39	balance problem		balance problem		1
+40	balance problems		balance problems		1
+41	barking cough in the throat	barking	cough	throat	1
+42	bed wetting		bed wetting		2
+43	bedwetting		bedwetting		1
+44	behaviour		behaviour		1
+45	behaviour change		behaviour change		2
+46	behavioural challenges		behavioural challenges		1
+47	behavioural changes		behavioural changes		6
+48	bites		bites		1
+49	black eye	black	eye		1
+50	black poo	black	poo		1
+51	black skin	black	skin		1
+52	bleeding		bleeding		7
+53	bleeding gums in the gums		bleeding gums	gums	1
+54	bleeding in the cyst		bleeding	cyst	1
+55	bleeding in the ears		bleeding	ears	1
+56	bleeding in the gum		bleeding	gum	2
+57	bleeding in the penile		bleeding	penile	2
+58	bleeding in the rectal		bleeding	rectal	5
+59	bleeding in the vagina		bleeding	vagina	3
+60	bleeding in the vaginal		bleeding	vaginal	2
+61	blind spot		blind spot		1
+62	blinking		blinking		2
+63	blister		blister		1
+64	blister in the skin		blister	skin	3
+65	blistering		blistering		1
+66	blisters		blisters		4
+67	blisters in the ears		blisters	ears	1
+68	blisters in the hands		blisters	hands	1
+69	blisters in the mouth		blisters	mouth	3
+70	blisters in the skin		blisters	skin	5
+71	bloating		bloating		8
+72	bloating in the abdomen		bloating	abdomen	17
+73	bloating in the stomach		bloating	stomach	1
+74	blocked nose in the nose		blocked nose	nose	2
+75	blood clot	blood	clot		1
+76	blood in the poo		blood	poo	4
+77	blood in the semen		blood	semen	1
+78	blood in the stool		blood	stool	6
+79	blood in the urine		blood	urine	12
+80	blood in the vomit		blood	vomit	1
+81	bloodshot eyes		bloodshot eyes		1
+82	bloody diarrhoea	bloody	diarrhoea		2
+83	blotchy rash	blotchy	rash		1
+84	blurred vision		blurred vision		20
+85	blurring in the vision		blurring	vision	5
+86	body aches in the body		body aches	body	1
+87	body pain		body pain		1
+88	body pain in the body		body pain	body	1
+89	body weakness		body weakness		3
+90	bone pain		bone pain		8
+91	bowed legs in the legs		bowed legs	legs	1
+92	bowel movements		bowel movements		1
+93	brain fog		brain fog		5
+94	breast enlargement		breast enlargement		1
+95	breath		breath		1
+96	breathing		breathing		1
+97	breathing changes		breathing changes		1
+98	breathing difficulties		breathing difficulties		1
+99	breathing problems		breathing problems		1
+100	breathlessness		breathlessness		6
+101	breathlessness in the chest		breathlessness	chest	1
+102	brittle toenails		brittle toenails		1
+103	broken sleep		broken sleep		1
+104	brown discoloration in the skin	brown	discoloration	skin	1
+105	brown skin	brown	skin		1
+106	brown skin patches in the skin	brown	skin patches	skin	1
+107	brown spots	brown	spots		1
+108	bruising		bruising		9
+109	bruising in the ears		bruising	ears	1
+110	bruising in the eyes		bruising	eyes	1
+111	bruising in the hip		bruising	hip	1
+112	bruising in the leg		bruising	leg	1
+113	bruising in the limb		bruising	limb	1
+114	bulge in the tummy		bulge	tummy	1
+115	bulging eye		bulging eye		1
+116	bulging lump	bulging	lump		1
+117	bulging spot in the head	bulging	spot	head	2
+118	bumps		bumps		1
+119	burning		burning		1
+120	burning in the genital		burning	genital	1
+121	burning in the skin		burning	skin	1
+122	burning pain	burning	pain		2
+123	burning sensation in the skin		burning sensation	skin	1
+124	burning skin		burning skin		2
+125	burp		burp		1
+126	burping		burping		3
+127	cardiac arrest		cardiac arrest		2
+128	change in the bowel		change	bowel	6
+129	change in the skin		change	skin	1
+130	changes in the appetite		changes	appetite	2
+131	changes in the finger		changes	finger	1
+132	changes in the skin		changes	skin	1
+133	chest infection in the chest		chest infection	chest	5
+134	chest pain in the chest		chest pain	chest	7
+135	chest tenderness in the chest		chest tenderness	chest	1
+136	chesty cough		chesty cough		1
+137	choking		choking		1
+138	choking in the throat		choking	throat	1
+139	clammy skin in the skin	clammy	skin	skin	1
+140	claudication		claudication		1
+141	cleft lip in the lip		cleft lip	lip	1
+142	cleft palate in the palate		cleft palate	palate	1
+143	clicking in the jaw		clicking	jaw	1
+144	clicking in the joint		clicking	joint	1
+145	clicking sound in the hip		clicking sound	hip	1
+146	clubbing in the finger		clubbing	finger	3
+147	clumsiness		clumsiness		2
+148	co-ordination problem in the limb		co-ordination problem	limb	1
+149	coating in the throat		coating	throat	1
+150	coating in the tongue		coating	tongue	1
+151	cognitive impairment		cognitive impairment		1
+152	cold feet in the foot	cold	feet	foot	1
+153	cold hands in the hand	cold	hands	hand	1
+154	cold in the arm		cold	arm	1
+155	cold in the body		cold	body	1
+156	cold in the hand		cold	hand	1
+157	cold skin	cold	skin		1
+158	cold skin in the skin	cold	skin	skin	1
+159	cold sore		cold sore		3
+160	coloured mucus in the nose	coloured	mucus	nose	1
+161	communication		communication		1
+162	communication problems		communication problems		1
+163	complaint		complaint		1
+164	concentration difficulty		concentration difficulty		10
+165	confusion		confusion		25
+166	confusion in the head		confusion	head	1
+167	congestion		congestion		1
+168	constipation		constipation		11
+169	control difficulty in the limb		control difficulty	limb	1
+170	coping		coping		1
+171	cough		cough		31
+172	cough in the throat		cough	throat	1
+173	coughing		coughing		7
+174	coughing blood		coughing blood		1
+175	coughing in the throat		coughing	throat	1
+176	cracked skin		cracked skin		2
+177	crackling sound in the nose		crackling sound	nose	1
+178	cradle patch in the head	cradle	patch	head	1
+179	cramps in the muscle		cramps	muscle	8
+180	cramps in the stomach		cramps	stomach	2
+181	creases		creases		1
+182	crowded teeth in the mouth	crowded	teeth	mouth	1
+183	crusting in the face		crusting	face	1
+184	crusting in the hairline		crusting	hairline	1
+185	crusts in the eyelashes		crusts	eyelashes	1
+186	crusty scales in the eyebrows	crusty	scales	eyebrows	1
+187	crusty skin sores	crusty	skin sores		2
+188	crying		crying		2
+189	cuddling		cuddling		1
+190	curvature in the spine		curvature	spine	1
+191	curved spine in the spine		curved spine	spine	2
+192	cyanosis		cyanosis		7
+193	cyst		cyst		1
+194	dandruff flakes in the scalp		dandruff flakes	scalp	1
+195	dark patch in the eye	dark	patch	eye	1
+196	dark pee		dark pee		4
+197	dark skin marks in the skin	dark	skin marks	skin	1
+198	dark skin patches	dark	skin patches		1
+199	dark spots	dark	spots		1
+200	dark spots in the fingernails		dark spots	fingernails	1
+201	dark urine	dark	urine		2
+202	daytime tiredness		daytime tiredness		2
+203	deep eyes in the eye	deep	eyes	eye	1
+204	deeper voice		deeper voice		1
+205	deformity in the bone		deformity	bone	1
+206	delay		delay		1
+207	delayed development		delayed development		3
+208	delayed puberty		delayed puberty		1
+209	delirium		delirium		1
+210	depression		depression		2
+211	diarrhoea		diarrhoea		7
+212	diarrhoea in the bowel		diarrhoea	bowel	3
+213	difficulties in the speech		difficulties	speech	2
+214	difficulty		difficulty		4
+215	difficulty breathing		difficulty breathing		13
+216	difficulty climbing in the stairs		difficulty climbing	stairs	2
+217	difficulty feeding		difficulty feeding		2
+218	difficulty in the body		difficulty	body	1
+219	difficulty in the breathing		difficulty	breathing	1
+220	difficulty in the chest		difficulty	chest	1
+221	difficulty in the exercising		difficulty	exercising	1
+222	difficulty in the eyes		difficulty	eyes	1
+223	difficulty in the head		difficulty	head	6
+224	difficulty in the hearing		difficulty	hearing	1
+225	difficulty in the leg		difficulty	leg	1
+226	difficulty in the lips		difficulty	lips	1
+227	difficulty in the mouth		difficulty	mouth	1
+228	difficulty in the movement		difficulty	movement	3
+229	difficulty in the numbers		difficulty	numbers	1
+230	difficulty in the reading		difficulty	reading	1
+231	difficulty in the speech		difficulty	speech	2
+232	difficulty in the tongue		difficulty	tongue	1
+233	difficulty in the walking		difficulty	walking	1
+234	difficulty in the writing		difficulty	writing	1
+235	difficulty lifting		difficulty lifting		3
+236	difficulty moving		difficulty moving		5
+237	difficulty moving in the tongue		difficulty moving	tongue	1
+238	difficulty moving in the wrist		difficulty moving	wrist	1
+239	difficulty planning		difficulty planning		2
+240	difficulty straightening in the arm		difficulty straightening	arm	1
+241	difficulty swallowing		difficulty swallowing		34
+242	difficulty urinating		difficulty urinating		10
+243	difficulty walking		difficulty walking		4
+244	digestion problems		digestion problems		1
+245	disappearance in the fontanelle		disappearance	fontanelle	1
+246	discharge in the anal		discharge	anal	1
+247	discharge in the ear		discharge	ear	5
+248	discharge in the eye		discharge	eye	1
+249	discharge in the vaginal		discharge	vaginal	1
+250	discharge in the wound		discharge	wound	1
+251	discolouration in the hand		discolouration	hand	1
+252	discolouration in the skin		discolouration	skin	5
+253	discoloured skin in the leg	discoloured	skin	leg	1
+254	discoloured skin lesion	discoloured	skin lesion		1
+255	discomfort in the vulval		discomfort	vulval	1
+256	disorientation		disorientation		5
+257	distension in the abdomen		distension	abdomen	1
+258	distortion in the line		distortion	line	1
+259	distress		distress		2
+260	dizziness		dizziness		21
+261	double vision		double vision		3
+262	drainage		drainage		1
+263	drip in the nose		drip	nose	1
+264	drooling		drooling		2
+265	drooling in the unspecified		drooling	unspecified	1
+266	drooping eyelid		drooping eyelid		2
+267	drooping in the face		drooping	face	2
+268	droopy eyelid		droopy eyelid		2
+269	drowsiness		drowsiness		5
+270	drowsiness in the head		drowsiness	head	3
+271	dry dry skin in the skin	dry	dry skin	skin	3
+272	dry eyes		dry eyes		4
+273	dry eyes in the eyes		dry eyes	eyes	1
+274	dry flake in the skin	dry	flake	skin	1
+275	dry lips		dry lips		2
+276	dry lips in the lips	dry	lips	lips	1
+277	dry mouth		dry mouth		7
+278	dry mouth in the mouth	dry	mouth	mouth	1
+279	dry scalp in the scalp	dry	scalp	scalp	1
+280	dry skin		dry skin		4
+281	dry skin in the skin	dry	skin	skin	1
+282	dry throat in the throat		dry throat	throat	1
+283	dry tongue in the tongue	dry	tongue	tongue	1
+284	dryness in the vagina		dryness	vagina	2
+285	ear infections		ear infections		1
+286	ear pressure in the ear		ear pressure	ear	3
+287	earache		earache		7
+288	earwax		earwax		1
+289	easy bruising in the skin	easy	bruising	skin	1
+290	eating habit		eating habit		1
+291	echolalia		echolalia		1
+292	enlargement in the clitoris		enlargement	clitoris	1
+293	erectile dysfunction		erectile dysfunction		8
+294	erection problem		erection problem		1
+295	excessive crying	excessive	crying		1
+296	excessive hair growth in the skin	excessive	hair growth	skin	1
+297	excessive sleepiness	excessive	sleepiness		1
+298	exhaustion		exhaustion		3
+299	exposed bone in the wound		exposed bone	wound	1
+300	extreme sleepiness in the head	extreme	sleepiness	head	2
+301	eye change in the eye		eye change	eye	1
+302	eye contact		eye contact		1
+303	eye injury		eye injury		1
+304	eye irritation		eye irritation		2
+305	eye pain in the eye		eye pain	eye	3
+306	eye problem in the eye		eye problem	eye	2
+307	eye rubbing in the eye		eye rubbing	eye	2
+308	eye swelling in the eye		eye swelling	eye	1
+309	eyelid drooping		eyelid drooping		1
+310	eyelid swelling		eyelid swelling		1
+311	face pressure in the face		face pressure	face	3
+312	facial drooping		facial drooping		3
+313	facial expression		facial expression		1
+314	facial pain in the face		facial pain	face	2
+315	facial swelling in the face		facial swelling	face	6
+316	facial weakness		facial weakness		4
+317	faded vision		faded vision		1
+318	fainting		fainting		8
+319	fainting in the body		fainting	body	1
+320	falling		falling		2
+321	fast breath	fast	breath		1
+322	fast breathing		fast breathing		4
+323	fatigue		fatigue		97
+324	fatigue in the arm		fatigue	arm	1
+325	fatigue in the body		fatigue	body	3
+326	fatigue in the head		fatigue	head	1
+327	fear		fear		1
+328	febrile seizure		febrile seizure		2
+329	feeding difficulty		feeding difficulty		1
+330	feeding difficulty in the unspecified		feeding difficulty	unspecified	1
+331	feeding in the mouth		feeding	mouth	1
+332	feeling		feeling		1
+333	feeling irritable		feeling irritable		1
+334	fever		fever		11
+335	fidgety movements		fidgety movements		1
+336	filler		filler		1
+337	firm skin	firm	skin		1
+338	fist clenching		fist clenching		1
+339	flakes in the eyelashes		flakes	eyelashes	1
+340	flaking skin		flaking skin		1
+341	flaky skin in the skin		flaky skin	skin	1
+342	flashes		flashes		2
+343	flashing lights in the vision		flashing lights	vision	1
+344	flat feet in the foot	flat	feet	foot	1
+345	flatulence		flatulence		4
+346	floaters		floaters		2
+347	floppiness		floppiness		1
+348	floppiness in the muscle		floppiness	muscle	2
+349	floppy body		floppy body		2
+350	flu		flu		25
+351	fluid blister	fluid	blister		1
+352	fluid leakage		fluid leakage		1
+353	fluid leakage in the skin		fluid leakage	skin	1
+354	flushing in the face		flushing	face	3
+355	focus		focus		1
+356	folds in the skin		folds	skin	1
+357	foot drop in the foot		foot drop	foot	1
+358	forehead scale in the forehead		forehead scale	forehead	1
+359	fragile bone in the bone		fragile bone	bone	2
+360	fragile skin in the skin		fragile skin	skin	2
+361	freckles in the armpits		freckles	armpits	1
+362	freckles in the groin		freckles	groin	1
+363	frequent falls		frequent falls		1
+364	frequent illness		frequent illness		2
+365	frequent infection	frequent	infection		1
+366	frequent urination		frequent urination		3
+367	friend		friend		1
+368	frothy urine in the urine		frothy urine	urine	2
+369	frustration		frustration		1
+370	fullness in the anus		fullness	anus	1
+371	general malaise		general malaise		12
+372	genital pain in the genital		genital pain	genital	2
+373	grating sound in the bone		grating sound	bone	1
+374	greasy hair		greasy hair		1
+375	greasy scale in the face		greasy scale	face	1
+376	greasy scale in the scalp		greasy scale	scalp	1
+377	green vomit	green	vomit		1
+378	grey hair	grey	hair		1
+379	grinding noise in the jaw		grinding noise	jaw	1
+380	grip weakness		grip weakness		1
+381	gritty eyes		gritty eyes		2
+382	growth		growth		2
+383	growth in the skin		growth	skin	1
+384	growth restriction		growth restriction		1
+385	growths in the skin		growths	skin	1
+386	gut symptoms		gut symptoms		1
+387	hair		hair		2
+388	hair change in the hair		hair change	hair	1
+389	hair in the pubic		hair	pubic	1
+390	hair in the underarm		hair	underarm	1
+391	hair loss		hair loss		4
+392	hair loss in the leg		hair loss	leg	1
+393	hallucinations		hallucinations		7
+394	halos		halos		2
+395	hand pain in the hand		hand pain	hand	2
+396	hard skin	hard	skin		1
+397	hardened skin in the skin		hardened skin	skin	2
+398	head tilting in the head		head tilting	head	1
+399	headache		headache		24
+400	headache in the head		headache	head	10
+401	headache in the neck		headache	neck	1
+402	headache in the temporal		headache	temporal	1
+403	headaches		headaches		1
+404	hearing loss		hearing loss		12
+405	hearing problem		hearing problem		1
+406	heart murmur in the heart		heart murmur	heart	3
+407	heart tongue	heart	tongue		1
+408	heartbeat		heartbeat		9
+409	heartburn		heartburn		8
+410	heat sensitivity		heat sensitivity		1
+411	heavy legs in the legs		heavy legs	legs	1
+412	heavy periods		heavy periods		1
+413	hesitation		hesitation		1
+414	hiccups		hiccups		2
+415	high fever	high	fever		1
+416	high palate in the arched	high	palate	arched	1
+417	high temperature		high temperature		82
+418	hives		hives		6
+419	hoarse voice		hoarse voice		14
+420	hot skin	hot	skin		1
+421	hyperalgesia		hyperalgesia		1
+422	hyperpigmentation		hyperpigmentation		1
+423	hypersomnia		hypersomnia		1
+424	hypertension		hypertension		6
+425	inability in the leg		inability	leg	1
+426	incomplete emptying in the bowel		incomplete emptying	bowel	1
+427	incontinence		incontinence		5
+428	incontinence in the bowel		incontinence	bowel	2
+429	increased crying		increased crying		1
+430	increased hunger		increased hunger		2
+431	increased thirst	increased	thirst		17
+432	increased urination	increased	urination		12
+433	indigestion		indigestion		7
+434	infection		infection		1
+435	infection in the skin		infection	skin	3
+436	infertility		infertility		1
+437	ingrown hair		ingrown hair		1
+438	insomnia		insomnia		14
+439	intense pain		intense pain		1
+440	irregular periods		irregular periods		8
+441	irritability		irritability		8
+442	irritability in the body		irritability	body	1
+443	irritation		irritation		2
+444	irritation in the throat		irritation	throat	2
+445	itch in the anus		itch	anus	1
+446	itchiness in the skin		itchiness	skin	1
+447	itching		itching		2
+448	itching in the ear		itching	ear	2
+449	itching in the eyes		itching	eyes	2
+450	itching in the genital		itching	genital	1
+451	itching in the mouth		itching	mouth	1
+452	itching in the nose		itching	nose	1
+453	itching in the vagina		itching	vagina	2
+454	itching in the vulva		itching	vulva	1
+455	itchy		itchy		1
+456	itchy feeling	itchy	feeling		1
+457	itchy itchy skin in the skin	itchy	itchy skin	skin	3
+458	itchy legs in the legs		itchy legs	legs	1
+459	itchy rash	itchy	rash		13
+460	itchy rash in the bumpy	itchy	rash	bumpy	1
+461	itchy scalp in the scalp	itchy	scalp	scalp	1
+462	itchy skin		itchy skin		9
+463	jaundice		jaundice		17
+464	jerking movement in the body	jerking	movement	body	2
+465	jerky movements		jerky movements		1
+466	joint ache		joint ache		25
+467	joint crackling		joint crackling		2
+468	joint grating		joint grating		2
+469	joint hypermobility in the joint		joint hypermobility	joint	2
+470	joint pain		joint pain		16
+471	joint pain in the joint		joint pain	joint	1
+472	joint problems in the joint		joint problems	joint	1
+473	joint redness in the joint		joint redness	joint	1
+474	joint stiffness in the joint		joint stiffness	joint	1
+475	joint swelling		joint swelling		13
+476	joint swelling in the joint		joint swelling	joint	1
+477	joint warmth in the joint		joint warmth	joint	1
+478	kidney function		kidney function		1
+479	lacelike rash	lacelike	rash		1
+480	lack		lack		1
+481	language problems		language problems		1
+482	large head		large head		1
+483	laughing		laughing		1
+484	leaking in the skin		leaking	skin	1
+485	leaning		leaning		1
+486	leg discomfort in the leg		leg discomfort	leg	1
+487	leg dragging		leg dragging		1
+488	lesion		lesion		1
+489	lesion clustering		lesion clustering		1
+490	lesions in the face		lesions	face	1
+491	lesions in the legs		lesions	legs	1
+492	less peeing	less	peeing		2
+493	lethargy		lethargy		1
+494	light-headedness		light-headedness		2
+495	light-headedness in the head		light-headedness	head	1
+496	lightheadedness		lightheadedness		8
+497	limb		limb		1
+498	limp		limp		1
+499	limp in the child		limp	child	1
+500	lines		lines		1
+501	loose joint		loose joint		1
+502	loose teeth		loose teeth		1
+503	loss in the balance		loss	balance	5
+504	loss in the brain		loss	brain	1
+505	loss in the head		loss	head	1
+506	loss in the hearing		loss	hearing	3
+507	loss in the sight		loss	sight	3
+508	loud snoring	loud	snoring		1
+509	low drive in the sex	low	drive	sex	2
+510	low mood		low mood		3
+511	low temperature		low temperature		1
+512	lump		lump		9
+513	lump in the arm		lump	arm	1
+514	lump in the breast		lump	breast	1
+515	lump in the cheek		lump	cheek	1
+516	lump in the eyelid		lump	eyelid	1
+517	lump in the mouth		lump	mouth	1
+518	lump in the neck		lump	neck	3
+519	lump in the skin		lump	skin	5
+520	lump in the tummy		lump	tummy	2
+521	lumps		lumps		2
+522	lumps in the anal		lumps	anal	2
+523	lumps in the joints		lumps	joints	1
+524	lumps in the vagina		lumps	vagina	1
+525	making		making		1
+526	malaise		malaise		3
+527	memory loss		memory loss		4
+528	memory problems		memory problems		11
+529	mental changes		mental changes		1
+530	migraine in the head		migraine	head	1
+531	migraines		migraines		1
+532	missed period		missed period		1
+533	mobility difficulty		mobility difficulty		1
+534	mobility problems		mobility problems		2
+535	mole		mole		1
+536	mole changes		mole changes		1
+537	mood changes		mood changes		8
+538	mood changes in the head		mood changes	head	3
+539	mood swings		mood swings		2
+540	mouth breathing in the mouth		mouth breathing	mouth	2
+541	mouth burning in the mouth		mouth burning	mouth	1
+542	mouth rash in the mouth		mouth rash	mouth	1
+543	movement		movement		2
+544	movement difficulties		movement difficulties		5
+545	movement difficulty in the eye		movement difficulty	eye	1
+546	movement difficulty in the eyelid		movement difficulty	eyelid	1
+547	movement difficulty in the joint		movement difficulty	joint	1
+548	movement difficulty in the tongue		movement difficulty	tongue	1
+549	movement in the abdomen		movement	abdomen	1
+550	movement in the eye		movement	eye	1
+551	movement problem		movement problem		1
+552	movement problems		movement problems		2
+553	movements		movements		1
+554	movements in the eye		movements	eye	2
+555	mucus		mucus		1
+556	mucus in the poo		mucus	poo	4
+557	mucus in the stool		mucus	stool	1
+558	mucus in the underwear		mucus	underwear	1
+559	muscle ache		muscle ache		25
+560	muscle contracture in the muscle		muscle contracture	muscle	1
+561	muscle cramping in the muscle		muscle cramping	muscle	1
+562	muscle pain in the muscle		muscle pain	muscle	2
+563	muscle paralysis		muscle paralysis		2
+564	muscle stiffness		muscle stiffness		1
+565	muscle stiffness in the muscle		muscle stiffness	muscle	6
+566	muscle swelling in the muscle		muscle swelling	muscle	1
+567	muscle tingling in the muscle		muscle tingling	muscle	1
+568	muscle tremor in the muscle		muscle tremor	muscle	6
+569	muscle wasting in the leg		muscle wasting	leg	1
+570	muscle wasting in the muscle		muscle wasting	muscle	1
+571	muscle weakness		muscle weakness		17
+572	muscle weakness in the face		muscle weakness	face	1
+573	muscle weakness in the foot		muscle weakness	foot	1
+574	muscle weakness in the muscle		muscle weakness	muscle	4
+575	nail abnormalities in the nail		nail abnormalities	nail	1
+576	nail change in the nail		nail change	nail	1
+577	nail changes		nail changes		2
+578	nail dents in the nail		nail dents	nail	1
+579	nail discoloration in the nail		nail discoloration	nail	1
+580	nail pits in the nail		nail pits	nail	1
+581	nail pitting in the nail		nail pitting	nail	1
+582	nail thickening in the nails		nail thickening	nails	1
+583	nails		nails		2
+584	nasal congestion in the nose		nasal congestion	nose	5
+585	nausea		nausea		83
+586	nausea in the stomach		nausea	stomach	1
+587	nerve problems		nerve problems		1
+588	neuropathy in the peripheral		neuropathy	peripheral	6
+589	night sweats		night sweats		7
+590	night terrors		night terrors		1
+591	nightmares		nightmares		1
+592	nipple changes in the nipple		nipple changes	nipple	1
+593	nipple discharge in the nipple		nipple discharge	nipple	2
+594	nocturia		nocturia		1
+595	noise		noise		1
+596	noisy breathing		noisy breathing		5
+597	non rash in the skin	non	rash	skin	3
+598	nosebleeds		nosebleeds		2
+599	not peeing		not peeing		1
+600	numbness		numbness		7
+601	numbness in the arm		numbness	arm	1
+602	numbness in the foot		numbness	foot	1
+603	numbness in the hand		numbness	hand	2
+604	numbness in the leg		numbness	leg	2
+605	numbness in the skin		numbness	skin	2
+606	nystagmus		nystagmus		1
+607	obsessive behaviour		obsessive behaviour		1
+608	oedema		oedema		6
+609	oily skin		oily skin		1
+610	organ problems		organ problems		1
+611	organisational difficulties		organisational difficulties		2
+612	overwhelmed		overwhelmed		1
+613	pain		pain		38
+614	pain in the abdomen		pain	abdomen	28
+615	pain in the anal		pain	anal	4
+616	pain in the arm		pain	arm	4
+617	pain in the back		pain	back	13
+618	pain in the bottom		pain	bottom	1
+619	pain in the bowel		pain	bowel	2
+620	pain in the breast		pain	breast	2
+621	pain in the chest		pain	chest	25
+622	pain in the ear		pain	ear	4
+623	pain in the elbow		pain	elbow	1
+624	pain in the eye		pain	eye	9
+625	pain in the flank		pain	flank	3
+626	pain in the foot		pain	foot	2
+627	pain in the forearm		pain	forearm	1
+628	pain in the genitals		pain	genitals	1
+629	pain in the groin		pain	groin	2
+630	pain in the hamstring		pain	hamstring	1
+631	pain in the hand		pain	hand	1
+632	pain in the head		pain	head	1
+633	pain in the heel		pain	heel	1
+634	pain in the hip		pain	hip	2
+635	pain in the jaw		pain	jaw	3
+636	pain in the joint		pain	joint	12
+637	pain in the knee		pain	knee	1
+638	pain in the leg		pain	leg	16
+639	pain in the limb		pain	limb	1
+640	pain in the liver		pain	liver	1
+641	pain in the lower back		pain	lower back	4
+642	pain in the mouth		pain	mouth	1
+643	pain in the muscle		pain	muscle	4
+644	pain in the neck		pain	neck	2
+645	pain in the penis		pain	penis	2
+646	pain in the shoulder		pain	shoulder	4
+647	pain in the skin		pain	skin	1
+648	pain in the stomach		pain	stomach	1
+649	pain in the temple		pain	temple	1
+650	pain in the tendon		pain	tendon	2
+651	pain in the testicular		pain	testicular	2
+652	pain in the thighs		pain	thighs	1
+653	pain in the throat		pain	throat	1
+654	pain in the toe		pain	toe	1
+655	pain in the tummy		pain	tummy	12
+656	pain in the upper tummy		pain	upper tummy	4
+657	pain in the vulval		pain	vulval	1
+658	pain in the wound		pain	wound	1
+659	painful blisters in the face	painful	blisters	face	1
+660	painful cold sore	painful	cold sore		1
+661	painful erection		painful erection		1
+662	painful lumps in the fingers		painful lumps	fingers	1
+663	painful skin		painful skin		1
+664	painful spot in the skin	painful	spot	skin	1
+665	painful urination		painful urination		15
+666	painful wrists in the wrist		painful wrists	wrist	1
+667	painless lump	painless	lump		1
+668	painless swelling	painless	swelling		1
+669	pains		pains		1
+670	pale in the skin		pale	skin	1
+671	pale pallor	pale	pallor		1
+672	pale pallor in the face	pale	pallor	face	1
+673	pale poo		pale poo		4
+674	pale skin		pale skin		3
+675	palpitation in the heart		palpitation	heart	1
+676	palpitations in the heart		palpitations	heart	14
+677	paralysis		paralysis		5
+678	parasomnia episodes		parasomnia episodes		1
+679	patch in the skin		patch	skin	3
+680	patches in the foot		patches	foot	1
+681	patches in the mouth		patches	mouth	5
+682	patchy hair loss in the scalp	patchy	hair loss	scalp	1
+683	pauses		pauses		1
+684	peeing problems		peeing problems		1
+685	peeling skin in the skin		peeling skin	skin	1
+686	pelvic pain in the pelvic		pelvic pain	pelvic	4
+687	penile discharge		penile discharge		6
+688	penile discharge in the penis		penile discharge	penis	1
+689	penile patches in the penile		penile patches	penile	1
+690	penile rash in the penile		penile rash	penile	1
+691	penile swelling		penile swelling		2
+692	period pain		period pain		1
+693	periods		periods		2
+694	persistent headaches in the head		persistent headaches	head	2
+695	personality change		personality change		3
+696	personality changes		personality changes		12
+697	physical slowness	physical	slowness		1
+698	pica		pica		1
+699	pink bump in the skin	pink	bump	skin	1
+700	pink eye in the eye	pink	eye	eye	1
+701	pink hand	pink	hand		1
+702	pink patch	pink	patch		1
+703	pink patches	pink	patches		1
+704	pink phlegm	pink	phlegm		1
+705	pink rash	pink	rash		2
+706	pink skin	pink	skin		1
+707	pink skin in the skin	pink	skin	skin	1
+708	pink skin patch in the skin	pink	skin patch	skin	1
+709	pink spot in the forehead	pink	spot	forehead	1
+710	pink spots	pink	spots		1
+711	pointy forehead in the head	pointy	forehead	head	1
+712	poor appetite		poor appetite		1
+713	poor coordination		poor coordination		1
+714	poor feeding in the mouth	poor	feeding	mouth	1
+715	poor vision		poor vision		2
+716	popping noise in the jaw		popping noise	jaw	1
+717	popping sensation		popping sensation		2
+718	positioning		positioning		1
+719	pretend play		pretend play		1
+720	problem in the head		problem	head	1
+721	problems in the balance		problems	balance	10
+722	problems in the breathing		problems	breathing	2
+723	problems in the communication		problems	communication	1
+724	prolongation		prolongation		1
+725	prolonged feeding in the unspecified		prolonged feeding	unspecified	1
+726	psychological problems		psychological problems		1
+727	pulling in the ear		pulling	ear	1
+728	pulsing feeling in the tummy		pulsing feeling	tummy	1
+729	purple discolouration in the feet	purple	discolouration	feet	1
+730	purple discolouration in the hands	purple	discolouration	hands	1
+731	pus		pus		1
+732	pus in the chest		pus	chest	1
+733	pus in the eyelash		pus	eyelash	1
+734	quietness		quietness		1
+735	raised rash in the skin	raised	rash	skin	1
+736	raised skin bumps in the skin	raised	skin bumps	skin	1
+737	raised skin in the skin		raised skin	skin	1
+738	rash		rash		13
+739	rash in the scalp		rash	scalp	1
+740	rash in the skin		rash	skin	5
+741	reaction		reaction		1
+742	recession in the gum		recession	gum	1
+743	recurrent miscarriage	recurrent	miscarriage		1
+744	red blisters	red	blisters		1
+745	red cheeks in the cheeks	red	cheeks	cheeks	1
+746	red clusters in the vessel	red	clusters	vessel	1
+747	red discoloration in the skin	red	discoloration	skin	1
+748	red eye		red eye		1
+749	red eye in the eye	red	eye	eye	1
+750	red eyes in the eye	red	eyes	eye	3
+751	red eyes in the eyes		red eyes	eyes	3
+752	red face in the face	red	face	face	1
+753	red knuckles	red	knuckles		1
+754	red lump	red	lump		1
+755	red patch in the skin	red	patch	skin	1
+756	red rash	red	rash		1
+757	red rash in the skin	red	rash	skin	2
+758	red redness	red	redness		1
+759	red redness in the eye	red	redness	eye	1
+760	red redness in the eyelid	red	redness	eyelid	1
+761	red redness in the eyes	red	redness	eyes	4
+762	red skin	red	skin		12
+763	red skin in the skin	red	skin	skin	2
+764	red skin patches in the skin	red	skin patches	skin	2
+765	red sores	red	sores		1
+766	red spots in the skin	red	spots	skin	1
+767	redness in the ear		redness	ear	1
+768	redness in the eye		redness	eye	3
+769	redness in the face		redness	face	3
+770	redness in the ulcer		redness	ulcer	1
+771	redness in the unspecified		redness	unspecified	1
+772	reduced sweating		reduced sweating		1
+773	regurgitation		regurgitation		1
+774	repeated falls	repeated	falls		1
+775	repetitive questioning	repetitive	questioning		1
+776	responsiveness		responsiveness		2
+777	restless legs		restless legs		2
+778	restless pain	restless	pain		1
+779	restless sleep		restless sleep		1
+780	restlessness		restlessness		6
+781	rib protrusion in the rib		rib protrusion	rib	1
+782	rough skin		rough skin		1
+783	rounded shoulders in the shoulders		rounded shoulders	shoulders	1
+784	runny nose in the nose		runny nose	nose	8
+785	sad		sad		1
+786	salty sweat in the skin	salty	sweat	skin	1
+787	sandpaper rash in the sandpaper	sandpaper	rash	sandpaper	2
+788	satiety		satiety		5
+789	scalp crust in the scalp		scalp crust	scalp	1
+790	scaly legs in the legs		scaly legs	legs	1
+791	scaly scalp in the scalp		scaly scalp	scalp	1
+792	scaly skin		scaly skin		4
+793	scaly skin crust in the skin	scaly	skin crust	skin	1
+794	scaly skin in the skin	scaly	skin	skin	1
+795	scaly skin patches in the skin	scaly	skin patches	skin	1
+796	scars in the skin		scars	skin	1
+797	seizure		seizure		24
+798	seizure awareness		seizure awareness		1
+799	sensation in the foot		sensation	foot	1
+800	sensitivity		sensitivity		4
+801	sensitivity in the eye		sensitivity	eye	1
+802	sensitivity in the light		sensitivity	light	7
+803	sensitivity in the sound		sensitivity	sound	3
+804	sensitivity in the teeth		sensitivity	teeth	1
+805	sensory changes		sensory changes		1
+806	sexual problem		sexual problem		2
+807	shadow in the vision		shadow	vision	1
+808	shaking		shaking		4
+809	shape change in the nose		shape change	nose	1
+810	shape changes in the chest		shape changes	chest	1
+811	sharp headache in the eye	sharp	headache	eye	1
+812	sharp pain	sharp	pain		2
+813	sharp pain in the abdomen	sharp	pain	abdomen	1
+814	shin pain in the shin		shin pain	shin	1
+815	shiny skin	shiny	skin		1
+816	shivering		shivering		3
+817	shooting pain	shooting	pain		2
+818	short stature		short stature		2
+819	skin		skin		7
+820	skin blister		skin blister		1
+821	skin blisters		skin blisters		1
+822	skin blotches		skin blotches		1
+823	skin boil		skin boil		1
+824	skin bump		skin bump		4
+825	skin bumps		skin bumps		1
+826	skin changes in the skin		skin changes	skin	4
+827	skin cold	skin	cold		2
+828	skin discoloration	skin	discoloration		9
+829	skin discolouration in the ulcer		skin discolouration	ulcer	1
+830	skin hole in the anus	skin	hole	anus	1
+831	skin in the foot		skin	foot	1
+832	skin in the skin		skin	skin	1
+833	skin irritation in the anal	skin	irritation	anal	2
+834	skin lesion		skin lesion		1
+835	skin marks in the skin		skin marks	skin	1
+836	skin patches		skin patches		5
+837	skin peeling in the skin		skin peeling	skin	1
+838	skin rash	skin	rash		12
+839	skin rash in the skin		skin rash	skin	2
+840	skin spots in the skin		skin spots	skin	4
+841	skin thickening in the skin		skin thickening	skin	1
+842	skin tingling in the skin		skin tingling	skin	1
+843	skin ulcer in the skin		skin ulcer	skin	1
+844	sleep difficulty		sleep difficulty		1
+845	sleep disturbance		sleep disturbance		2
+846	sleep paralysis		sleep paralysis		1
+847	sleepiness		sleepiness		3
+848	sleepiness in the body		sleepiness	body	2
+849	slow breathing		slow breathing		2
+850	slow growth		slow growth		2
+851	slow growth in the body	slow	growth	body	2
+852	slow movement		slow movement		1
+853	slow speech	slow	speech		1
+854	slowness in the thought		slowness	thought	1
+855	slurred speech		slurred speech		14
+856	slurred speech in the speech		slurred speech	speech	1
+857	small jaw in the lower	small	jaw	lower	1
+858	smaller pupil		smaller pupil		1
+859	smelly diarrhoea	smelly	diarrhoea		4
+860	smelly ulcer in the ulcer		smelly ulcer	ulcer	1
+861	smelly urine		smelly urine		1
+862	sneezing		sneezing		5
+863	social withdrawal		social withdrawal		1
+864	sore		sore		1
+865	sore eyelids		sore eyelids		2
+866	sore eyes in the eye	sore	eyes	eye	3
+867	sore eyes in the eyes		sore eyes	eyes	1
+868	sore throat in the throat		sore throat	throat	21
+869	sore tip in the penis		sore tip	penis	1
+870	sore tongue		sore tongue		2
+871	soreness in the body		soreness	body	2
+872	soreness in the breast		soreness	breast	1
+873	soreness in the eye		soreness	eye	1
+874	soreness in the eyelid		soreness	eyelid	1
+875	soreness in the nipples		soreness	nipples	1
+876	soreness in the throat		soreness	throat	1
+877	soreness in the vaginal		soreness	vaginal	2
+878	sores		sores		1
+879	sores in the chest		sores	chest	1
+880	sores in the genital		sores	genital	1
+881	sores in the skin		sores	skin	1
+882	sound		sound		1
+883	sour taste	sour	taste		2
+884	spasms in the muscle		spasms	muscle	2
+885	speech		speech		2
+886	speech comprehension		speech comprehension		1
+887	speech problem		speech problem		2
+888	speech problems		speech problems		2
+889	spot		spot		1
+890	spots		spots		2
+891	spots in the mouth		spots	mouth	1
+892	spots in the tooth		spots	tooth	1
+893	spotting in the vagina		spotting	vagina	1
+894	spotty rash in the spotty	spotty	rash	spotty	1
+895	squint		squint		3
+896	squinting		squinting		1
+897	stabbing pain	stabbing	pain		2
+898	stammering		stammering		1
+899	stature		stature		1
+900	sticky eyes in the eye		sticky eyes	eye	1
+901	stiff joints		stiff joints		1
+902	stiff muscles		stiff muscles		1
+903	stiff neck in the neck		stiff neck	neck	7
+904	stiffness		stiffness		1
+905	stiffness in the back		stiffness	back	2
+906	stiffness in the finger		stiffness	finger	1
+907	stiffness in the jaw		stiffness	jaw	1
+908	stiffness in the joint		stiffness	joint	10
+909	stiffness in the muscle		stiffness	muscle	7
+910	stiffness in the shoulder		stiffness	shoulder	1
+911	stinging in the mouth		stinging	mouth	1
+912	stomach ache		stomach ache		5
+913	stomach pain in the stomach		stomach pain	stomach	1
+914	stool change		stool change		1
+915	strain in the eye		strain	eye	1
+916	strange sensation in the limb		strange sensation	limb	1
+917	strawberry tongue		strawberry tongue		2
+918	stress		stress		3
+919	stretch marks in the skin		stretch marks	skin	1
+920	stretchy skin in the skin		stretchy skin	skin	1
+921	suicidal ideation		suicidal ideation		1
+922	sunken eyes		sunken eyes		2
+923	swallowing difficulties		swallowing difficulties		1
+924	swallowing problem		swallowing problem		1
+925	sweating		sweating		5
+926	swelling		swelling		15
+927	swelling in the anal		swelling	anal	1
+928	swelling in the arm		swelling	arm	2
+929	swelling in the body		swelling	body	1
+930	swelling in the breast		swelling	breast	2
+931	swelling in the ear		swelling	ear	1
+932	swelling in the elbow		swelling	elbow	1
+933	swelling in the face		swelling	face	2
+934	swelling in the finger		swelling	finger	1
+935	swelling in the gum		swelling	gum	1
+936	swelling in the head		swelling	head	1
+937	swelling in the hip		swelling	hip	1
+938	swelling in the joint		swelling	joint	1
+939	swelling in the leg		swelling	leg	15
+940	swelling in the limb		swelling	limb	2
+941	swelling in the mouth		swelling	mouth	1
+942	swelling in the neck		swelling	neck	5
+943	swelling in the skin		swelling	skin	2
+944	swelling in the stomach		swelling	stomach	1
+945	swelling in the testicular		swelling	testicular	2
+946	swelling in the throat		swelling	throat	1
+947	swelling in the tongue		swelling	tongue	1
+948	swelling in the tummy		swelling	tummy	2
+949	swelling in the ulcer		swelling	ulcer	1
+950	swelling in the unspecified		swelling	unspecified	1
+951	swelling variation		swelling variation		1
+952	swollen		swollen		1
+953	swollen extremities		swollen extremities		2
+954	swollen eyelid	swollen	eyelid		1
+955	swollen fingers		swollen fingers		4
+956	swollen glands		swollen glands		16
+957	swollen gums in the gums		swollen gums	gums	1
+958	swollen scrotum in the scrotum		swollen scrotum	scrotum	1
+959	swollen skin in the skin		swollen skin	skin	2
+960	swollen toes		swollen toes		4
+961	swollen veins	swollen	veins		2
+962	swollen wrists in the wrist		swollen wrists	wrist	1
+963	taste		taste		1
+964	tears in the eye		tears	eye	1
+965	temperature in the skin		temperature	skin	1
+966	temperature sensitivity		temperature sensitivity		2
+967	tender skin bumps in the skin	tender	skin bumps	skin	1
+968	tender skin in the skin		tender skin	skin	1
+969	tenderness		tenderness		4
+970	tenderness in the body		tenderness	body	2
+971	tenderness in the breast		tenderness	breast	2
+972	tenderness in the elbow		tenderness	elbow	1
+973	tenderness in the eye		tenderness	eye	1
+974	tenderness in the face		tenderness	face	2
+975	tenderness in the scalp		tenderness	scalp	1
+976	tenderness in the shin		tenderness	shin	1
+977	tenderness in the temporal		tenderness	temporal	1
+978	tenderness in the thigh		tenderness	thigh	1
+979	tenderness in the tummy		tenderness	tummy	1
+980	tension headache in the head	tension	headache	head	1
+981	testicular lump in the testis		testicular lump	testis	1
+982	testicular pain in the testis		testicular pain	testis	1
+983	testicular swelling in the testis		testicular swelling	testis	1
+984	thickened skin in the skin		thickened skin	skin	1
+985	thickened thickened skin in the nose	thickened	thickened skin	nose	1
+986	thinking problems		thinking problems		1
+987	thirst		thirst		1
+988	throbbing headache in the head	throbbing	headache	head	1
+989	throbbing leg pain in the leg	throbbing	leg pain	leg	1
+990	throbbing pain	throbbing	pain		3
+991	tight foreskin		tight foreskin		2
+992	tight tightness	tight	tightness		1
+993	tightness in the chest		tightness	chest	2
+994	tingling		tingling		4
+995	tingling in the foot		tingling	foot	1
+996	tingling in the lips		tingling	lips	1
+997	tinnitus		tinnitus		11
+998	tiny bumps in the skin		tiny bumps	skin	1
+999	tiptoe walking		tiptoe walking		1
+1000	tiredness		tiredness		3
+1001	tiredness in the body		tiredness	body	1
+1002	tooth sensitivity		tooth sensitivity		1
+1003	toothache		toothache		3
+1004	trapped hair in the skin		trapped hair	skin	1
+1005	tremor		tremor		1
+1006	tripping		tripping		1
+1007	tummy ache in the tummy		tummy ache	tummy	23
+1008	twitching in the muscle		twitching	muscle	1
+1009	ulcer		ulcer		3
+1010	ulcer discharge in the ulcer		ulcer discharge	ulcer	1
+1011	ulcer in the mouth		ulcer	mouth	9
+1012	ulcer in the skin		ulcer	skin	3
+1013	ulcers in the foot		ulcers	foot	1
+1014	ulcers in the leg		ulcers	leg	2
+1015	uncontrollable movements		uncontrollable movements		1
+1016	uncontrolled movements		uncontrolled movements		1
+1017	understanding problems		understanding problems		1
+1018	undescended testicle in the scrotum	undescended	testicle	scrotum	1
+1019	uneven shoulders in the shoulders		uneven shoulders	shoulders	1
+1020	unexplained weight loss	unexplained	weight loss		14
+1021	unpleasant smell		unpleasant smell		1
+1022	unsteady movement		unsteady movement		1
+1023	unsteady walking		unsteady walking		1
+1024	unusual behaviour		unusual behaviour		1
+1025	unusual bleeding	unusual	bleeding		5
+1026	unusual bruising	unusual	bruising		5
+1027	unusual cry in the throat	unusual	cry	throat	2
+1028	unusual shape in the head	unusual	shape	head	1
+1029	unwell in the body		unwell	body	3
+1030	upset		upset		1
+1031	urgency in the bowel		urgency	bowel	1
+1032	urinary changes		urinary changes		1
+1033	urinary hesitation		urinary hesitation		1
+1034	urinary incontinence		urinary incontinence		6
+1035	urinary symptoms		urinary symptoms		1
+1036	urinary urgency		urinary urgency		15
+1037	urine appearance		urine appearance		10
+1038	vaginal bleeding		vaginal bleeding		4
+1039	vaginal discharge		vaginal discharge		9
+1040	vaginal sores in the vaginal		vaginal sores	vaginal	1
+1041	varicose veins		varicose veins		3
+1042	verrucas		verrucas		1
+1043	vertigo		vertigo		2
+1044	vision changes		vision changes		15
+1045	vision loss		vision loss		10
+1046	vision problems		vision problems		11
+1047	visual disturbance		visual disturbance		2
+1048	visual hallucinations		visual hallucinations		1
+1049	visual patterns		visual patterns		1
+1050	voice		voice		1
+1051	voice change		voice change		1
+1052	voice change in the nose		voice change	nose	1
+1053	vomiting		vomiting		73
+1054	vomiting in the stomach		vomiting	stomach	3
+1055	vulval redness in the vulval		vulval redness	vulval	2
+1056	walking difficulties		walking difficulties		1
+1057	warm itch in the skin	warm	itch	skin	1
+1058	warm skin	warm	skin		1
+1059	warm skin in the bone	warm	skin	bone	1
+1060	warm skin in the skin	warm	skin	skin	1
+1061	wart		wart		1
+1062	watering eye		watering eye		1
+1063	watery eyes		watery eyes		2
+1064	watery eyes in the eyes		watery eyes	eyes	7
+1065	weak in the leg		weak	leg	1
+1066	weakness		weakness		5
+1067	weakness in the arm		weakness	arm	1
+1068	weakness in the hand		weakness	hand	3
+1069	weakness in the limb		weakness	limb	4
+1070	weight gain	weight	gain		2
+1071	weight loss		weight loss		22
+1072	wet nappies in the body	wet	nappies	body	1
+1073	wheezing		wheezing		4
+1074	white coating in the tongue	white	coating	tongue	1
+1075	white glow in the eye		white glow	eye	1
+1076	white hair	white	hair		1
+1077	white patch in the vulva	white	patch	vulva	1
+1078	white patches in the skin	white	patches	skin	1
+1079	white patches in the tonsil	white	patches	tonsil	1
+1080	worms in the stool		worms	stool	1
+1081	worry		worry		1
+1082	yawning in the mouth		yawning	mouth	1
+1083	yellow raised dots in the iris	yellow	raised dots	iris	1
+1084	yellow skin	yellow	skin		1
+1085	yellow skin patches in the skin	yellow	skin patches	skin	1
+1086	yellow spots	yellow	spots		1
