@@ -77,15 +77,15 @@ def _flash(payload: str, schema: dict = GEMINI_SCHEMA) -> list[dict]:
 
 def _record(raw: dict) -> Record | None:
     r = Record(
-        concept=raw.get("concept", "").strip().lower(),
-        character=raw.get("character", "").strip().lower(),
-        site=raw.get("site", "").strip().lower(),
-        onset=raw.get("onset", "unspecified"),
-        duration=raw.get("duration", "unspecified"),
-        duration_text=raw.get("duration_text", "").strip(),
-        severity=raw.get("severity", "unspecified"),
-        progression=raw.get("progression", "unspecified"),
-        polarity=raw.get("polarity", "present"),
+        concept=(raw.get("concept") or "").strip().lower(),
+        character=(raw.get("character") or "").strip().lower(),
+        site=(raw.get("site") or "").strip().lower(),
+        onset=raw.get("onset") or "unspecified",
+        duration=raw.get("duration") or "unspecified",
+        duration_text=(raw.get("duration_text") or "").strip(),
+        severity=raw.get("severity") or "unspecified",
+        progression=raw.get("progression") or "unspecified",
+        polarity=raw.get("polarity") or "present",
     )
     try:
         validate(r)
