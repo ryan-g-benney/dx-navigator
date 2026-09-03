@@ -1,0 +1,1306 @@
+symptom_id	canonical	n_conditions
+0	tummy or back pain	1
+1	pulsing feeling in tummy	1
+2	darker and thicker skin patches	1
+3	skin patches	5
+4	itchy skin	6
+5	regurgitation	1
+6	choking and coughing fits	1
+7	chest pain	25
+8	recurrent chest infections	2
+9	drooling	2
+10	weight loss	16
+11	difficulty swallowing food or drink	1
+12	difficulty swallowing	25
+13	swallowing problems	1
+14	back acne	1
+15	chest acne	1
+16	hearing loss	11
+17	tinnitus	10
+18	dizziness	20
+19	headache	19
+20	blurred or double vision	1
+21	facial drooping and body weakness	3
+22	limb co-ordination problems	1
+23	swollen fingers and toes	4
+24	insomnia	11
+25	numbness and weakness in hands	2
+26	joint pain and swelling	13
+27	oily skin	1
+28	deeper voice	1
+29	irregular periods	8
+30	erection problems	1
+31	dry rough scaly skin	1
+32	skin lesion colour	2
+33	lumps in cheek or neck	1
+34	pus leaking from chest skin	1
+35	abdominal symptoms	1
+36	lower tummy pain and vaginal bleeding	1
+37	high temperature	78
+38	fatigue and nausea	23
+39	vomiting	12
+40	loss of appetite	40
+41	jaundice	17
+42	tummy bulge	1
+43	sharp upper right abdominal pain	1
+44	shoulder pain spreading	1
+45	tummy tenderness	1
+46	flu-like symptoms	25
+47	peeing less than usual	2
+48	increased thirst	8
+49	nausea and vomiting	59
+50	leg pain and swelling	11
+51	altered mental state and fatigue	6
+52	breathlessness	3
+53	looking pale	1
+54	fatigue	65
+55	frequent infections	1
+56	unusual bleeding or bruising	5
+57	unexplained weight loss	14
+58	severe sharp pain	1
+59	tummy pain	3
+60	radiating pain to sides and back	1
+61	feeling better when leaning forward	1
+62	abdominal pain	4
+63	high temperature and vomiting	1
+64	shortness of breath	47
+65	short fast breaths	1
+66	hyperpigmentation	1
+67	appetite loss weight loss and tummy pain	1
+68	light-headedness	2
+69	joint and muscle pain	3
+70	mild fever	1
+71	increased thirst and urination	12
+72	difficulty concentrating	10
+73	stress and anxiety	3
+74	distorted straight lines	1
+75	sensitivity to light and sound	3
+76	flashing lights in vision	1
+77	hallucinations	7
+78	blurred vision	19
+79	sensitivity to light	4
+80	nystagmus	1
+81	squint	3
+82	new mole, growth or lump	1
+83	changing skin lesion	1
+84	slurred speech	14
+85	loss of coordination	1
+86	urinary incontinence	6
+87	cyanosis	7
+88	slow breathing	2
+89	seizure	20
+90	loss of consciousness	7
+91	panic attack symptoms	1
+92	alcohol withdrawal symptoms	1
+93	visible shaking	1
+94	restlessness and irritability	1
+95	confusion	10
+96	alcohol withdrawal	1
+97	prolonged symptoms	1
+98	itchy nose	1
+99	nasal congestion and sneezing	5
+100	itchy red and watery eyes	2
+101	cough	14
+102	itchy roof of mouth	1
+103	red or watering eyes	2
+104	facial pain and tenderness	2
+105	respiratory symptoms	6
+106	hives	6
+107	bloating	1
+108	facial swelling	6
+109	difficulty planning or making decisions	2
+110	speech and language problems	3
+111	mobility and self-care problems	1
+112	behaviour changes	3
+113	low mood and anxiety	8
+114	memory loss	2
+115	memory problems	3
+116	bruising around eyes	1
+117	heart rhythm changes and chest pain	1
+118	digestive symptoms	1
+119	frothy urine	2
+120	peripheral neuropathy	6
+121	painful bowel movement	2
+122	blood in poo	6
+123	rectal bleeding	4
+124	anal lumps and skin irritation	2
+125	throbbing pain	2
+126	anal discharge	1
+127	anal swelling	1
+128	incontinence	5
+129	skin hole near anus	1
+130	swollen throat and tongue	1
+131	skin cold to touch	2
+132	skin rash	12
+133	absent periods	2
+134	absent pubic and underarm hair	1
+135	enlarged clitoris	1
+136	partially undescended testicle	1
+137	chest tightness	2
+138	malaise	1
+139	stomach pain	1
+140	breathing difficulty	1
+141	back pain	11
+142	joint and tendon pain	1
+143	leg swelling and pain	2
+144	arm or tummy pain and swelling	1
+145	skin discoloration	9
+146	swollen veins	2
+147	coughing up blood	6
+148	lace-like rash	1
+149	recurrent miscarriage	1
+150	blood clot	1
+151	speech difficulty	1
+152	speech difficulties	1
+153	making up words or sounds	1
+154	difficulty understanding speech	2
+155	reading or writing difficulty	1
+156	aphasia communication problems	1
+157	bowel habit change	4
+158	sudden confusion	1
+159	middle abdominal pain	1
+160	lower abdominal pain	20
+161	pain worsened by movement	3
+162	atypical pain	1
+163	severe abdominal pain	1
+164	movement difficulty	3
+165	heart palpitations	14
+166	fainting and lightheadedness	7
+167	heart palpitation	1
+168	joint stiffness and pain	7
+169	persistent cough	12
+170	clubbed fingers	2
+171	productive cough	4
+172	breathing problems	2
+173	eye strain	1
+174	lazy eye	2
+175	walking difficulty	1
+176	abnormal curvature of the spine	1
+177	sight and hearing loss	3
+178	red blood vessel clusters	1
+179	slow eye movement	1
+180	weakened immune system	1
+181	muscle cramps and stiffness	5
+182	memory loss and speech difficulties	1
+183	balance problems	10
+184	muscle spasms	2
+185	involuntary eye movements	2
+186	vertigo, migraines and tinnitus	1
+187	scaly foot patches	1
+188	red skin	12
+189	cracked skin on feet	1
+190	blisters	1
+191	dry and scaly skin	1
+192	blistering or bleeding	1
+193	blistered skin	3
+194	warm swollen painful limb	1
+195	skin infection	2
+196	irregular heartbeat	3
+197	fast heartbeat	5
+198	difficulty exercising	1
+199	difficulty hearing in noisy places	1
+200	slow speech comprehension	1
+201	lack of response to name	2
+202	reduced speech	1
+203	flat tone of voice	1
+204	repeating words and phrases	1
+205	intense focus and talking about interests	1
+206	unilateral talking	1
+207	reduced eye contact	1
+208	reduced facial expressions	1
+209	unresponsive to facial expressions	1
+210	not wanting to be cuddled	1
+211	social withdrawal or aggression	1
+212	social withdrawal in children	1
+213	lack of pretend play	1
+214	repetitive actions	1
+215	repetitive movements	1
+216	distress from routine changes	1
+217	difficulty describing feelings	1
+218	altered sensory sensitivity	1
+219	sensitivity to light and noise	1
+220	clothing sensitivity	1
+221	restricted eating habits	1
+222	food texture aversion	1
+223	food mixing aversion	1
+224	social coping difficulty	1
+225	fewer repetitive behaviours	1
+226	few close friends and spending time alone	1
+227	inappropriate social behaviour	1
+228	social communication difficulty	1
+229	distress over rule changes	1
+230	repetitive behaviours	1
+231	difficulty adjusting to routine changes	1
+232	suspected autism in child	1
+233	blood in urine	12
+234	high blood pressure	6
+235	loss of kidney function	1
+236	enlarged cyst	1
+237	bleeding into cysts	1
+238	severe headache	6
+239	vision loss or blurring	5
+240	flank pain	3
+241	feeling restless	1
+242	abnormal urine appearance	10
+243	frequent urination	3
+244	painful urination	15
+245	urgent need to pee	1
+246	smelly urine	1
+247	swollen extremities	2
+248	itchy rash	13
+249	erectile dysfunction	8
+250	breathing difficulties	1
+251	swollen tummy	1
+252	dry mouth and lips	2
+253	sunken eyes	2
+254	smelly vaginal discharge	1
+255	abnormal vaginal discharge	5
+256	changes to vaginal discharge	1
+257	penile or vaginal discharge	5
+258	penile discharge and bleeding	2
+259	unpleasant smell	1
+260	tight foreskin	2
+261	penile swelling and discharge	2
+262	facial weakness	4
+263	dry mouth	5
+264	loss of taste and smell	4
+265	eye irritation	2
+266	pale poo and dark pee	4
+267	general malaise	12
+268	bone pain	5
+269	urinary urgency	15
+270	difficulty urinating	10
+271	sore eyelids	2
+272	gritty eyes	2
+273	flakes or crusts around eyelashes	1
+274	eyelids sticking together	1
+275	lump or swelling	5
+276	movement problems	2
+277	daytime tiredness after sleep	2
+278	night sweats and high temperature	3
+279	bone fracture	2
+280	arm lump	1
+281	numbness or tingling	3
+282	drooping eyelids	2
+283	difficulty breathing and swallowing	9
+284	facial muscle weakness	1
+285	abnormal cry	1
+286	difficulty feeding	2
+287	lethargy	1
+288	floppy body	2
+289	paralysis	5
+290	muscle paralysis	2
+291	faecal incontinence	1
+292	faecal urgency	1
+293	incomplete bowel emptying	1
+294	bowel incontinence	2
+295	blood or mucus in poo	4
+296	change in bowel habits	2
+297	mental state changes	1
+298	nerve function problems	1
+299	stiff neck	7
+300	vision changes	12
+301	eye pain	7
+302	short-term memory loss	2
+303	thunderclap headache	2
+304	nausea vomiting and drowsiness	1
+305	behavioural and personality changes	4
+306	muscle weakness	16
+307	vision or speech problems	1
+308	nipple discharge	2
+309	changes in chest shape	1
+310	chest sores	1
+311	nipple changes	1
+312	feeling unwell	2
+313	hip and groin pain	1
+314	hip and leg pain	2
+315	abnormal leg angle	1
+316	hip and upper leg swelling and bruising	1
+317	pain swelling and bruising	4
+318	movement difficulties	5
+319	bone deformity	1
+320	grating sound in bones	1
+321	bone sticking out of wound	1
+322	nasal crackling sound	1
+323	blocked nose	2
+324	change in nose shape	1
+325	difficulty walking	2
+326	frequent chest infections	3
+327	noisy breathing	5
+328	fast breathing and heartbeat	3
+329	irritability and restlessness	4
+330	cold symptoms	1
+331	chest pain worse when breathing or coughing	2
+332	sore throat	19
+333	runny nose	7
+334	seizures	3
+335	cardiac arrest	2
+336	mouth blisters	3
+337	foot pain	1
+338	red and swollen skin	2
+339	pain	8
+340	warm and tender skin	1
+341	tenderness	1
+342	skin changes on brown or black skin	4
+343	tummy ache	22
+344	mole changes	1
+345	frequent heartburn	1
+346	abdominal bloating	17
+347	hoarse voice	14
+348	mouth ulcer	8
+349	patches in mouth	5
+350	unusual vaginal discharge	3
+351	unusual vaginal bleeding	3
+352	blood in semen	1
+353	unusual body pain	1
+354	weakness and fatigue	3
+355	tiredness and confusion	1
+356	facial flushing	3
+357	arm and hand pain	2
+358	pins and needles	13
+359	grip weakness	1
+360	poor night vision	2
+361	vision problems	9
+362	double vision	2
+363	halos around lights	2
+364	faded colours vision	1
+365	skin blisters	5
+366	swollen glands	16
+367	delayed development milestones	1
+368	muscle stiffness or floppiness	2
+369	limb weakness	4
+370	fidgety or jerky movements	1
+371	uncontrolled movements	1
+372	walking on tiptoes	1
+373	swallowing difficulties	1
+374	pain during sex	8
+375	neck headache	1
+376	visual patterns	1
+377	hallucinations of people animals objects or places	1
+378	visual hallucinations	1
+379	insomnia and depression	1
+380	chickenpox rash	1
+381	skin lesions on face and legs	1
+382	eye movement abnormalities	1
+383	abnormal vaginal bleeding	2
+384	genital burning and itching	1
+385	testicular pain and swelling	2
+386	anal pain	3
+387	eye redness pain and discharge	1
+388	diarrhoea	6
+389	ear discharge	5
+390	earache	7
+391	ear infections	1
+392	bleeding or bruising easily	1
+393	pale skin	2
+394	frequent illness	2
+395	oedema and bloating	6
+396	night sweats	4
+397	painful erection	1
+398	chesty cough	1
+399	wheezing	4
+400	upper tummy pain	4
+401	smelly floating diarrhoea	3
+402	mood changes and depression	1
+403	mood and personality changes	8
+404	organisational difficulties	2
+405	memory and thinking problems	1
+406	sharp headache around eye	1
+407	cluster headache	1
+408	sudden short headache	1
+409	restless pain	1
+410	red and watering eye	1
+411	eyelid drooping and swelling	1
+412	smaller pupil	1
+413	excessive sweating	4
+414	recurrent headaches	1
+415	smelly diarrhoea	1
+416	stomach ache	5
+417	fatigue due to malnutrition	1
+418	unintentional weight loss	4
+419	difficulty getting pregnant	3
+420	gut symptoms	1
+421	slow growth and delayed puberty	1
+422	cold sore	3
+423	painful facial blisters	1
+424	painful cold sore	1
+425	painful red spot filled with pus	1
+426	skin boil	1
+427	crusty skin sores	2
+428	baby difficult to soothe	1
+429	fist clenching	1
+430	abdominal discomfort posture	1
+431	flatulence	3
+432	increased hunger	2
+433	acid reflux	3
+434	increased crying	1
+435	colic crying	1
+436	aberrant colour choice in drawing	1
+437	colour sorting difficulty	1
+438	lack of interest in colouring	1
+439	colour vision deficiency signs	1
+440	muscle and joint aches	25
+441	ear and face pressure	3
+442	breathing through mouth	2
+443	exhaustion	3
+444	muscle pain	1
+445	muscle swelling	1
+446	difficulty moving	5
+447	strange limb sensations	1
+448	hair and nail changes	1
+449	joint stiffness and swelling	1
+450	fragile bones	2
+451	skin ulcers	1
+452	muscle wasting	1
+453	muscle contractures	1
+454	chronic pain	1
+455	poor weight gain	2
+456	cold and clammy skin	1
+457	heart murmur	2
+458	pus sticking to eyelashes	1
+459	red or pink eye	1
+460	eye changes	1
+461	constipation	11
+462	abnormal stools	1
+463	skin colour changes	1
+464	pain in neck shoulder jaw or arm	1
+465	limb control difficulty	1
+466	muscle stiffness and weakness	4
+467	muscle tremors	6
+468	slow, effortful speech	1
+469	chest tenderness	1
+470	greasy scales on scalp and face	1
+471	dry flakes of skin	1
+472	asymptomatic lesion	1
+473	scaly scalp	1
+474	hairline crusting	1
+475	scaly skin crust	1
+476	forehead scales	1
+477	pink skin patch with brown spots	1
+478	scalp crust	1
+479	scaly pink skin	1
+480	cradle cap patch on head	1
+481	crusty scales on eyebrows	1
+482	facial crusting	1
+483	tiny pink spots on forehead and cheeks	1
+484	pointy forehead	1
+485	head shape abnormality	1
+486	early disappearance of fontanelle	1
+487	learning difficulties	4
+488	unusual head shape	1
+489	memory and intellect loss	1
+490	loss of balance	5
+491	jerking or twitching movements	2
+492	progressive loss of brain function and mobility	1
+493	generally unwell	3
+494	slow growth in children	2
+495	barking cough	1
+496	cold-like symptoms	2
+497	cold and flu symptoms	1
+498	cold-like symptoms and rapid breathing	1
+499	whooping cough	1
+500	abnormal fat distribution	1
+501	red round face	1
+502	easy bruising and stretch marks	1
+503	low sex drive	2
+504	mood changes	3
+505	excessive hair growth	1
+506	eye pain from bright lights	2
+507	stomach pain bloating and swelling	1
+508	very salty sweat	1
+509	dandruff flakes	1
+510	dry and itchy scalp	1
+511	throbbing leg pain	1
+512	headache and light-headedness	1
+513	dry mouth lips and tongue	1
+514	bulging soft spot on head	2
+515	few or no tears when crying	1
+516	fewer wet nappies	1
+517	fatigue and drowsiness	3
+518	difficulty carrying out daily tasks	1
+519	difficulty following conversations	2
+520	confusion and disorientation	5
+521	repetitive questioning	1
+522	difficulty with numbers and money	1
+523	anxiety	3
+524	stroke-like symptoms	1
+525	brain fog	5
+526	fluctuating levels of alertness and confusion	1
+527	slow physical movements	1
+528	repeated falls and fainting	1
+529	sleep disturbance	2
+530	personality change	1
+531	lack of social awareness	1
+532	obsessive behaviour	1
+533	communication problems	1
+534	mobility problems	1
+535	self care neglect	1
+536	blotchy rash	1
+537	toothache	3
+538	facial redness	3
+539	tooth sensitivity	1
+540	bad breath and taste	7
+541	swollen face or neck	2
+542	shadow in vision	1
+543	spatial awareness issues	1
+544	fine motor skill difficulty	1
+545	gross motor skills issues	1
+546	social and emotional management difficulty	1
+547	clumsiness	1
+548	delayed developmental milestones	1
+549	poor coordination	1
+550	groin pain	1
+551	joint clicking	1
+552	hip pain	1
+553	loose joint	1
+554	clicking sound in hips	1
+555	leg movement asymmetry	1
+556	uneven leg length	1
+557	child limp or leg dragging	1
+558	excessive crying	1
+559	slow growth	1
+560	high body temperature	1
+561	bedwetting	1
+562	excessive thirst	1
+563	deep breathing	1
+564	fruity smelling breath	1
+565	flashes and floaters	2
+566	developmental delay	1
+567	speech and hearing problems	1
+568	feeding difficulties	1
+569	tremors and seizures	1
+570	recurrent infections	1
+571	short stature	1
+572	throat and tongue coating	1
+573	fever	7
+574	pus-filled blisters	1
+575	large skin ulcers	1
+576	lower left tummy pain	2
+577	stomach cramps	2
+578	severe constant tummy pain	1
+579	difficulty moving mouth tongue or lips	1
+580	difficulty controlling voice volume	1
+581	voice changes	1
+582	hesitating when talking	1
+583	communication difficulty	2
+584	unclear speech	1
+585	abnormal body positioning	1
+586	frequent blinking	2
+587	fine motor difficulties	1
+588	ear itching	2
+589	ear pulling	1
+590	not reacting to sounds	1
+591	easy bruising	4
+592	bleeding from orifices	1
+593	blood in vomit or stool	1
+594	bleeding	2
+595	missed period	1
+596	vaginal bleeding	3
+597	shoulder tip pain	1
+598	droopy eyelid	2
+599	sore and red eye and eyelid	1
+600	difficulty closing eye	1
+601	watery eyes	2
+602	dry eyes	4
+603	low birth weight	1
+604	cleft lip or palate	1
+605	organ problems	1
+606	breathing or digestion problems	1
+607	joint hypermobility	2
+608	stretchy skin	1
+609	fragile skin	2
+610	skin spots	4
+611	dark spots under fingernails	1
+612	painful skin lumps on fingers or toes	1
+613	severe period pain	1
+614	heavy periods	1
+615	chest pain and coughing up blood	1
+616	period symptoms	1
+617	low mood	1
+618	weak urine flow	2
+619	peeing problems	1
+620	blisters on hands and feet	1
+621	thickened skin	1
+622	thickening of skin and nails	1
+623	testicular pain	1
+624	swollen scrotum	1
+625	testicular lump or swelling	1
+626	penile discharge	1
+627	pain relieved by leaning forward	2
+628	difficulty breathing	4
+629	breathing changes	1
+630	forward leaning posture	1
+631	suddenly falling	1
+632	loss of awareness	1
+633	unusual sensory changes	1
+634	unusual behaviour	1
+635	seizure awareness	1
+636	febrile seizure	2
+637	mouth rash	1
+638	body aches and pain	1
+639	red swollen and blistered skin rash	1
+640	skin bumps	4
+641	daytime napping difficulty	2
+642	daytime sleepiness	2
+643	sleeping for long hours	1
+644	excessive daytime sleepiness	1
+645	visual disturbances	3
+646	growing dark patch in eye	1
+647	vision loss	3
+648	bulging eye	1
+649	eyelid lump	1
+650	difficulty recognising facial emotions	1
+651	difficulty recognising objects or animals	1
+652	difficulty recognising faces	1
+653	face blindness	1
+654	difficulty recognising strangers	1
+655	unrecognisable faces	1
+656	muscle twitching and shaking	1
+657	postictal confusion	1
+658	increased pain sensitivity	1
+659	cognitive difficulties	1
+660	frustration worry or low mood	1
+661	sudden high temperature	1
+662	aching body	2
+663	gastrointestinal symptoms	1
+664	ear pain	2
+665	food intolerance symptoms	1
+666	general symptoms	1
+667	personality and behaviour changes	2
+668	problems with mental abilities	1
+669	neurological symptoms	1
+670	difficulty with daily activities	2
+671	cold and firm skin	1
+672	skin numbness and burning	1
+673	skin color changes	1
+674	frozen skin	1
+675	skin swelling and numbness	2
+676	fluid filled blisters	1
+677	black and hard skin	1
+678	shoulder stiffness	1
+679	joint stiffness	2
+680	lump in tummy	2
+681	right-sided abdominal pain	1
+682	blisters and sores with discharge	1
+683	indigestion	3
+684	early satiety	5
+685	wart clusters	1
+686	soft or firm lump	2
+687	skin lumps	3
+688	vaginal itching	2
+689	smelly burps	1
+690	red eye	2
+691	tenderness around eyes	1
+692	dark urine	1
+693	limb swelling	2
+694	temporary hearing loss	1
+695	earwax build-up	1
+696	ear pain with toothache	1
+697	throat irritation sensation	2
+698	neck swelling	2
+699	bleeding between periods	1
+700	sudden severe joint pain	1
+701	raised skin patches	2
+702	pink skin bumps	1
+703	visual disturbance	1
+704	cough and respiratory symptoms	1
+705	rashes ulcers and spots	1
+706	tummy pain, diarrhoea and blood in poo	1
+707	nerve pain	3
+708	facial muscle drooping	1
+709	joint movement difficulty	1
+710	bleeding gums	2
+711	swollen gums	1
+712	gum recession	1
+713	loose teeth	1
+714	enlarged breasts	1
+715	swollen and sore breasts	1
+716	prolonged bleeding	2
+717	hamstring pain	1
+718	popping sensation	2
+719	thigh tenderness	1
+720	leg mobility difficulty	1
+721	raised rash	1
+722	skin blister	2
+723	excessive sleepiness	1
+724	fall from height	1
+725	black eye	1
+726	bleeding or bruising behind ears	1
+727	numbness or weakness	2
+728	neurological impairment	1
+729	head injury at high speed	1
+730	head injury	1
+731	behavioural changes	2
+732	asking people to repeat themselves	1
+733	listening to loud media	1
+734	difficulty hearing on the phone	1
+735	listening fatigue	1
+736	breathlessness during physical activity	2
+737	fatigue and lightheadedness	1
+738	weight gain	2
+739	night cough	2
+740	coughing up frothy pink phlegm	1
+741	heartburn	7
+742	unpleasant sour taste in mouth	2
+743	recurrent cough or hiccups	1
+744	hot skin without sweating	1
+745	hot skin	1
+746	confusion and lack of coordination	1
+747	heatstroke signs	1
+748	muscle cramps	3
+749	irritability	2
+750	itchy and prickly feeling	1
+751	mild swelling	1
+752	red rash on white skin	1
+753	purpura rash	1
+754	bruise like spots	1
+755	memory and concentration problems	4
+756	frequent nosebleeds	2
+757	red skin spots	1
+758	muscle stiffness	1
+759	swollen eyelid	1
+760	eyelid rash	1
+761	finger sores	1
+762	skin redness	1
+763	skin lumps and drainage	1
+764	spots and lumps on skin	1
+765	pus-filled skin lumps	2
+766	new lumps	1
+767	delayed passage of meconium	1
+768	green vomit	1
+769	skin irritation	2
+770	pink or red rash	1
+771	hives rash	1
+772	rash	6
+773	pink raised bumpy skin on thigh	1
+774	deep thigh creases	1
+775	pink hand with red patches	1
+776	raised pink skin spots	1
+777	skin lesion clustering	1
+778	spotty rash on arm and hand	1
+779	red knuckles and fingertips	1
+780	darker brown skin	1
+781	skin bumps near knee	1
+782	puffy skin blisters	1
+783	clustered bumps	1
+784	raised bumps	1
+785	uneven skin bumps	1
+786	pink skin patches	1
+787	pink patch on groin and hip	1
+788	raised skin lines	1
+789	skin coloured rash	1
+790	involuntary movements	1
+791	clumsiness and muscle control difficulty	1
+792	muscle stiffness and slow movement	1
+793	anxiety triggered by sounds	1
+794	hearing sensitivity	1
+795	sound sensitivity	1
+796	widespread aches and pains	1
+797	tingling or burning sensation	1
+798	dry hair and skin with brittle nails	2
+799	cold skin	1
+800	unusually quiet and sleepy	1
+801	hypothermia in baby	1
+802	flaking skin layer at birth	1
+803	hair loss	4
+804	reduced sweating	1
+805	scaly skin	2
+806	scaly skin appearance	1
+807	itchy and burning skin	2
+808	red sores or blisters	1
+809	dry and cracked skin	2
+810	itchy blisters	2
+811	burping and flatulence	1
+812	itchy skin bumps	1
+813	hair trapped under skin	1
+814	ingrown hairs	1
+815	pus discharge	1
+816	ingrown toenail	1
+817	toe infection	1
+818	pain at bite or sting site	1
+819	swollen skin lump	1
+820	red lump	1
+821	difficulty falling asleep	1
+822	broken sleep	1
+823	daytime tiredness	2
+824	paler skin	1
+825	altered taste	1
+826	itching	2
+827	sore tongue	2
+828	pica	1
+829	nail changes	2
+830	restless legs	2
+831	mucus in stool	1
+832	pelvic pain	2
+833	yellow skin	1
+834	sleep difficulty	1
+835	indigestion and nausea	1
+836	bloodshot eyes	1
+837	strawberry tongue	2
+838	itchy or painful skin	1
+839	persistent high temperature	1
+840	lower back or side pain	1
+841	bed wetting	2
+842	drowsiness	3
+843	intermittent severe pain	1
+844	infertility and low sex drive	1
+845	knee or leg pain	1
+846	rounded upper back	1
+847	rounded shoulders	1
+848	curved spine	2
+849	back pain and stiffness	1
+850	difficulty walking and climbing stairs	2
+851	difficulty lifting objects	3
+852	dizziness upon standing	1
+853	progressive muscle weakness	1
+854	loss of voice	1
+855	squinting	1
+856	difficulty following objects with eyes	1
+857	head tilting	1
+858	frequent eye rubbing	2
+859	difficulty catching or throwing	1
+860	frequent tripping or falling	1
+861	complaint when covering good eye	1
+862	skin discolouration around ulcer	1
+863	hardened skin	2
+864	heavy legs	1
+865	itchy scaly legs	1
+866	varicose veins	3
+867	worsening pain	1
+868	ulcer discharge	1
+869	redness and swelling around ulcer	1
+870	smelly ulcer	1
+871	chest pain when breathing	2
+872	red or watery eyes	3
+873	raised skin	1
+874	red skin patches	1
+875	skin rash with purple red blotches	1
+876	mouth burning and stinging	1
+877	vulval redness	2
+878	nail abnormalities	1
+879	penile patches	1
+880	red scaly skin patches	1
+881	vulvar itching and white patches	1
+882	ring-like red patch	1
+883	skin texture changes	1
+884	painful sex	1
+885	painful erections	2
+886	limb pain and bruising	1
+887	mental health problems	1
+888	mobile skin lump	1
+889	body ache	3
+890	decreased baby movement	1
+891	irritability and reduced feeding	1
+892	upper right tummy or shoulder pain	1
+893	tingling lips	1
+894	low blood sugar	1
+895	persistent breathlessness	1
+896	finger clubbing	1
+897	sun-induced rash	1
+898	upper abdominal pain	2
+899	raynaud's phenomenon	1
+900	spreading rash	2
+901	tick bite rash	1
+902	skin temperature and itchiness	1
+903	flu-like symptoms after tick bite	1
+904	heavy aching feeling	2
+905	repeated skin infections	1
+906	hard tight or thickened skin	1
+907	skin folds	1
+908	wart-like skin growths	1
+909	fluid leaking through skin	1
+910	swelling	1
+911	head and neck swelling	1
+912	confusion and headache	1
+913	extreme tiredness and sleepiness	1
+914	vomiting and diarrhoea	3
+915	sore throat, cough and difficulty breathing	1
+916	motion-induced nausea	1
+917	excessive sleepiness or fainting	1
+918	soreness and tenderness	2
+919	finger swelling or changes	1
+920	small lower jaw	1
+921	high arched palate	1
+922	deep-set eyes	1
+923	flat feet	1
+924	abnormal breastbone shape	1
+925	crowded teeth	1
+926	breast lump with pain and swelling	1
+927	breast lump	1
+928	breast pain	1
+929	pain behind the ear	1
+930	ear redness	1
+931	swelling behind the ear	1
+932	red and sore eyes	3
+933	mouth spots	1
+934	cold hands and feet	1
+935	worsening severe headache	1
+936	extreme sleepiness	2
+937	non-blanching rash	3
+938	poor feeding	1
+939	high-pitched or unusual cry	2
+940	throbbing headache	1
+941	daytime fatigue and yawning	1
+942	appetite changes	2
+943	migraine aura	1
+944	aura	1
+945	menstrual migraine	1
+946	vaginal spotting	1
+947	vaginal lumps	1
+948	vaginal bleeding in pregnancy	1
+949	pregnancy vaginal bleeding	1
+950	toe foot pain	1
+951	sensation of lump under foot	1
+952	foot numbness or tingling	1
+953	feeling cold and pale	1
+954	hand weakness	1
+955	weak legs and feet	1
+956	inability to walk or move	1
+957	mouth or lip lump	1
+958	mouth pain	1
+959	neck lump	2
+960	multiple ulcers	2
+961	mouth ulcers	1
+962	shivering	2
+963	anal pain or rectal bleeding	1
+964	skin ulcer	2
+965	sexual problems	2
+966	unsteady movement	1
+967	stiff muscles	1
+968	temperature sensitivity	2
+969	unpredictable laughing or crying	1
+970	swollen salivary glands	2
+971	unilateral swelling variation	1
+972	frequent falls	1
+973	floppiness and delayed development	1
+974	difficulty climbing stairs	1
+975	difficulty combing hair	1
+976	patchy red rash	1
+977	restless sleep	1
+978	automatic behaviour	1
+979	low mood from narcolepsy	1
+980	intense pain or numbness	1
+981	skin blisters or blotches	1
+982	light brown skin patches	1
+983	freckles in armpits or groin	1
+984	painful or itchy skin lumps	1
+985	yellow-brown raised dots on iris	1
+986	eye problems	2
+987	large head and short stature	1
+988	persistent headaches	2
+989	foot drop	1
+990	skin marks	1
+991	eye pain and vision problems	1
+992	vomiting and hiccups	1
+993	night terrors	1
+994	night terror behaviour	1
+995	night terror memory loss	1
+996	nightmares	1
+997	parasomnia episodes	1
+998	fear upon waking	1
+999	sleep paralysis	1
+1000	liver pain	1
+1001	post-nasal drip	1
+1002	speech movement and balance problems	1
+1003	painless lump or swelling	1
+1004	burping	2
+1005	black poo or coughing up blood	1
+1006	digestion problems	2
+1007	discoloured skin lesion	1
+1008	large skin blister	1
+1009	fluid leakage from skin	1
+1010	joint grating or crackling	2
+1011	swelling and tenderness	3
+1012	warm skin	1
+1013	limp	1
+1014	lumps on joints	1
+1015	tummy pain with nausea	1
+1016	irritability and anxiety	1
+1017	mood swings	2
+1018	heat sensitivity	1
+1019	bone and joint pain	3
+1020	warm skin over bone	1
+1021	bone shape changes	1
+1022	shooting pain	1
+1023	upper abdominal and back pain	1
+1024	slow movement	1
+1025	stiff and inflexible muscles	1
+1026	sharp or stabbing pain	1
+1027	worsening pain triggers	1
+1028	leg hair loss	1
+1029	leg numbness	2
+1030	brittle toenails	1
+1031	leg and foot ulcers	1
+1032	discoloured leg skin	1
+1033	shiny skin	1
+1034	leg muscle wasting	1
+1035	leg ache on walking	1
+1036	intermittent claudication	1
+1037	burning stabbing or shooting pain	1
+1038	foot muscle weakness	1
+1039	loss of appetite and nausea	1
+1040	pale face	1
+1041	warm and itchy skin	1
+1042	skin colour and texture changes	1
+1043	itchy anus	1
+1044	mucus in underwear	1
+1045	pilonidal sinus infection	1
+1046	abscess pain and swelling	1
+1047	wound discharge and pain	1
+1048	skin discolouration	3
+1049	heel pain when walking after resting	1
+1050	pain better with movement worse with activity	1
+1051	foot pain when stretching	1
+1052	heel pain	1
+1053	loss of interest in activities	1
+1054	feeling overwhelmed	1
+1055	suicidal thoughts	1
+1056	breast tenderness	2
+1057	abdominal distension and pain	1
+1058	blotchy skin areas	1
+1059	polymorphic light eruption rash	1
+1060	sun sensitivity	1
+1061	blisters on ears	1
+1062	shaking and sweating	1
+1063	visual disturbance and headache	1
+1064	purple hands and feet	1
+1065	excessive appetite	1
+1066	restricted growth	1
+1067	lack of sexual development	1
+1068	behavioral challenges	1
+1069	sudden swelling	1
+1070	feeling upset, anxious or emotional	1
+1071	spotty skin	1
+1072	greasy hair	1
+1073	balance and mobility problems	1
+1074	eye and eyelid movement difficulty	1
+1075	slowness of thought and memory problems	1
+1076	intermittent urination	1
+1077	nocturia	1
+1078	lower back pain and weight loss	1
+1079	changes in urination	1
+1080	pelvic or genital pain	2
+1081	dark skin marks	1
+1082	scaly skin patches	1
+1083	small brown and yellow spots	1
+1084	nail pits and dents	1
+1085	varying patch size	1
+1086	skin patches joining together	1
+1087	nail pitting and discoloration	1
+1088	dry scaly skin	1
+1089	lice bites	1
+1090	lice eggs on hair	1
+1091	dark spots in underwear	1
+1092	lice in hair	1
+1093	feeling of fullness in anus	1
+1094	difficulty reaching orgasm	1
+1095	pain when sitting	1
+1096	fluid leakage	1
+1097	stiff joints	1
+1098	agitation	1
+1099	joint redness and warmth	1
+1100	flaky skin	1
+1101	penile rash	1
+1102	sticky eyes	1
+1103	burning aching or throbbing pain	1
+1104	leg discomfort	1
+1105	blind spot in vision	1
+1106	headache with visual symptoms	1
+1107	eye symptoms	1
+1108	iris colour change	1
+1109	eye swelling	1
+1110	white glow in eye	1
+1111	chest pain breathlessness and fast heart rate	1
+1112	uncontrollable movements	1
+1113	tiny bumps under skin	1
+1114	pale red skin patches	1
+1115	joint problems	1
+1116	poor appetite	1
+1117	swollen and painful wrists	1
+1118	walking difficulties	1
+1119	muscle tingling and cramping	1
+1120	bowed legs	1
+1121	outward curving legs	1
+1122	skin burning sensation	1
+1123	dry and itchy skin	3
+1124	yellow orange skin patches	1
+1125	thickened skin on nose	1
+1126	aching fingers wrists or knees	1
+1127	spotty rash	1
+1128	mouth swelling	1
+1129	stone infection signs	1
+1130	intense mealtime pain	1
+1131	tender skin bumps	1
+1132	raised skin bumps	1
+1133	sandpaper rash	2
+1134	white coating on tongue	1
+1135	red cheeks	1
+1136	skin peeling	1
+1137	itchy bumpy rash	1
+1138	headache tummy ache muscle and joint pain	1
+1139	bloody diarrhoea	2
+1140	vaginal sores and pain during sex	1
+1141	water-induced rash	1
+1142	worms in stool	1
+1143	leg pain	1
+1144	leaning to one side	1
+1145	uneven shoulders	1
+1146	rib protrusion	1
+1147	clothes not fitting well	1
+1148	feeling irritable and sad	1
+1149	swollen and bleeding gums	1
+1150	abnormal temperature	1
+1151	not peeing	1
+1152	non fading rash	1
+1153	high temperature in baby	1
+1154	inability to urinate	1
+1155	fast breathing	1
+1156	confusion and slurred speech	1
+1157	shin pain and tenderness	1
+1158	skin tingling or pain	1
+1159	pain without rash	1
+1160	shingles rash	1
+1161	difficulty reading from a distance	1
+1162	sitting close to tv	1
+1163	dry and sore eyes or throat	1
+1164	painful crisis	1
+1165	developmental and medical complications	1
+1166	mobility difficulty	1
+1167	coloured nasal mucus	1
+1168	nasal voice	1
+1169	feeling blocked up	1
+1170	vaginal dryness	2
+1171	skin abscess	1
+1172	runny nose and sore throat	1
+1173	breathing pausing	1
+1174	gasping, snorting or choking noises during sleep	1
+1175	frequent waking during sleep	1
+1176	loud snoring	1
+1177	morning headache	1
+1178	back movement difficulty	1
+1179	sciatica	2
+1180	loss of sensation	1
+1181	scoliosis	2
+1182	congenital back abnormalities	1
+1183	lower back pain	1
+1184	referred pain in bottom or thighs	1
+1185	tight hamstrings	1
+1186	speech sound prolongation	1
+1187	speech pauses	1
+1188	frequent filler words in speech	1
+1189	avoiding eye contact	1
+1190	stammer avoidance	1
+1191	avoidance of social situations	1
+1192	stammering	1
+1193	emotional distress from stammering	1
+1194	painful swallowing	1
+1195	pain when peeing	1
+1196	eye pain and sensitivity	1
+1197	burning sensation	1
+1198	indigestion and bloating	1
+1199	feeling hot to touch	1
+1200	peeling skin	1
+1201	red or pink skin	1
+1202	genital sores	1
+1203	sores	1
+1204	skin growths	1
+1205	rash on hands and feet	1
+1206	patchy hair loss	1
+1207	frequent severe headaches	1
+1208	temporal tenderness	1
+1209	jaw pain	2
+1210	muscle pain and stiffness	1
+1211	jaw ear and temple pain	1
+1212	jaw clicking popping or grinding noises	1
+1213	temporal headache	1
+1214	pain when chewing	1
+1215	tendon pain	1
+1216	swelling with redness	1
+1217	difficulty moving wrist	1
+1218	elbow tenderness or swelling	1
+1219	forearm pain	1
+1220	difficulty straightening arm	1
+1221	outer elbow pain	1
+1222	arm pain	1
+1223	bilateral head pain	1
+1224	tension headache sensation	1
+1225	scalp tenderness	1
+1226	tension headache	1
+1227	stiff jaw	1
+1228	arm fatigue	1
+1229	arm pain and swelling	1
+1230	cold hand and arm	1
+1231	discoloured hand skin	1
+1232	repeated miscarriages	1
+1233	neck pain	1
+1234	hearing music or singing	1
+1235	heart murmur sounds	1
+1236	feeding and latching difficulty	1
+1237	prolonged feeding	1
+1238	excessive drooling during feeds	1
+1239	coughing or choking when feeding	1
+1240	taking small amount of milk	1
+1241	heart shaped tongue	1
+1242	difficulty moving tongue	1
+1243	tongue movement difficulty	1
+1244	sore nipples and breast pain	1
+1245	tonsil white patches	1
+1246	sensitive teeth	1
+1247	tooth spots	1
+1248	monocular vision loss	1
+1249	unsteady walking	1
+1250	facial drooping	1
+1251	arm weakness or numbness	1
+1252	speech problems	1
+1253	vaginal discharge	1
+1254	vaginal soreness	2
+1255	light touch sensitivity	1
+1256	spontaneous pain	1
+1257	finger stiffness	1
+1258	morning hand pain	1
+1259	poor weight gain or growth	1
+1260	small stature	1
+1261	pink spot rash	1
+1262	frequent or urgent bowel movements	1
+1263	belly button lump	1
+1264	undescended testicle	1
+1265	sore tip of penis	1
+1266	urine storage problems	1
+1267	incomplete bladder emptying	1
+1268	lower urinary tract symptoms	1
+1269	delirium	1
+1270	shivering and shaking	1
+1271	lower back and tummy pain	1
+1272	blood in pee	1
+1273	confusion and drowsiness	1
+1274	low temperature	1
+1275	dark or smelly urine	1
+1276	eye injury	1
+1277	itchy and swollen	1
+1278	dry flaky skin	1
+1279	skin scars	1
+1280	red or brown skin discoloration	1
+1281	leg swelling	2
+1282	leg ulcers	1
+1283	skin changes	1
+1284	bulging lump	1
+1285	slowness of thought	1
+1286	memory and language problems	1
+1287	severe vertigo	1
+1288	lack of energy	1
+1289	psychological problems	1
+1290	problems with memory and understanding	1
+1291	scalp rash	1
+1292	white or grey hair	1
+1293	white skin patches	1
+1294	discoloured skin patch	1
+1295	heavy bleeding	1
+1296	joint pain swelling and stiffness	1
+1297	increased bleeding after surgery	1
+1298	vulval pain on touch	1
+1299	vulval pain	1
+1300	vulval discomfort	1
+1301	painful verrucas	1
+1302	whooping cough sound	1
+1303	thick mucus	1
+1304	serious symptoms	1
