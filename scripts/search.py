@@ -121,8 +121,13 @@ class Retriever:
     def rank(self, matches: list[Match], n: int = 10) -> list[Hit]:
         hits: list[Hit] = []
         for slug, stated in self.links.items():
-            total = 0.0
-            evidence: list[tuple[str, float]] = []
+            # A patient record can land near several corpus rows that are
+            # near-duplicates of one another ("cough" and "coughing" both
+            # linked to the same condition). That is one statement, not
+            # several, so it credits a condition at most once: the strongest
+            # of its hits, not their sum. Hits from different records still
+            # sum, since those are genuinely different statements.
+            best: dict[int, tuple[str, float]] = {}  # id(record) -> (phrase, weight)
             for m in matches:
                 corpus = stated.get(m.symptom_id)
                 if corpus is None:
@@ -131,16 +136,18 @@ class Retriever:
                 w *= facet_multiplier(corpus, m.record)
                 if m.record.polarity == "absent":
                     w = -ABSENT_WEIGHT * w
-                total += w
-                evidence.append((self.phrases[m.symptom_id], w))
-            if not evidence:
+                key = id(m.record)
+                if key not in best or abs(w) > abs(best[key][1]):
+                    best[key] = (self.phrases[m.symptom_id], w)
+            if not best:
                 continue
+            evidence = sorted(best.values(), key=lambda e: -abs(e[1]))
+            total = sum(w for _, w in evidence)
             # Dividing by the full vector length hands an advantage to whatever
             # has fewest symptoms; a fractional power damps that without
             # swinging the other way. See triage_poc.py for the measured table.
             length = sum(self.idf.get(s, 1.0) for s in stated) or 1.0
-            hits.append(Hit(slug, total / length ** LENGTH_ALPHA,
-                            sorted(evidence, key=lambda e: -abs(e[1]))))
+            hits.append(Hit(slug, total / length ** LENGTH_ALPHA, evidence))
         hits.sort(key=lambda h: -h.score)
         return hits[:n]
 
@@ -165,13 +172,13 @@ def main() -> None:
     matches = r.match(records)
     if not matches:
         print("\nnothing in the description matched the symptom vocabulary")
-        return
-    print("\ntop conditions:")
-    for i, hit in enumerate(r.rank(matches), 1):
-        print(f"  {i:2d}. {hit.score:+.3f}  {hit.slug}")
-        if explain:
-            for phrase, w in hit.evidence:
-                print(f"          {w:+.3f}  {phrase}")
+    else:
+        print("\ntop conditions:")
+        for i, hit in enumerate(r.rank(matches), 1):
+            print(f"  {i:2d}. {hit.score:+.3f}  {hit.slug}")
+            if explain:
+                for phrase, w in hit.evidence:
+                    print(f"          {w:+.3f}  {phrase}")
     print("\nRetrieval only, weighted by corpus statistics rather than published "
           "likelihood ratios, with no prevalence. Not clinical advice.")
 
