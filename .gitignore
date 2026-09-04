@@ -4,3 +4,4 @@ __pycache__/
 .venv/
 .env
 data/candidates/csv/
+data/candidates/csv-v2/

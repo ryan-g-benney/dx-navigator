@@ -19,6 +19,7 @@ Import it for a session:
 Or run it:
 
     dataset.py                  print a summary of each frame
+    dataset.py --v2             read the form contract instead of the string bank
     dataset.py --wide           print the 0/1 matrix's shape and density
     dataset.py --csv out/       write every frame to CSV
 """
@@ -34,10 +35,25 @@ ROOT = Path(__file__).resolve().parents[1]
 CAND = ROOT / "data" / "candidates"
 
 
-def frames() -> dict[str, pd.DataFrame]:
+def frames(v2: bool = False) -> dict[str, pd.DataFrame]:
+    """The four frames, over the string bank by default or the form contract.
+
+    v2 is what search.py actually retrieves over, so it is the one to read when
+    asking why a ranking came out as it did. The bank is kept because the
+    evaluation still scores against it. The frames have the same columns either
+    way: v2's core_phrase is the bank's canonical under another name, and the
+    facet columns on the v2 links are dropped here because nothing downstream
+    groups on them.
+    """
     conditions = pd.read_csv(CAND / "conditions.tsv", sep="\t", dtype=str)
-    symptoms = pd.read_csv(CAND / "symptom-bank.tsv", sep="\t")
-    links = pd.read_csv(CAND / "condition-symptoms.tsv", sep="\t")
+    if v2:
+        symptoms = (pd.read_csv(CAND / "symptoms-v2.tsv", sep="\t")
+                    .rename(columns={"core_phrase": "canonical"}))
+        links = pd.read_csv(CAND / "condition-symptoms-v2.tsv",
+                            sep="\t")[["condition", "symptom_id"]]
+    else:
+        symptoms = pd.read_csv(CAND / "symptom-bank.tsv", sep="\t")
+        links = pd.read_csv(CAND / "condition-symptoms.tsv", sep="\t")
 
     n = links["condition"].nunique()
     # Same inverse document frequency the scorer uses, surfaced here so the
@@ -69,7 +85,7 @@ def frames() -> dict[str, pd.DataFrame]:
 
 
 def main() -> None:
-    d = frames()
+    d = frames(v2="--v2" in sys.argv)
     pd.set_option("display.width", 130, "display.max_columns", 20)
 
     if "--csv" in sys.argv:
