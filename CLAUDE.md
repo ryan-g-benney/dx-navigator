@@ -140,6 +140,43 @@ Paraphrase recovery is 62% exact, 71% same-condition, over 200 symptoms, and
 drifts a couple of points run to run. Same-condition credits a near-duplicate
 row, which is what `rank()` consumes.
 
+## The decision tree
+
+On branch `decision-tree`, cut from 74d566a. `scripts/triage.py` narrows the
+retrieval by asking questions:
+
+```bash
+uv run --no-sync python scripts/triage.py "crushing chest pain spreading to my left arm"
+uv run --no-sync python scripts/triage.py --auto angina "crushing chest pain..."
+```
+
+The tree is greedy and built per consultation, not precomputed: `next_question`
+picks the symptom with the most even split across the surviving candidates,
+because one every candidate lists cannot reorder them however it is answered.
+Ties break towards the rarer symptom. The answer folds in as one more `Match`,
+a denial through the `polarity="absent"` path `rank()` already had, and the
+shortlist narrows 10 to 5 to 1 while the original ten are reprinted in their
+final order.
+
+It is a port of `triage_poc.py`'s loop onto the form contract; `triage_poc.py`
+still runs the same idea over the v1 string bank and is what the eval's
+baseline refers to.
+
+Two limits to state out loud rather than let a narrowing imply otherwise:
+
+- **Questions split the corpus, not the odds.** Max entropy is the most
+  information one yes-or-no answer carries about *this vocabulary*. With no
+  prevalence it will happily spend a question separating two equally rare
+  conditions. Shipped deliberately, with the caveat printed on every run.
+- **`--auto` over-denies.** It answers "no" to anything the condition's page
+  does not list, but silence on a page is not a patient's denial, and the
+  conditions with the longest symptom lists get asked most and so denied most.
+  Watch the loop with it; do not measure the loop with it.
+
+Retrieval is still the ceiling. Questioning only reorders what the opening
+description surfaced, and task 5 measured top-10 at 85%, so roughly one
+condition in seven cannot be reached by any number of questions.
+
 ## What is wrong with the data
 
 Say these out loud rather than letting a ranking imply otherwise.
