@@ -201,24 +201,96 @@ Two measurements and one transcript.
 condition on two of its own symptoms, ask nothing, and record where it comes
 back. The same 150 conditions and the same seed across four systems.
 
+Measured 2026-09-04 by `eval/run_retrieval_eval.py`, over the 150 conditions
+both systems can retrieve, under one scorer:
+
 | System | top-1 | top-5 | top-10 |
 |---|---|---|---|
-| Current string bank | 75% | 85% | 85% |
-| Pass 1, restructured facets | | | |
+| String bank (v1), rescored | 59% | 89% | 96% |
+| Pass 1, restructured facets | 48% | 75% | 85% |
+| Pass 1, seeded at the bank's symptom frequency | 62% | 89% | 93% |
 | Pass 2, normalised from raw | | | |
-| Condition-profile dense vectors | | | |
 
-The blank cells are the result of the phase. The first row is the figure
-already measured in `scripts/triage_poc.py` at `alpha = 0.25`.
+And over pass 1's own 150, which is the pool the control shares:
 
-The fourth row is the one-vector-per-condition alternative, built as a
-forty-line baseline. It has no per-row evidence, so it is a control rather than
-a candidate.
+| System | top-1 | top-5 | top-10 |
+|---|---|---|---|
+| Pass 1, restructured facets | 47% | 71% | 78% |
+| Condition-profile dense vectors | 26% | 46% | 59% |
+
+At `n = 150` the standard error is about 4 points near 50%, so differences
+smaller than 8 points are not differences.
+
+**The 75 / 85 / 85 that stood in the first row is withdrawn, not beaten.** It
+came from `triage_poc.py`, which scores in its own way and was measured before
+`rank()` stopped crediting one patient statement several times to the same
+condition. Rebuilt under today's scorer the same bank gives 59 / 89 / 96, so
+the old figure was comparable to nothing here and is kept only in
+`triage_poc.py`'s own docstring.
+
+**Read rows two and three together or the phase looks like a regression.**
+Seeded on its own two commonest symptoms, pass 1 loses to the bank by eleven
+points at top-1 and fourteen at top-5. It is not ranking worse. Both systems
+are seeded on the symptoms *they* consider commonest, and the two vocabularies
+merged differently: the bank left 926 of 1305 symptoms in exactly one condition
+(71%), pass 1 leaves 683 of 1087 (63%), and mean links per symptom rose from
+2.26 to 2.95. So pass 1's commonest symptom is shared by half again as many
+conditions — mean corpus frequency of the two seeds is 41.9 against the bank's
+27.8 — and the held-out question it is being asked is harder. Ask both the same
+question, by seeding pass 1 on the symptoms whose frequency matches what the
+bank opened on, and it scores 62 / 89 / 93 against 59 / 89 / 96: level
+everywhere, inside the standard error at every cut.
+
+The merge that costs the headline row is the thing §2 wanted. A symptom in one
+condition identifies that condition and is silent about every other, so it can
+never rank a differential; 243 fewer of those is the rewrite working. The
+honest summary of the phase is that the form contract bought a better
+vocabulary at no measurable cost in ranking, and that the raw held-out number
+must never be quoted without the frequency-matched one beside it.
+
+The dense control is the one-vector-per-condition alternative, built as a
+forty-line baseline with no per-row evidence and no inverse document frequency.
+At 26 / 46 / 59 against 47 / 71 / 78 on the same pool it loses by more than
+twenty points at every cut, so the two-stage design earns itself. It remains a
+control rather than a candidate.
 
 **Paraphrase recovery.** Two hundred corpus symptoms are rewritten by the flash
 model as a patient would say them, run through the query path, and checked
 against the symptom they came from. This measures the symmetry claim in §2.5
 directly, and the current bank has no equivalent figure.
+
+Measured 2026-09-04: **62% exact, 71% same-condition.** Exact asks whether the
+paraphrase returned to the row it was written from; same-condition asks whether
+it returned to a row carrying the same conditions, which is what `rank()`
+actually consumes. The vocabulary holds near-duplicates — "tiredness" beside
+"daytime tiredness" — and landing on the sibling costs the differential
+nothing, so 71% is the figure that bears on retrieval and 62% is the floor.
+The run is not deterministic at temperature 0: an earlier pass of the same 200
+gave 60% exact, so treat these to the nearest few points.
+
+Twenty-two of the 58 exact misses were read. They fall into three kinds, and
+only the third is the schema failing:
+
+- **The corpus row is malformed**, about eight of the twenty-two. `delay` and
+  `prolongation` are bare concepts stripped of the site that gave them meaning
+  (a late period, a period that will not stop); `hair` and `growth` likewise;
+  `eye problem in the eye` is the invented-site tautology Task 2 recorded. No
+  paraphrase can return to a row that says nothing. Task 6 regenerates these
+  from the prose they were flattened from.
+- **The patient's record was rejected outright**, 5 records across the 200,
+  causing 4 of the 58 misses. `validate()` refused `blood in urine` and
+  `bowel habit change` as over two words and `pins and needles` as bundling
+  concepts, and a rejected record is dropped rather than repaired. On the
+  corpus side that costs one row in 3210; on the query side it can be the whole
+  query — "There's blood when I go for a wee" currently matches nothing at all.
+  Same rule, two very different costs. Splitting a rejected concept on its
+  preposition (`blood in urine` to concept `blood`, site `urine`) rather than
+  dropping it is the obvious repair, and it is not yet written.
+- **The cosine simply fell below 0.80**, the rest. "My foot's gone all pins and
+  needles" did not reach `tingling in the foot`; "blood when I go for a wee"
+  would not have reached `blood in the urine` either. These are the real
+  measure of the symmetry claim, and they are why the exact figure is 62 rather
+  than 90.
 
 **Transcript.** Six hand-written patient descriptions with their normalised
 records and their top ten, committed as markdown.
